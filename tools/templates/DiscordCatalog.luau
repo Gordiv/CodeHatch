@@ -1,0 +1,66 @@
+--!nonstrict
+--[[
+	DiscordCatalog  (ModuleScript, ServerScriptService)
+
+	The list of what your game has, so the Discord bot knows the EXACT names.
+	/code-add, /give, /egg-create and /event-start suggest these names and refuse a name your game doesn't have,
+	so a typo can't create a code that doesn't work.
+
+	HOW TO FILL IT (no coding needed)
+	1. Write the names between the { } exactly as your game uses them, in quotes, separated by commas.
+	   Letter case, spaces and "_" don't matter to the bot. Each list has an example in the line above it.
+	2. A list you leave empty { } blocks nothing: the bot then accepts any name for it.
+	3. Save, click Play in Studio (or publish the game) and on Discord open /setup-roblox -> Game catalog -> Refresh.
+	   The Output window shows: [DiscordCodes] Game catalog: ...
+
+	This module is YOURS: updates of the DiscordCodes file never touch it. Keep it in ServerScriptService.
+	Only the names go to the bot, never anything about players.
+]]
+
+local Catalog = {}
+
+-- Currencies players collect (for example leaderstats.Coins -> "Coins")
+-- Example: Catalog.Currencies = { "Coins", "Gems" }
+Catalog.Currencies = {}
+
+-- Items and passes a code can give (for example a BoolValue "VIP Pass" in the player's data)
+-- Example: Catalog.Items = { "VIP Pass", "Speed Coil" }
+Catalog.Items = {}
+
+-- Pets: the exact name and the rarity your game shows (any word: Common, Rare, Epic, Legendary...)
+-- Example:
+-- Catalog.Pets = {
+-- 	{ Name = "Dog", Rarity = "Common" },
+-- 	{ Name = "Dragon", Rarity = "Legendary" },
+-- }
+Catalog.Pets = {}
+
+-- Eggs of your game. /egg-create can copy their pets and chances (any numbers, the bot turns them into %).
+-- Example:
+-- Catalog.Eggs = {
+-- 	{ Name = "Basic Egg", Currency = "Coins", Price = 100, Pets = { Dog = 60, Cat = 35, Dragon = 5 } },
+-- }
+Catalog.Eggs = {}
+
+-- Multipliers your code reads with Live.GetMultiplier("Coins"): events from Discord can raise them
+-- Example: Catalog.Multipliers = { "Coins" }
+Catalog.Multipliers = {}
+
+-- Currencies, items and pets players can buy with Robux, directly or with a currency bought with Robux (a Robux shop
+-- for Gems, a pass sold for Robux). Roblox doesn't allow giving them in codes posted outside Roblox (e.g. on Discord)
+-- or as prizes of contests outside Roblox: the bot warns you about a reward from this list.
+-- Example: Catalog.SoldForRobux = { "Gems", "VIP Pass" }
+Catalog.SoldForRobux = {}
+
+--[[ ALREADY HAVE A LIST OF PETS IN YOUR GAME? Read it instead of typing the names again, for example:
+
+local PetsConfig = require(game.ReplicatedStorage:WaitForChild("PetsConfig", 10)) -- 10 = give up after 10 seconds
+Catalog.Pets = {}
+for key, data in pairs(PetsConfig) do
+	-- a dictionary (Dog = { Rarity = "Common" }) has the name in the key, a list ({ { Name = "Dog" } }) in the entry
+	local name = type(key) == "string" and key or data.Name
+	table.insert(Catalog.Pets, { Name = name, Rarity = data.Rarity })
+end
+]]
+
+return Catalog

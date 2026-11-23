@@ -1,0 +1,876 @@
+{
+  "ui": {
+    "doc_title": "Bot documentation",
+    "search_placeholder": "Search, e.g. API key",
+    "search_empty": "Nothing found for “{q}”. Try another word, e.g. “token” or “catalog”.",
+    "search_hint": [
+      "API key",
+      "token",
+      "catalog",
+      "Output",
+      "update"
+    ],
+    "menu": "Contents",
+    "theme": "Light / dark theme",
+    "close": "Close",
+    "nav_home": "Start",
+    "nav_quests": "Quests",
+    "group_tutorial": "Tutorial",
+    "group_guide": "Guide A–Z",
+    "group_docs": "Extras",
+    "group_tutorial_lead": "The same chapters as /tutorial in the bot, in order.",
+    "group_guide_lead": "Answers from /setup-guide, for when you look for something specific.",
+    "group_docs_lead": "Installing from zero, the glossary and things the bot itself doesn't show.",
+    "hero_title": "From zero to codes in your game, step by step",
+    "hero_text": "Pick a quest and go through it checkpoint by checkpoint. You don't need to know how to code, and your progress saves by itself, so you can take breaks.",
+    "hero_start": "Start from zero",
+    "hero_continue": "Back to the quest: {quest}",
+    "hero_ready": "Bot already running? Connect your game",
+    "badges_title": "Your badges",
+    "badges_count": "Quests done: {n} of {total}",
+    "badges_hint": "Finish your first quest and its badge lights up here.",
+    "quests_title": "Pick a quest",
+    "quests_lead": "Each quest is a few checkpoints. Click “Done” when you finish a step and watch the bar fill up.",
+    "quest_new": "New",
+    "quest_progress": "{done} of {total}",
+    "quest_done": "Done",
+    "minutes": "about {n} min",
+    "checkpoint": "Checkpoint {n} of {total}",
+    "optional": "Optional",
+    "mark_done": "Done, next",
+    "mark_done_last": "Done, get the badge",
+    "done": "Done",
+    "undo": "Undo",
+    "prev": "Back",
+    "next": "Next",
+    "back_quests": "All quests",
+    "stuck": "Stuck? Look here:",
+    "complete_title": "Badge earned!",
+    "complete_text": "Quest “{quest}” complete. Nice work!",
+    "complete_next": "Next quest: {quest}",
+    "complete_home": "Back to start",
+    "complete_all": "You have every badge. Your bot is ready!",
+    "where_tutorial": "/tutorial → chapter {n}",
+    "where_guide": "/setup-guide → topic {n}",
+    "in_quest": "Quest: {quest}",
+    "mark_read": "Mark as done",
+    "on_this_page": "On this page",
+    "commands_title": "Three commands to remember",
+    "cmd_tutorial": "The tutorial inside the bot: shows what already works and what's missing.",
+    "cmd_setup": "Discord: language, the bug report channel, diagnostics.",
+    "cmd_setup_roblox": "Your game: connection, Studio file, names from the game.",
+    "copy": "Copy",
+    "copied": "Copied",
+    "click_to_copy": "Click to copy",
+    "help_title": "Something doesn't work?",
+    "help_text": "Start with these pages. Most problems have a ready fix there.",
+    "all_docs": "All documentation",
+    "count_sections": "Chapters: {n}",
+    "to_badge": "Left to the badge: {n}",
+    "cheers": [
+      "Great!",
+      "Keep it up!",
+      "Checkpoint reached!",
+      "You're doing great!",
+      "One more step done!"
+    ],
+    "reset": "Reset progress",
+    "reset_confirm": "Reset the progress and badges on this page?",
+    "footer": "The texts on this page come from the same files the bot uses for /tutorial and /setup-guide. Bot version {version}.",
+    "not_found": "There's no such page. Pick something from the contents.",
+    "in_bot_check": "Check it in the bot (✅/⚠️)",
+    "in_bot_same": "Same text in the bot",
+    "needs": "First: {quest}",
+    "quest_hint": "This page guides you step by step and the bot checks your work: steps with a /tutorial badge show ✅ or ⚠️ on Discord."
+  },
+  "quests": {
+    "from_zero": {
+      "title": "Bot online from zero",
+      "desc": "Python, the bot account, the first start and the invite to your server.",
+      "goal": "At the end the bot is online on your server and answers /tutorial.",
+      "badge": "Bot online"
+    },
+    "server": {
+      "title": "Your Discord server",
+      "desc": "The bot's language and the bug report channel.",
+      "goal": "At the end the bot speaks your language and posts its error reports on your private channel.",
+      "badge": "Server host"
+    },
+    "codes": {
+      "title": "Your first code in the game",
+      "desc": "The game connection, one file in Studio and your first code.",
+      "goal": "At the end a player types a code in your game and gets the reward.",
+      "badge": "Code master"
+    },
+    "catalog": {
+      "title": "Game catalog",
+      "desc": "The exact names of currencies and items, so codes have no typos.",
+      "goal": "At the end the bot suggests only names that really exist in your game.",
+      "badge": "Name keeper"
+    },
+    "update": {
+      "title": "Stress-free updates",
+      "desc": "A new bot version and the Studio file swap, without losing your changes.",
+      "goal": "At the end the bot and the game run the newest version, and your changes are still there.",
+      "badge": "Always up to date"
+    },
+    "hosting": {
+      "title": "Bot 24/7",
+      "desc": "So the bot keeps running when you turn your computer off.",
+      "goal": "At the end the bot is online all the time.",
+      "badge": "Night shift"
+    },
+    "live": {
+      "title": "Eggs and events",
+      "desc": "Control your game straight from Discord: eggs, events, gifts, announcements, bans and the leaderboard.",
+      "goal": "At the end you create an egg and an event on Discord, and players see them in the game.",
+      "badge": "Egg breeder"
+    }
+  },
+  "sections": [
+    {
+      "id": "features",
+      "emoji": "🌟",
+      "title": "What the bot can do",
+      "menu": "Every feature in one place",
+      "intro": "A Discord bot for **Roblox** game creators: you run your game straight from Discord. Promo codes, eggs, multiplier events, gifts, on-screen announcements and bans reach the game within seconds, without publishing it. You configure everything on Discord, without editing files.\n\nThe bot speaks **English, Polish and Spanish**. English is the default, and you can switch the language with one click in `/setup`.",
+      "fields": [
+        [
+          "📜 Promo codes that work in the game",
+          "- A new code with a form in `/setup-roblox` → **📜 Promo codes** or the `/code-add` command: validity and rewards (currency, EXP, a permanent or timed item, e.g. VIP for 24 h).\n- Codes reach the game **in a few seconds**, without publishing a game update (Roblox Open Cloud).\n- `/code-remove` removes one code or several at once from a list. `/codes` shows players the active codes.\n- A ready file for Roblox Studio with a code window, double-redeem protection and automatic rewards.\n- **🕹️ Control panel** in your team's channel: administrators and the roles they choose run the game with buttons (`/setup-roblox` → 🕹️ Control panel)."
+        ],
+        [
+          "🧪 Inside your game",
+          "- A ready **code window** with a **Codes** button (English, Polish and Spanish), plus a template if you want your own look.\n- A **⚙️ Manager** panel that only the game's owner sees: active codes, events, eggs with their chances, waiting gifts, your player data, settings you can change live, test tools and the kit's messages. The owner also **creates codes, events, eggs, gifts, announcements and bans right there**, and the game does it by itself, even when the bot is off.\n- The **game catalog** (`DiscordCatalog`): one list of your game's exact names, so the bot refuses typos before a code that can't work is created."
+        ],
+        [
+          "👥 For players on Discord",
+          "- `/codes` – the active codes to type in the game.\n- `/eggs` – eggs with their pets and chances.\n- `/events` – the events running now.\n- `/leaderboard` – the game's top players."
+        ],
+        [
+          "⚙️ Setup without editing files",
+          "- `/tutorial`: a step-by-step tutorial inside the bot, with a live view of what already works (✅/⚠️) and buttons that open the right panels.\n- `/setup`: Discord: language, the bug report channel and the log channel, diagnostics and the list of the bot's servers.\n- `/setup-roblox`: your game: game link, API key, Studio file, names from the game (the game reports them itself), the game catalog, codes and a check of everything.\n- `/setup-roblox` also has the panels for eggs, events, gifts, on-screen announcements, bans, the player card, the leaderboard and the control panel.\n- `/setup-guide`: a step-by-step guide in three languages.\n- `/help`: the list of commands."
+        ],
+        [
+          "🔄 Updates and error reports",
+          "- You download a new version from the #buyers channel on the CodeHatch HQ Discord server (you get the 💎 Buyer role when you buy): you copy the new files over the old ones and your settings and data stay (`CHANGELOG.md` lists what changed). The bot window and the bottom of `/help` show your version, e.g. `CodeHatch 1.0.0`.\n- Automatic error reports on your own bug report channel (`/setup` → Channels). They never leave your server.\n- The log channel (`/setup` → Channels) records every change in the game made from Discord or from the ⚙️ Manager, with who made it. Changes made in the game while the bot was off are written there when it starts again."
+        ],
+        [
+          "🎮 Your game controlled from Discord",
+          "- **Eggs:** `/egg-create` puts an egg on a stand in the game: price, pets with chances, color, limited time. `/egg-edit` and `/egg-remove` change it live. It shows the exact chances, also during a luck event, and won't sell an egg to a player Roblox doesn't allow paid random items.\n- **Events:** `/event-start` turns on multipliers on every server, e.g. 2x Coins, 2x EXP or more luck for rare pets, with a timer on the players' screens.\n- **Gifts:** `/give` sends currency, EXP or an item to one player (by username or Roblox ID), no code needed. The **Send a gift** button in `/setup-roblox` first shows a draft where you add EXP and the item's time; nothing reaches the game before ✅. Offline players get it when they join.\n- **Announcements:** `/announce-game` shows a message on the screen of every player. Write without links: Roblox hides a whole text with a link (####).\n- **Bans:** `/roblox-ban`, `/roblox-unban` and `/roblox-ban-check` work on every server through Roblox's official ban API.\n- **Leaderboard:** `/leaderboard` shows the top players from the leaderboard your game already saves (an OrderedDataStore). The bot only reads it."
+        ],
+        [
+          "🔌 Your game works without the bot",
+          "Codes, eggs, events and gifts are saved in your game, so they keep working when the bot is off (your computer is asleep, the bot window is closed). The game's **⚙️ Manager** doesn't need the bot at all: in your game you create and remove codes, eggs, events, gifts, announcements and bans by yourself. The bot is needed only for Discord: the `/` commands, the panels and the log channel (the changes made in the game while it was off are written there when it starts). So you don't have to keep the bot online 24/7: it's a convenience."
+        ]
+      ]
+    },
+    {
+      "id": "prepare",
+      "emoji": "🧰",
+      "title": "What you need and Python",
+      "menu": "Preparing your computer, once",
+      "intro": "You do this chapter once per computer. **You don't need to know how to code.** Do the steps in order and don't skip any.",
+      "fields": [
+        [
+          "What you need",
+          "- a Windows computer (or Linux, or a bot hosting),\n- a Discord account and your own Discord server where you are an administrator,\n- a Roblox game you can edit in Roblox Studio,\n- the bot's ZIP file (you get it in your Purchase ticket on the CodeHatch HQ Discord server)."
+        ],
+        [
+          "Unzip the bot package",
+          "1. Right-click the ZIP file (`CodeHatch-1.0.0.zip`) → **Extract All…**.\n2. Choose a folder that stays, e.g. `C:\\Bots`, and click **Extract**.\n3. Open the extracted folder, then the `CodeHatch-1.0.0` folder inside it: among others you'll see `start.bat`, `main.py` and `DOCS.html`. That's your bot folder.\n\nDon't run anything straight from the ZIP preview: unzip it first. Don't put the bot folder in **OneDrive** or **Dropbox** (on many computers the Desktop and Documents are synced by OneDrive): they lock files while the bot uses them. `C:\\Bots` is a safe place."
+        ],
+        [
+          "Install Python (once per computer)",
+          "The bot is tested on **Python 3.14**; 3.12 and 3.13 work too. Install it from **python.org**, not from the Microsoft Store.\n1. Go to **python.org** → **Downloads** → **Windows**.\n2. Under the newest Python 3.14 click **Windows installer (64-bit)** and run the downloaded file.\n3. **On the first screen tick “Add python.exe to PATH” at the bottom**, then click **Install Now**. At the end you'll see *Setup was successful* → **Close**.\n4. Done. You don't open anything in it: the bot starts it by itself.\n\nAlready have an older Python (3.10 or 3.11)? The bot starts with it too, but 3.12–3.14 is recommended. A Python newer than 3.14 hasn't been tested yet."
+        ]
+      ]
+    },
+    {
+      "id": "discord_app",
+      "emoji": "🤖",
+      "title": "The bot account on Discord",
+      "menu": "Application, intent and token",
+      "intro": "The bot needs its own Discord account. You create it once, on Discord's developer website. The program in the bot folder will “drive” that account.",
+      "fields": [
+        [
+          "1. New application",
+          "1. Go to **discord.com/developers/applications** and sign in.\n2. **New Application** → type a name (e.g. your game's name) → tick the agreement → **Create**.\n\nYou'll see your new application's page. Already made one before? Open it from the list instead of creating another."
+        ],
+        [
+          "2. Intent and token",
+          "**Bot** tab:\n- turn on **Server Members Intent** → **Save Changes** (the other two intents, Presence and Message Content, are not needed),\n- click **Reset Token** → **Yes, do it!** → **Copy**. That's the bot token: you'll paste it into `.env` in a moment."
+        ],
+        [
+          "⚠️ The token is the bot's password",
+          "You put it only into the `.env` file. **Never send it to anyone**, not even someone who is helping you. If it leaks, click **Reset Token** again and paste the new one."
+        ],
+        [
+          "Private bot",
+          "**discord.com/developers/applications** → your app → first **Installation**: set **Install Link** to **None** and untick **User Install** → **Save Changes**; then **Bot** → turn **Public Bot** off → **Save Changes**. In this order: with an Install Link set, Discord refuses with “Private application cannot have a default authorization link”. You still invite the bot with the OAuth2 → URL Generator link. The bot works only on your servers anyway (it leaves strangers' servers by itself), but this way nobody can even try to add it. `/setup` → **🌐 Servers** shows the list: a server is added by itself when you (the account that created the bot) own it or have **Administrator** or **Manage Server** there.\n\n**The bot's servers.** The bot's settings are shared by all its servers, so it works only on its owner's servers (the Discord account that created the bot in the Developer Portal); from any other server it leaves by itself. Only the bot's owner can change the list (`/setup` → **🌐 The bot's servers**):\n- **Add a server ID** lets you add a server BEFORE you invite the bot there, e.g. a friend's server where you have no rights. A server ID has 17–20 digits. Get it: Discord → ⚙️ **User Settings** → **Advanced** → turn on **Developer Mode**, then right-click the server → **Copy Server ID**. You'll see ✅ *Server … was added*. Now invite the bot there: it stays.\n- The **Remove a server (bot leaves)** list removes a server from the list and the bot leaves it.\n- The window also warns you when **Public Bot** is on (follow the *Private bot* steps above)."
+        ]
+      ]
+    },
+    {
+      "id": "first_start",
+      "emoji": "▶️",
+      "title": "First start",
+      "menu": "start.bat and the .env file",
+      "intro": "Now you start the bot for the first time. Keep the token from the previous step at hand (if it's gone from the clipboard, click **Reset Token** again).",
+      "fields": [
+        [
+          "1. Run start.bat",
+          "1. Open the unzipped bot folder (the one with `start.bat`, `main.py` and `DOCS.html`).\n2. Double-click **`start.bat`**. A black window opens: that's the bot's program (its messages are in English).\n3. Windows shows “Windows protected your PC”? Click **More info** → **Run anyway**.\n\nThe first time, the bot prepares the Python environment and then opens Notepad with the `.env` file (it's made from `.env.example`, the template in the zip)."
+        ],
+        [
+          "2. Paste the token into .env",
+          "In Notepad you'll see the line `DISCORD_TOKEN=your_bot_token_here`. Select and delete `your_bot_token_here` and paste the token in its place (**Ctrl+V**). Keep `DISCORD_TOKEN=` as it is, with no spaces or quotes, e.g. `DISCORD_TOKEN=MTI3NDk…`."
+        ],
+        [
+          "3. Save and wait",
+          "Save the file (**Ctrl+S**) and close Notepad. The bot now installs its libraries: for a few minutes the window may look frozen, that's normal. When `✅ Synced … commands` shows up, the bot works. The window also shows a block with `📦 CodeHatch 1.0.0` (your version) and `🎮 The bot is ONLINE!`. **Don't close this window**: closing it turns the bot off.\n\nNormal at the first start:\n- `⚠️ \"Public Bot\" is ON in the Discord Developer Portal…`: just a reminder. The bot works; make it private later (chapter *The bot account on Discord* → *Private bot*).\n- Clicking into the window doesn't pause the bot (it turns Windows' select mode off). If the window title still starts with *Select*, press **Esc**."
+        ],
+        [
+          "Getting back to .env and restarting the bot",
+          "- **Open `.env` again:** in the bot folder right-click `.env` → **Open with** → **Notepad**.\n- **Restart the bot:** close the black window and double-click `start.bat`.\n\nRestart the bot after every change in `.env`."
+        ],
+        [
+          "Linux or a server",
+          "- **Linux / macOS / server:** `bash start.sh` (the same, but without Notepad; fill in `.env` with `nano .env`).\n- Manually: `pip install -r requirements.txt`, then `python main.py` (after every update run `pip install -r requirements.txt` again)."
+        ],
+        [
+          "💡 Your own files",
+          "Three things in the bot folder are yours: `.env` (token and keys), `config.json` (settings) and the `data` folder (database: codes, eggs, events, gifts). Copy them somewhere safe from time to time and **never overwrite them** when you update the bot. Moving to another computer or host is fine: copy the whole folder."
+        ]
+      ]
+    },
+    {
+      "id": "invite",
+      "emoji": "📨",
+      "title": "Invite the bot to your server",
+      "menu": "A link with permissions and the bot's role",
+      "intro": "The bot runs, now it has to join your Discord server.",
+      "fields": [
+        [
+          "The invite link",
+          "1. Developer Portal → your application → **OAuth2** → **URL Generator**.\n2. Under *Scopes* tick **bot** and **applications.commands**.\n3. Below, under *Bot Permissions*, tick **View Channels**, **Send Messages**, **Embed Links** and **Read Message History** (the card *Which permissions the bot needs* explains why). Don't tick **Administrator**: the bot doesn't need it.\n4. Copy the link at the bottom, open it in your browser, pick your server → **Authorize**.\n\nThe bot appears in your server's member list."
+        ],
+        [
+          "Which permissions the bot needs",
+          "Only four: **View Channels**, **Send Messages**, **Embed Links** and **Read Message History**. That's all the bot needs: it doesn't give roles and doesn't moderate members, so it never needs **Administrator**. Without these four it can't post its panels and error reports. Invited it with Administrator earlier? It works, but you can take it away: Server Settings → **Roles** → the bot's role → **Permissions** → turn on the four above, turn off **Administrator** → **Save Changes**."
+        ],
+        [
+          "First command: /tutorial",
+          "On your server type **`/tutorial`**. The bot walks you through everything else, chapter by chapter: it shows what already works (✅) and what is missing (⚠️), and the green buttons open exactly the place being explained.\n\n`/` commands can take a few minutes to show up. If you don't see them, press **Ctrl+R** in Discord."
+        ],
+        [
+          "The bot starts in English",
+          "At first the bot speaks English: the welcome “👋 Thanks for adding me!” it posts on the server and `/tutorial` too. To change it: `/setup` → the **🌐 Language / Język / Idioma** list at the very bottom. It works right away."
+        ],
+        [
+          "✅ How to check it worked",
+          "The bot shows as online in the server's member list, and `/tutorial` → chapter 2 (*The bot on your server: permissions*) shows ✅ for the permissions."
+        ]
+      ]
+    },
+    {
+      "id": "start_problems",
+      "emoji": "🆘",
+      "title": "Problems at the start",
+      "menu": "Black window, token, commands",
+      "intro": "The most common troubles on the first start and how to fix them. The messages below are written exactly as the black window shows them: `start.bat` always speaks English, the bot itself speaks the bot's language (English at first).",
+      "fields": [
+        [
+          "`ERROR: Python was not found.`",
+          "Python isn't installed, or “Add python.exe to PATH” wasn't ticked. Install it again from python.org with that option ticked (chapter *What you need and Python*) and double-click `start.bat` again."
+        ],
+        [
+          "`ERROR: The bot needs Python 3.10 or newer, but an older Python was found`",
+          "Windows found an old Python, or only the Microsoft Store shortcut. Install Python 3.14 from **python.org** (chapter *What you need and Python*), with “Add python.exe to PATH” ticked, and run `start.bat` again."
+        ],
+        [
+          "`ERROR: Could not create the Python environment.` or `ERROR: Could not install the libraries. Check your internet connection.`",
+          "Check your internet connection and double-click `start.bat` again. Still failing? Install Python 3.13 or 3.14 from **python.org** (not from the Microsoft Store), delete the `.venv` folder in the bot folder and run `start.bat` again. Also make sure the bot folder isn't in OneDrive or Dropbox."
+        ],
+        [
+          "`The Python environment in the .venv folder is incomplete: creating it again...`",
+          "That's fine: an earlier start broke off, and `start.bat` repairs the `.venv` folder by itself. Wait. Only if it then says `ERROR: The Python environment can't be created with pip.`, install Python again from python.org, delete the `.venv` folder and run `start.bat` again."
+        ],
+        [
+          "`ERROR: The .env file has no bot token yet (DISCORD_TOKEN).` or `❌ ERROR: No valid DISCORD_TOKEN in the .env file!`",
+          "There's no token in `.env`: the text `your_bot_token_here` is still there, or the file wasn't saved. Open `.env` (chapter *First start*, “Getting back to .env”), paste the token in place of that text, save and run `start.bat` again."
+        ],
+        [
+          "`❌ Discord didn't accept the bot token (DISCORD_TOKEN in .env).`",
+          "The token in `.env` is wrong or out of date: Developer Portal → your app → **Bot** → **Reset Token** → **Copy**, paste the new one into `.env` after `DISCORD_TOKEN=` (no spaces or quotes), save and start the bot again."
+        ],
+        [
+          "`❌ Discord refused the connection: the bot needs one intent.`",
+          "The intent isn't on: Developer Portal → your application → **Bot** tab → turn on **Server Members Intent** → **Save Changes**, then start the bot again."
+        ],
+        [
+          "`⚠️ \"Public Bot\" is ON in the Discord Developer Portal…`",
+          "Normal on the first start, not an error: the bot works. It's a reminder to make the bot private when you have a moment (chapter *The bot account on Discord* → *Private bot*)."
+        ],
+        [
+          "`⚠️ No connection to Discord (…). Trying again in … s...`",
+          "No internet, or Discord has a short outage. Nothing to do: the bot waits and tries again by itself."
+        ],
+        [
+          "The black window stopped moving",
+          "The bot turns off the window's select mode, so a click into it doesn't pause the bot. If the window title still starts with *Select*, press **Esc**. A bot folder in OneDrive or Dropbox can also make it hang: move the folder to e.g. `C:\\Bots`."
+        ],
+        [
+          "I don't see the `/` commands",
+          "Wait a few minutes and press **Ctrl+R** in Discord. Check that the bot is on the server (invited with the **applications.commands** scope) and that the black window is open."
+        ],
+        [
+          "A moderator gets “You don't have permission”",
+          "Panels (`/setup`, `/setup-roblox`) and admin commands work only for people with **Administrator** (or the server owner). Allowing the command for another role in **Server Settings → Integrations** only shows it on the list: the bot still checks the permissions itself, so nobody gets past them. Give the person a role with *Administrator* or do the change yourself."
+        ],
+        [
+          "“The application did not respond”",
+          "The bot isn't running: the black window is closed, the computer is asleep, or the bot stopped with an error (see what the black window says). Run `start.bat` again. To keep it running all the time: the quest *Bot 24/7*."
+        ],
+        [
+          "The bot can't post in a channel",
+          "The channel hides itself from the bot. Channel → ⚙️ **Edit Channel** → **Permissions** → add the bot's role and allow **View Channel**, **Send Messages** and **Embed Links**. `/setup` → **🩺 Diagnostics** shows what is missing."
+        ],
+        [
+          "Something doesn't work in the game (e.g. codes)",
+          "`/setup-roblox` → **🧪 Check everything** tells you what is missing. More: *Codes in game: problems*."
+        ],
+        [
+          "`❌ This bot is already running` or `This bot is already running in another window.`",
+          "Another copy of the bot is running (another `start.bat` window, or a hosting panel). Two copies would answer everything twice, so the second one stops. Close the other window."
+        ],
+        [
+          "`❌ config.json can't be read`",
+          "The file was edited by hand and has a mistake (usually a missing comma or quote). The message says the line. Fix it in Notepad, or put back your copy, and start the bot again. Nothing was changed by the bot."
+        ]
+      ]
+    },
+    {
+      "id": "glossary",
+      "emoji": "📖",
+      "title": "Glossary",
+      "menu": "Tricky words explained once",
+      "intro": "Words that show up in the instructions. Read them once and the rest gets easier.",
+      "fields": [
+        [
+          "Discord application / bot",
+          "The bot account you create on Discord's website. The program in this folder “drives” that account."
+        ],
+        [
+          "Bot token",
+          "The bot's password. You put it only into the `.env` file. **Never send it to anyone** (not even someone who is helping you)."
+        ],
+        [
+          "Application ID",
+          "Your bot's number (Developer Portal → your app → **General Information**). It isn't secret, and the invite link from **OAuth2 → URL Generator** already contains it."
+        ],
+        [
+          "Intent",
+          "A switch on Discord's developer website (your app → **Bot** tab) that lets the bot see certain information. This bot needs only one: **Server Members Intent**."
+        ],
+        [
+          "Bug report channel",
+          "A private channel on your server where the bot posts reports about its own errors. You pick it in `/setup` → **📡 Channels**."
+        ],
+        [
+          "`.env`",
+          "The file with secret keys in the bot folder. You open it with Notepad."
+        ],
+        [
+          "`/` command",
+          "On Discord type a slash `/` and the name, e.g. `/tutorial`, then Enter."
+        ],
+        [
+          "Game link",
+          "Your game's address from the browser, e.g. `https://www.roblox.com/games/123456789/Name`. The bot reads the Place ID and Universe ID from it."
+        ],
+        [
+          "API key (Open Cloud)",
+          "A key from Roblox Creator Hub that lets the bot change your game's data (e.g. promo codes)."
+        ],
+        [
+          "Roblox Studio",
+          "The program where you edit your game."
+        ],
+        [
+          "Explorer",
+          "The Studio window that lists everything in the game (Workspace, Players, ServerScriptService…). It's usually on the right. Don't see it? **Window** menu → **Explorer** (or the **Explorer** button on the **Home** tab)."
+        ],
+        [
+          "Properties",
+          "The Studio window with the settings of the selected thing (color, text, size…). Open it the same way: **Window** menu → **Properties** (or the button on the **Home** tab)."
+        ],
+        [
+          "Output",
+          "The Studio window where the game writes messages, including the bot's (`[DiscordCodes] …`). Don't see it? **Window** menu → **Output**."
+        ],
+        [
+          "Play and Publish",
+          "**Play** runs the game as a test in Studio, only for you. **Publish** (**File → Publish to Roblox**, Alt+P) sends players the whole game open in Studio."
+        ],
+        [
+          "Experience Settings",
+          "The game's settings in Studio: **File** menu → **Experience Settings** (older Studio: **Home** → **Game Settings**). This is where you turn on **Security** → **Enable Studio Access to API Services**, among others."
+        ],
+        [
+          "ServerStorage and StarterGui",
+          "More folders in the **Explorer** window. Scripts in **ServerStorage** don't run, so it's where you keep a backup. **StarterGui** holds the windows and buttons a player sees."
+        ],
+        [
+          "Place",
+          "One place (map) of your game. Most games have one; a game with several places needs the bot's file in every place where players type codes."
+        ],
+        [
+          "leaderstats",
+          "A folder in player data where many games keep the currency and points shown in the player list. That's where the bot gives rewards. In games with their own save system (e.g. ProfileStore) it's only a copy: see *Rewards: for the game's developer*."
+        ],
+        [
+          "Black window",
+          "The command window that `start.bat` opens. It's the running bot: `start.bat` writes in English, the bot in its own language, and closing the window turns the bot off."
+        ],
+        [
+          "ServerScriptService",
+          "A folder in Studio (in the **Explorer** window) for scripts that run on the game server."
+        ],
+        [
+          "`DiscordCodes.rbxmx`",
+          "One file from the bot's `scripts` folder that you insert into your game. It lets the game understand commands from Discord."
+        ],
+        [
+          "`DiscordSettings.rbxmx`",
+          "An optional file from the same `scripts` folder with your settings: the **Codes** button, the language, a currency limit per code, the ⚙️ Manager panel. You insert it once next to DiscordCodes, and updates never change it."
+        ]
+      ]
+    },
+    {
+      "id": "updates",
+      "emoji": "🔄",
+      "title": "Bot updates",
+      "menu": "Your version, the new zip, what to keep, CHANGELOG",
+      "intro": "You copy the new files over the old ones, and your token, settings and database stay as they are. It takes a few minutes.",
+      "fields": [
+        [
+          "0. Which version do I have?",
+          "When the bot starts, its window shows `📦 CodeHatch 1.0.0`; the bottom of `/help` on Discord shows it too. After an update the bot writes *🔄 The bot was updated from version … to …*."
+        ],
+        [
+          "Where do I get a new version?",
+          "On the CodeHatch HQ Discord server, in the #buyers channel (you see it with the 💎 Buyer role you got when you bought the bot): download the newest zip (e.g. `CodeHatch-1.0.1.zip`)."
+        ],
+        [
+          "1. See what changed",
+          "Unzip the new version (right-click → **Extract All…**) to a new folder, e.g. `C:\\Bots-new`, and open the file **`CHANGELOG.md`** in it with Notepad. Read **every entry between your version and the new one**, not only the top one: if you skipped a version, its steps (e.g. replacing the Studio file) still apply. It lists what is new and whether the Roblox Studio file `DiscordCodes.rbxmx` changed."
+        ],
+        [
+          "2. Make a backup (just in case)",
+          "Copy your whole bot folder somewhere else, e.g. as `C:\\Bots-backup`. If you're short on space, copy at least `.env`, `config.json` and the `data` folder: that is all your data (token and keys, settings, the database with codes, eggs, events and gifts)."
+        ],
+        [
+          "3. Close the bot",
+          "Close the black window (on a hosting: stop the bot in the panel). Don't copy files while the bot is running."
+        ],
+        [
+          "4. Copy the new files",
+          "1. Open the unzipped new version, select everything inside (**Ctrl+A**) and copy it (**Ctrl+C**). You'll see one folder there (e.g. `CodeHatch-1.0.1`): open it first.\n2. Open your bot folder (the one with `start.bat`) and paste (**Ctrl+V**).\n3. Windows asks about files with the same names: choose **Replace the files in the destination**.\n\n**Never overwrite** `.env`, `config.json` or the `data` folder. If the new version has a file or folder with one of these names, don't copy it."
+        ],
+        [
+          "5. Start the bot again",
+          "Double-click **`start.bat`** (Linux: `bash start.sh`). It installs new libraries by itself, so the first start can take a minute or two. When a line with ✅ shows up (`Synced … commands` or `Slash commands are up to date`), the new version works. The bot also writes *🔄 The bot was updated from version … to …* in the window and on your log channel. New settings are added to `config.json` by themselves, and when the database needs changes, the bot first saves a copy in `data/backups`."
+        ],
+        [
+          "📥 The Roblox Studio file",
+          "**The file `scripts/DiscordCodes.rbxmx` is not replaced inside your game automatically.** When an update changes it, `CHANGELOG.md` says so and `/setup-roblox` shows ⚠️ next to the DiscordCodes file. Only then do the next checkpoint (*Updating the Studio file*). If neither says anything about it, you can skip that step."
+        ],
+        [
+          "Files you changed by hand",
+          "The new version replaces the files in `locales/` (texts) and `scripts/`. If you changed something there yourself, make the same change again after the update. Your own scripts inside your Roblox game are not affected."
+        ],
+        [
+          "Something went wrong?",
+          "1. Read what the black window says and look for it in *Problems at the start*.\n2. To go back to the old version: close the bot, rename the bot folder (e.g. to `Bot-new`), give your backup copy the old folder's name and start `start.bat` in it.\n3. Questions: the project's GitHub Issues page. Attach the file `data/logs/bot.log` (tokens and keys are hidden in it)."
+        ]
+      ]
+    },
+    {
+      "id": "language",
+      "emoji": "🌐",
+      "title": "Bot language: details",
+      "menu": "Commands, the game window, text files",
+      "intro": "",
+      "fields": [
+        [
+          "Good to know",
+          "- **The default language is English.** Change it in `/setup` → the **🌐 Language / Język / Idioma** list (English, Polski, Español). The change applies right away, without a restart.\n- **Messages already posted** (e.g. the game control panel) switch language after you post them again: `/setup-roblox` → **🕹️ Control panel** → **📤 Post the panel here**.\n- **Slash command descriptions** are shown to every user in their own Discord language (English, Polish or Spanish), regardless of the bot setting. This is a built-in Discord feature.\n- **The in-game code window** has its own `Language` setting in the **DiscordSettings** module (default `auto`, i.e. the player's Roblox language; chapter *Codes: rules and settings*). The window template has its own *Settings → Language*.\n- The bot's texts are in the `locales/` folder (`en.json`, `pl.json`, `es.json` and the `guide_*.json` guides). You can adjust them, and bot updates refresh them."
+        ]
+      ]
+    },
+    {
+      "id": "config",
+      "emoji": "🛠️",
+      "title": "Editing config.json manually",
+      "menu": "For advanced users, you don't have to",
+      "intro": "",
+      "fields": [
+        [
+          "Fields in the file",
+          "Everything you set in `/setup` and `/setup-roblox` is saved in `config.json`. Close the bot before you edit the file and start it again afterwards.\n- `bot_settings.language` – `en`, `pl` or `es`,\n- `bot_settings.home_guild_ids` – the servers the bot works on (filled in by itself; also `/setup` → 🌐 Servers),\n- `roblox.universe_id` – the game's Universe ID (Creator Hub → Creations → game → ⋯ → Copy Universe ID),\n- `roblox.place_id` – the game's Place ID (the number in the game link),\n- `ai_support.developer_bug_channel_id` – the bug report channel ID (the section name comes from older versions),\n- `moderation.log_channel_id` – the log channel ID,\n- `leaderboard.datastore`, `scope`, `label` – the leaderboard (also `/setup-roblox` → 🏆 Leaderboard).\nMissing settings are added by the bot itself with their default values."
+        ],
+        [
+          "How to copy a channel ID",
+          "1. Discord → ⚙️ **User Settings** → **Advanced** → turn on **Developer Mode**.\n2. Right-click the channel → **Copy Channel ID**.\n3. Paste the number after the colon, without quotes, e.g. `\"log_channel_id\": 123456789012345678`."
+        ]
+      ]
+    },
+    {
+      "id": "rewards",
+      "emoji": "🧩",
+      "title": "Rewards: for the game's developer",
+      "menu": "How the file gives rewards, OnReward, a text for AI",
+      "intro": "This chapter is for someone who knows their game's code, or for an AI assistant helping them. Games that keep and save their currency in `leaderstats` work without it. Not sure about your game? Do the test in the second card first.",
+      "fields": [
+        [
+          "How the script gives rewards",
+          "Rule: **the script never invents a place for a reward.** It adds it only where your game already keeps it. The currency and item names in the bot (`/setup-roblox` → 🔍 What your game has) must match the names in the game (letter case, spaces and underscores don't matter).\n\n| Reward | Where the script adds it |\n|---|---|\n| Currency | an `IntValue`/`NumberValue` named like the currency (e.g. `leaderstats.Coins`, `Data.Coins`) or an existing numeric player attribute with that name |\n| EXP | a value or attribute named `EXP`, `XP` or `Experience` |\n| Permanent item | a `BoolValue` (set to `true`) or `IntValue`/`NumberValue` (+1) named like the item or `Has<Item>`, or an existing attribute with that name |\n| Timed item | a value or numeric attribute `<Item>_ExpiresAt` (an `os.time()` timestamp), extended by the reward duration |\n\n- The player's data is searched **skipping** `Backpack`, `StarterGear`, `PlayerGui` and `PlayerScripts`, so tools and UI are never mistaken for data.\n- **If there is no place for any part of the reward**, the code is not used up and the player gets nothing. They see a message that the code can't be redeemed in this game yet, and the server log (*Output* window) says exactly what is missing.\n- **If several places match** (e.g. `leaderstats.Coins` and `Data.Coins`), the script doesn't guess. It lists both paths in the log and refuses the reward, and the bot warns you on Discord already when you pick such a name (*… is in 2 places in your player data*). Remove or rename the extra value, or use `OnReward` / `OnHatch`.\n- **If an error interrupts giving a reward halfway**, every change already made is undone and the code is not used up."
+        ],
+        [
+          "🧪 Test: does the reward stay after joining again?",
+          "Many games save their data with their own scripts (ProfileStore, ProfileService, DataStore2, data tables) and only **copy** the currency into `leaderstats` for the player list. The kit then adds the reward to the copy: the player sees it, but it's gone after joining again. Check it once:\n1. Create a test code with a little currency, e.g. `TEST1` with 10 Coins.\n2. Join the **published** game and redeem it. Note your Coins.\n3. Leave the game, wait about a minute and join again.\n4. Still the same Coins (with the 10 added)? Rewards work by themselves, you don't need this chapter.\n5. The 10 Coins are gone? Your game needs `Core.OnReward` (codes **and** gifts from `/give`), `Core.OnSpend` (egg prices) and `Live.OnHatch` (pets), as described below."
+        ],
+        [
+          "Games with their own save system (ProfileStore, ProfileService, DataStore2, data tables)",
+          "**No external script can see** data kept in Lua tables in the game's memory. This is a Roblox limitation, not a limitation of this system. In such a game the automatic mode either reports a missing place or writes into a copy like `leaderstats` that isn't saved. Add **one function** in any server script; it is used for promo codes **and** for gifts from `/give`:\n```lua\nlocal Core = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Core\"))\n\nCore.OnReward = function(player, reward)\n\t-- reward.currency = { name = \"Coins\", amount = 500 }                                     (may be nil)\n\t-- reward.exp      = 2000                                                                 (may be nil)\n\t-- reward.item     = { name = \"VIP Pass\", is_temporary = true, duration_seconds = 86400 } (may be nil)\n\t-- reward.refund   = true when this gives BACK the price of an egg that couldn't hatch:\n\t--                   add exactly that amount, never multiply it (no 2x gamepass, no Live.GetMultiplier)\n\n\t-- 1. First check that you can give EVERYTHING (e.g. the player's profile is loaded, you know the item).\n\t--    If not: return false  (add nothing – the code won't be used up)\n\t-- 2. Only then add the rewards in your save system.\n\treturn false -- change to \"return true\" only after you add the reward above\nend\n```"
+        ],
+        [
+          "Where to put it (step by step)",
+          "1. In Studio right-click **ServerScriptService** → **Insert Object** → **Script**.\n2. Rename the new script to `CodeRewards`.\n3. Delete its `print(\"Hello world!\")` line and paste the code from above.\n4. Inside the function write how to add the reward in your save system (or paste the text for an AI assistant, below)."
+        ],
+        [
+          "⚠️ Do not paste this into the `DiscordCodes` script",
+          "that file is replaced on updates, while your separate script stays.\nWhat the result means:\n- `true` – rewards given, code used up,\n- `false` or `nil` – **nothing was given** and the code is **not** used up (the player can try again, a gift keeps waiting). The automatic mode is **not** tried, because with your own save system it would write into a copy that is lost on the next join. Return `false` when the player's data isn't ready yet (e.g. the profile is still loading),\n- an error (`error`) – the code is marked as redeemed and the server log shows the error. This is on purpose: if the function gave part of the reward and only then crashed, the player can't collect that part over and over.\n\nAfter a successful redeem you can also listen to the `Core.CodeRedeemed:Connect(function(player, code, reward) end)` event, e.g. for effects."
+        ],
+        [
+          "Eggs in such a game: OnSpend and OnHatch",
+          "An egg takes its price through `Core.OnSpend` and gives the pet through `Live.OnHatch`. Put both in the same `CodeRewards` script:\n```lua\nCore.OnSpend = function(player, currencyName, amount)\n\t-- take the amount from your save system and return true;\n\t-- return false if the player doesn't have enough (take nothing then)\n\treturn false\nend\n\nlocal Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))\nLive.OnHatch = function(player, egg, petName)\n\t-- add the pet to your pet system; return false if you couldn't (the price is given back)\n\treturn true\nend\n```\n**If you set `OnSpend`, set `OnReward` too.** When a pet can't be given, the kit gives the price back through `OnReward` with `reward.refund = true`. Without `OnReward` the refund would go into a copy such as `leaderstats` and disappear. If your `OnReward` multiplies rewards (e.g. a 2x Coins gamepass or `Live.GetMultiplier`), skip that when `reward.refund` is `true`, otherwise the player gets back more than they paid."
+        ],
+        [
+          "Your own egg shop and your own data loading",
+          "Everything here runs on the server, in a Script in ServerScriptService. Put it in the same `CodeRewards` script as `OnReward` (not in the `Live` file: an update would undo it). Get the module first:\n```lua\nlocal Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))\n```\n- `Live.GetEggs()` – the list of eggs that are in the game right now (from Discord and from the ⚙️ Manager). Each one has `id`, `name`, `price`, `currency`, `pets` (a list of `{ name, chance }`), `spot` and `ends_at` (0 = no end).\n- `Live.GetChances(eggId)` – the chances to SHOW in your own UI, exactly what the player gets now (a luck event included): `{ { name = \"Cat\", chance = 60 }, ... }`. An empty list when there is no such egg.\n- `Live.OpenEgg(player, eggId)` – buys the egg from your own button, exactly like on the egg stand. It checks that the egg is open; it follows Roblox's rules on paid random items (PolicyService: some players can't buy and get a message); if the chances changed a moment ago (a luck event) it takes nothing; then it takes the price (`Core.OnSpend` or the value in the player's data) and gives the pet (`Live.OnHatch` or the value named like the pet in the player's data). If the pet can't be given, the price is returned (it tries a few times; if that fails, the Output window says who should get how much back by hand). The player sees the same hatch screen. At most 1 opening per second per player. It returns nothing: the result is on the player's screen and in the `Live.Hatched` signal.\n- `Live.GetActiveEvents()` – the events running now (their multipliers already work). A new event starts 10 seconds after you create it (the countdown), so it isn't here yet. If you only need the multiplier, the `Live.GetMultiplier` you already know is enough.\n- `Live.DeliverGifts(player)` – gifts from `/give` or the ⚙️ Manager are handed out by the kit 8 seconds after the player joins, so your game has time to load their data. If your game loads data for longer, call `Live.DeliverGifts(player)` right after the data is loaded.\n- `Live.Config.PaidRandomItems = false` – put it in your script ONLY if none of the egg currencies can be bought with Robux (then the kit doesn't ask Roblox about paid random items). If a currency can be bought with Robux, leave the default `true` (Roblox's rules).\n\nExample: your own egg shop (chances in your UI, buying from a button):\n```lua\nlocal egg = Live.GetEggs()[1]\nif egg then\n\tfor _, p in ipairs(Live.GetChances(egg.id)) do\n\t\tprint(p.name, p.chance .. \"%\") -- show this in your UI\n\tend\n\t-- when the player clicks your button (on the server, e.g. in a RemoteEvent handler):\n\tLive.OpenEgg(player, egg.id)\nend\n```\nThe signals `Live.EventsChanged`, `Live.Hatched` (`player, egg, petName`) and `Live.GiftReceived` are described in *Updates without conflicts* and at the top of the `Live` script."
+        ],
+        [
+          "💡 Do you have an AI assistant helping with your game?",
+          "Paste this description to it and it will connect the rewards to your system:\n```text\nMy Roblox game has a promo code system installed: the Script `ServerScriptService.DiscordCodes` with the `Core` module. Do not change its files. In a separate server script set `Core.OnReward = function(player, reward) ... end` (get the module with `require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Core\"))`). `reward.currency = {name, amount}` is a currency, `reward.exp` is experience points, `reward.item = {name, is_temporary, duration_seconds}` is an item or pass (timed when `is_temporary`), `reward.refund = true` means it gives back an egg price: add exactly that amount, without any multipliers or gamepass bonuses. This function is used for promo codes and for gifts. Map these rewards to my player data save system. First check that every part of the reward can be given (profile loaded, known names); if not, change nothing and return `false` with a warning in the log. If yes, give everything and return `true`. Don't throw errors after giving part of a reward. Also set `Core.OnSpend = function(player, currencyName, amount)` (take the egg price from my save system, return true, or false and take nothing if the player doesn't have enough) and, with `local Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))`, `Live.OnHatch = function(player, egg, petName)` (add the pet to my pet system, return false if that isn't possible).\n```"
+        ],
+        [
+          "Use only one code system in a game",
+          "If the game already has its own script that receives these codes (e.g. one written earlier by an AI), don't insert `DiscordCodes.rbxmx` next to it, because both would handle the same codes and show two windows."
+        ],
+        [
+          "Your own window instead of the built-in one",
+          "set `ShowButton = false` in **DiscordSettings** and call `game.ReplicatedStorage.DiscordCodesRedeem:InvokeServer(code)`. It returns `success, messageKey, rewards`: the key is `ok`, `invalid`, `expired`, `already`, `busy`, `cooldown`, `unsupported`, `error` or `left`, and on success `rewards` is a table `{currency = {name, amount}, exp, item = {name, is_temporary, duration_seconds}}` for showing the player what they got.\n\nThe script sources (for reference or for Rojo users) are in `scripts/DiscordCodes/`."
+        ]
+      ]
+    },
+    {
+      "id": "codes_rules",
+      "emoji": "🎟️",
+      "title": "Codes: rules and settings",
+      "menu": "Who does what, code format, group games, your settings, the window",
+      "intro": "",
+      "fields": [
+        [
+          "Who is responsible for what",
+          "| The bot and `DiscordCodes.rbxmx` provide | Your game must have |\n|---|---|\n| creating and removing codes on Discord, validity | currencies and items named as in `/setup-roblox` → *🔍 What your game has*, or an `OnReward` function |\n| syncing codes with the game in seconds | a published game version with `DiscordCodes.rbxmx` inserted (in every place where players enter codes) |\n| protection against double redeeming and against losing a code on errors | an API key with permissions for this game (`/setup-roblox` → *🔑 Game connection*) |\n| automatic rewards in games using `leaderstats`, values or attributes | optionally the window template (`DiscordCodesWindow.rbxmx`) if you want your own look |\n| a ready window with a button, in English, Polish and Spanish, and a template to edit | |\n\nFrom now on new and removed codes (the `/setup-roblox` → *📜 Promo codes* panel or the `/code-add` and `/code-remove` commands) sync with the game on their own, and the bot's reply shows the result. `/sync-codes` sends the codes manually. If a sync fails (e.g. a temporary Roblox outage), the bot retries every 2 minutes. Game servers also refresh the codes by themselves about every minute."
+        ],
+        [
+          "Codes",
+          "only the letters A–Z (no accented letters), digits, `_` and `-`, up to 30 characters, no spaces (the game removes spaces when a player types a code, so the bot refuses them). Letter case doesn't matter when typing in the game."
+        ],
+        [
+          "Game owned by a group",
+          "create the API key in Creator Hub after switching to the group. You need a group role allowed to manage API keys."
+        ],
+        [
+          "Your settings: DiscordSettings",
+          "**DiscordSettings** is your own module with the settings of the DiscordCodes file: updates never touch it. Without it the defaults are used, so insert it only to change something:\n1. Studio → right-click **ServerScriptService** → **Insert** → **Import Roblox Model** → `DiscordSettings.rbxmx` from the bot folder → `scripts`.\n2. Check that it sits next to **DiscordCodes**, not inside it. A game with several places needs it in every place that has DiscordCodes.\n3. Double-click it and change the value after `=` (keep the quotes and commas).\n4. Click **Play**: the **Output** shows `[DiscordCodes] Your settings from DiscordSettings: …`, or a warning about a misspelled name or a wrong value (then the default is used).\n\nChanged values in *DiscordCodes → Settings* of an older file? Type them here once."
+        ],
+        [
+          "Settings of the built-in window",
+          "(in **DiscordSettings**):\n- `ShowButton` – `true` shows the **Codes** button, `false` hides it (e.g. when you open the window from your own menu),\n- `ButtonPosition` – where the **Codes** button is: a place on the screen, one of `\"Left\"`, `\"Right\"`, `\"Top\"`, `\"Bottom\"`, `\"Center\"`, `\"TopLeft\"`, `\"TopRight\"`, `\"BottomLeft\"`, `\"BottomRight\"` (default `\"Left\"`). Every place below can be moved by pixels too: after the name write right (+) or left (-), then down (+) or up (-), e.g. `\"Left 0,-80\"` = 80 px higher, `\"BottomRight -20,0\"` = 20 px more to the left,\n- `Language` – `\"auto\"` (from the player's Roblox settings), `\"en\"`, `\"pl\"` or `\"es\"`; it applies to the window, the events and the messages,\n- `EventPosition` – where the round event icons are (a place, default `\"BottomRight\"`),\n- `EventEffects` – the animations of events: `\"full\"` (default), `\"light\"` or `\"off\"`,\n- `EventIcons` – your own event icons, e.g. `\"Coins=💰, Gems=💎, Strength=💪, EXP=⭐, Luck=🍀\"`: by what the event multiplies (a currency, `EXP`, `Luck`, `All` = every currency) or by the event's name; an emoji or `rbxassetid://123456` (an image you uploaded). Without them: 💰, ⭐, 🍀,\n- `AnnouncementPosition` – where announcements from Discord show (a place, default `\"Top\"`),\n- `NotificationPosition` – where the messages about gifts and hatched pets show (a place, default `\"Bottom\"`),\n- `ManagerPosition` – where the **⚙️ Manager** button is (a place, default `\"TopRight\"`).\nTwo things in the same place move apart by themselves; for anything else use the pixels.\n- `MaxCurrencyPerCode`, `Manager` and `ManagerUsers`: below and in the chapter *Your game from Discord: details*.\n\nTo try a value first, the game's owner can change `ShowButton`, every place (`…Position`), `Language` and `MaxCurrencyPerCode` live in the game: **⚙️ Manager** → **Settings**. That change lasts only until the server restarts; **Copy for DiscordSettings** gives you the lines to paste here (chapter *Your game from Discord: details*).\n\nThe window template (`StarterGui → DiscordCodesGui`) has its own *Settings → Language*. After redeeming, the window shows the player exactly what they got, e.g. “Code redeemed! You got: +50,000 Coins, +2,000 EXP, VIP Pass (1 day)”."
+        ],
+        [
+          "Key security",
+          "limit the key to one game and only the listed operations, and don't share it. If it leaks, delete it in Creator Hub and create a new one."
+        ],
+        [
+          "Order of redeeming and a limit",
+          "The game saves the code as used by the player first and gives the reward right after. If the reward can't be given, the code is released again. Only when a game server stops in that very moment does the player keep the code used without the reward: never a reward twice. `MaxCurrencyPerCode` in **DiscordSettings** (0 = no limit) refuses rewards (e.g. codes) with more currency than you allow. The game tells the bot this limit, so the bot warns in the draft and won't save or send a reward with more currency (commands included)."
+        ]
+      ]
+    },
+    {
+      "id": "live_more",
+      "emoji": "🥚",
+      "title": "Your game from Discord: details",
+      "menu": "Eggs, pets, multipliers and more",
+      "intro": "Eggs, events, gifts and announcements use the same connection as the promo codes: finish the quest *Your first code in the game* first (API key, game connection turned on in `/setup-roblox`, `DiscordCodes.rbxmx` in the game). The `DiscordCodes` script already contains the **Live** module for them.",
+      "fields": [
+        [
+          "The `/setup-roblox` panel",
+          "Every one of these features has buttons there: **🥚 Eggs** (spots in the game, pets ✅/⚠️, *New egg*, *Egg from the game catalog*, *Edit an egg*), **⚡ Events** (which multipliers your game applies, *New event* with the animation first, then several multipliers at once and a time from the list or typed, e.g. `45m`, `2h30m`), **🎁 Gifts & announcements**, **🔨 Bans**, **👤 Player card** (ban, unban and a gift for one player), **🏆 Leaderboard**, and **🧪 Check everything** checks it all. The commands (`/egg-create`, `/event-start`, `/give`...) have more options."
+        ],
+        [
+          "What your game has",
+          "While someone plays (also **Play** in Studio), the DiscordCodes file sends the bot **names**: values in player data (e.g. `leaderstats.Coins`, `Pets.Dragon`), egg spots and models, the multipliers your game code asks for and your own functions (`OnReward`, `OnHatch`...). Never amounts or usernames. In `/setup-roblox` → **🔍 What your game has** you pick currencies, items and pets from these lists, and the commands and panels warn you when something can't work in your game (e.g. a missing pet, currency or multiplier)."
+        ],
+        [
+          "Eggs",
+          "1. In Studio put a Part where an egg should stand. Select it, find **Tags** in the **Properties** window, click **+** and type `DiscordEggSpot`. One part = one egg. On it the kit builds a round pedestal with a glowing ring, and the egg floats up and down. Your part already is a pedestal? Add a **Script** in **ServerScriptService** with the line `require(game.ServerScriptService.DiscordCodes.Live).Config.Pedestal = false` (`.Config.EggAnimation = false` stops the floating). Optional: a text attribute `Spot` with a name (e.g. `Spawn`) that you can use in `/egg-create spot:`.\n2. Optional: your own egg models go into **ReplicatedStorage → folder `DiscordEggs`**. A model named `Default` is used for every egg; another name can be chosen with `/egg-create template:`. Without models the script makes a simple colored egg.\n3. Pets: a rolled pet is added like a code item, i.e. an IntValue (how many) or BoolValue named like the pet in the player's data (e.g. `Pets.Dragon`). If your game has its own pet system, set `Live.OnHatch` (example at the top of the `Live` script). The price is taken from the currency value (e.g. `leaderstats.Coins`) or by your `Core.OnSpend`. If something doesn't fit, nothing is taken from the player and the server log says what is missing.\n4. On Discord: `/egg-create name:Dragon Egg currency:Coins price:500 pets:Cat:60, Dog:35, Dragon:5`. The chances don't have to add up to 100, the bot converts them to percentages. Pick your pet names in `/setup-roblox` → **🔍 What your game has** to get suggestions and warnings.\n5. In the game a player walks up to the egg and holds **E**. After the roll they see a message with the pet's name and its chance.\n\nLimits: up to **20** active eggs and up to **25** pets in one egg. Each egg needs its own `DiscordEggSpot` part: with more active eggs than parts, the extra eggs don't appear and the bot warns you. Chances are shown with up to 4 digits after the first non-zero digit (e.g. 1 of 3 = `33.333%`). When a shown chance is rounded, the bot and the egg stand add the sentence Roblox requires for paid random items: *Probabilities are rounded; total of displayed individual probabilities may not equal 100%.*"
+        ],
+        [
+          "Events",
+          "A new event starts 10 seconds after you create it (on Discord or in the ⚙️ Manager): players first see a small countdown next to the event icons, then a big 3-2-1 at the top; the multiplier works from the start. On the players' screens the event appears by itself: a round icon in the bottom right corner with the multiplier and a countdown; hovering it (a tap on a phone) shows what the event does. Its place and your own icons (e.g. 💪 for a Strength event): `EventPosition` and `EventIcons` in **DiscordSettings** (chapter *Codes: rules and settings*). For the multiplier to really work, add one line where your game gives currency or EXP:\n```lua\nlocal Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))\namount = amount * Live.GetMultiplier(\"Coins\")   -- or \"EXP\"\n```\nEgg luck works by itself: it boosts pets with a chance of 5% or less.\n\nUp to **10** events can run at once. Events that run at the same time multiply: a 2× Coins event and another 2× Coins event give 4× Coins (2× Coins and 3× on all currencies give 6× Coins). The total is capped at ×100.\n\nText typed on Discord (egg, pet and event names) goes through Roblox's text filter before players see it. When you test in Studio (**Play**), changes from Discord arrive within a minute; in the published game within a few seconds.\n\n**Animations.** An event can have an animation every player sees, e.g. **💰 Coin Storm**: a big gold coin falls, bounces and bursts into a coin fountain, then gold coins rain around each player while the event runs. **🌌 Aurora** (made for an EXP boost): night falls in a few seconds, the sky clears of clouds, ribbons of green and violet aurora drift over the sky and glowing EXP orbs rise around each player; at the end the day comes back. The night is only on the players' screens: your game's sky, clouds and time of day return as they were. **🍀 Lucky Breeze** (made for a luck boost): the golden hour comes with rays of sun, ribbons of wind whirl clover leaves into a big four-leaf clover that bursts, and a double rainbow opens over the sky; gusts carry clovers across the sky above the eggs' chances, every egg glows gold with a little clover over it, and a rare pet makes a ring of clovers burst around its egg. **☄️ Meteor Shower** (made for a big currency or a big event): a violet dusk falls, glowing nebulae open over the sky, a ringed planet rises over the horizon and a huge meteor bursts into a fan of meteors; then meteors cross the sky in volleys, some fall far away into pillars of light and crystals, and now and then one falls closer and leaves a cluster of crystals that shatters. **🌸 Sakura Festival** (made for \"everything x2\" or a weekend event): a pink sunset with a moon, cherry trees in bloom, a snowy mountain, a pagoda and a red torii gate on the horizon; a big cherry blossom opens in the sky and bursts into petals, lanterns rise around the map and hang in strings above it, petals fall, swirl in whirlwinds and gather on the ground, and a few follow a running player. Pick it in `/setup-roblox` → **⚡ Events** → **New event** (the first step), under **Animation** in the ⚙️ Manager or in `/event-start` (`animation`). The newest event with an animation shows it; the start show only plays at the start. Effects never come close to the camera and never flash. `EventEffects` in **DiscordSettings**: `\"full\"`, `\"light\"` or `\"off\"` (phones and low graphics always get the light version). More animations come with the next updates."
+        ],
+        [
+          "Gifts, announcements, bans and the leaderboard",
+          "**Gifts and announcements** need nothing more. A gift waits in the game's DataStore until the player joins. If its reward doesn't match the names in your game, it keeps waiting and the server log says why.\n\n**Bans and the leaderboard** don't need any script, only extra API key permissions (Creator Hub → API Keys → your key → Access Permissions):\n- bans: the **user-restrictions** system → pick your game → `universe.user-restriction:read` and `universe.user-restriction:write`. To check it, click `/setup-roblox` → **🔨 Bans** → **Check the permission** (next to **🔍 Find a player**, which opens the player card). It does a harmless read through Open Cloud and answers ✅ *The key can manage bans.* or ❌ with what is missing. It bans nobody;\n- leaderboard: the **ordered-data-store** system → `universe.ordered-data-store.scope.entry:read`, then `/setup-roblox` → **🏆 Leaderboard** (or `/leaderboard-setup`) with the name of the OrderedDataStore your game's leaderboard uses. The bot tests it right away.\n\n**Bans** work only in the published game: in Studio (**Play**) a banned account can still play, so test a ban on a second account in the published game.\n\n**The leaderboard is only read.** The bot doesn't create a leaderboard and never writes to it: it shows the top 10 of an OrderedDataStore that your game already saves (e.g. a *Most Coins* board). If your game has no such leaderboard, skip this feature.\n\nThe text of announcements also goes through Roblox's text filter before players see it."
+        ],
+        [
+          "A gift is stuck: how to remove it",
+          "A gift waits until the game can give it. When its reward has a name your game doesn't know, it keeps waiting and every join writes the reason in the **Output** window. The bot has no button to cancel a sent gift. You can:\n1. **Let it arrive (easiest):** add the missing currency or item to your game under that name (or fix `OnReward`), publish the game: the player gets the gift on their next join.\n2. **Delete it:** create.roblox.com → **Creations** → your game → **Data Stores** (Data Stores Manager) → the data store `DiscordGifts` → find the keys that start with `gift_<the player's UserId>_` → delete the one you want. The player's UserId is the number in their profile link, also shown in `/setup-roblox` → **👤 Player card**.\nThen send a correct gift if you like."
+        ],
+        [
+          "🔌 When the bot is off",
+          "Everything keeps working in the game: codes (also their end time), eggs, events with their timers and waiting gifts are saved in the game's DataStores. The ⚙️ Manager in your game works without the bot too: what you create or remove there happens at once. Only Discord waits for the bot: the commands and panels, and the log channel (when the bot starts, it writes there what was changed in the game meanwhile and adds the new codes, events and eggs to its lists)."
+        ],
+        [
+          "⚙️ Manager in your game",
+          "The purple **⚙️ Manager** button in the top right corner of the screen opens a window in the middle for checking everything in your own game. The game's owner can also create codes, events, eggs, gifts, announcements and bans there (see *⚙️ Manager: create from the panel* below). The tabs are on the left:\n- **Overview** – how many codes, events and eggs this server has, the version of the Studio file, where it runs (Studio or the published game), your own functions (`OnReward`, `OnHatch`...), the currency limit per code and **Refresh from Discord** (reads the changes from Discord right away).\n- **Promo codes** – every active code: *Works for you* or *Blocked* with the reason. In Studio, **Forget** lets you redeem a code again.\n- **Events** – running events with their multipliers and time left, and what your code gets from `Live.GetMultiplier`.\n- **Eggs** – price and chances. **Simulate 100** and **Simulate 1000** only count the results and give nothing; **Open** buys the egg for its normal price.\n- **Gifts & news** – **Deliver mine now** gives you your waiting gifts right away.\n- **Players** – the values and attributes in your player data. In Studio only, **+1,000** and **−1,000** next to each of your currencies (taken from `DiscordCatalog`, egg prices and leaderstats) let you test eggs and prices. If your game saves player data in Studio, this change is saved too. In the published game these buttons don't exist and the server refuses such a change.\n- **Settings** – change the settings live on this server (details below).\n- **Test tools** – test codes and see what players see (details below).\n- **Log** – the kit's lines from the Output window.\n\nHover a row (on a phone: tap its title) to see *What does it do?*. The panel is in English; the list at the top right of the window switches it to Español or Polski."
+        ],
+        [
+          "⚙️ Manager: who sees it",
+          "The game's owner (for a group game: the group owner), everyone in Studio, and the people whose Roblox UserIds (the number in a Roblox profile link) are in `ManagerUsers`, separated by commas, e.g. `\"123456, 987654\"`. Turn the panel off with `Manager = false`. Both are in **DiscordSettings** (chapter *Codes: rules and settings*).\n\nDon't see the button? Check that you play on the game owner's account (or one listed in `ManagerUsers`) and that **DiscordSettings** doesn't have `Manager = false`."
+        ],
+        [
+          "⚙️ Manager: Settings",
+          "The game's owner or a person with the “Settings” permission can change them; people in `ManagerUsers` see only the Start tab. The `MaxCurrencyPerCode` limit can be changed only by the owner. Players' windows change at once:\n- **Codes button** – a switch: on shows the **Codes** button, off hides it.\n- **Button position**, **Manager button**, **Event icons**, **Announcements**, **Notifications** – where each one is: pick a place (Left, Right, Top, Bottom, Center or a corner) and, to move it a little, type pixels in the box next to it (e.g. `0, -80` = 80 px higher) and press **Enter**. Players see it at once.\n- **Players' language** – Auto (player), English, Español or Polski.\n- **Most currency per code** – type a number and press **Enter** to save it; 0 = no limit.\n\nA change lasts only until this server restarts. To keep it for good:\n1. Click **Copy for DiscordSettings**: the panel shows the lines with your values.\n2. In Studio double-click ServerScriptService → **DiscordSettings** and paste those lines in, in place of the lines with the same names.\n3. Click **Play**: the **Output** shows `[DiscordCodes] Your settings from DiscordSettings: …` with your values. Then publish the game.\n\n**Reset** goes back to the values from DiscordSettings. **Manager for helpers** shows how many people have access to the Manager; the owner has a **🛡️ Edit** button next to it that opens the **🛡️ Manager access** tab."
+        ],
+        [
+          "⚙️ Manager: Test tools",
+          "Only you see the results:\n- **Test a code** – type a code and click **Test**. You learn whether it would work for you, has ended, you already redeemed it, or why it can't be given. Nothing is used up.\n- **Show me** shows a preview on your screen: **Announcement** (with your own text), **Gift**, **Event icon** (2x on every currency for 30 seconds) or **Hatch** (pick an egg; one roll with today's chances). Previews give nothing, save nothing and send nothing to other players."
+        ],
+        [
+          "⚙️ Manager: create from the panel",
+          "The game's owner and people who were given that feature (in the 🛡️ tab in the game or on Discord) see the form; people in `ManagerUsers` don't. **The game does it by itself, at once:** the Discord bot doesn't have to run. The checks are the same as on Discord (names from your game catalog, the currency limit, at most 10 events and 20 eggs...). How it goes:\n1. Fill in a form and click its button (**Create**, **Start event**, **Send**, **Ban**...).\n2. The answer shows at the bottom of the panel right away: ✅ what was done, or ⚠️ why it wasn't (e.g. a name that isn't in the catalog).\n3. The tab shows the change at once, and every server of your game gets it within a second or two.\n\nEach code, event and egg shows where it was made: **🎮** with your name (this panel) or **💬 Discord**. Discord sees what you made here too: when the bot runs, it writes every change to the log channel you chose in `/setup` (the changes made while it was off as soon as it starts) and lists the new codes, events and eggs in `/codes`, `/events` and `/eggs`, where you can change or remove them.\n\nAmounts and EXP have the same limit as on Discord: at most 1,000,000,000.\n\nThe currencies and items in the lists come from your game catalog (`DiscordCatalog`) and from egg prices; the egg spots are the parts with the `DiscordEggSpot` tag. A name you need isn't on the list? Add it to `DiscordCatalog` in Studio (`/setup-guide` → *Game catalog*), publish the game and open the panel in a new server."
+        ],
+        [
+          "⚙️ Manager: the forms in each tab",
+          "- **Promo codes** → **New code**: **Code** (the word players type), **Currency** + **Amount**, **EXP**, **Item** (only when your game catalog lists items or pets) with **Item for** next to it (**Permanent**, or from 1 h to 30 days, the same choices as on Discord) and **Valid for** (24 h, 3, 7, 14 or 30 days, or **No end**) → **Create**. An active code with the same name is not replaced: remove the old one first. Each code has **Remove**: it asks **Sure?**, click it again to confirm.\n- **Events** → every running event has **Stop**. **New event**: **Name**, **Boost** (**All currencies**, one currency, **EXP** or **Luck (rare pets)**), the multiplier (×1.5, ×2, ×3, ×5 or ×10) and **How long** (from 1 minute to 7 days) → **Start event**. The multiplier: pick one or type your own (1.1 to 100, e.g. `2.5`). **Animation** (optional) with **Preview** (only on your screen) and **Where**: **All servers**, or **This server** only (not saved, gone when the server stops; the bot doesn't see it).\n- **Eggs** → **New egg**: **Name**, **Price** + **Currency**, **Pets : chance** (e.g. `Cat:60, Dog:35, Dragon:5`), **Spot** (**Any free spot** or one of your egg spots) and **Lasts** → **Create**. Each egg has a **Spot** list with **Move** (pick a spot, then click **Move**) and **Remove**.\n- **Gifts & news** → **Gift to a player**: **Player** (Roblox name or ID), **Currency** + **Amount**, **EXP**, **Item** + **Item for** and **Message** → **Send**. **Announcement**: **Text** and **On screen** (5–60 seconds) → **Send**. A text with a link is refused, because Roblox would hide the whole text (####)."
+        ],
+        [
+          "⚙️ Manager: ban a player",
+          "**Players** → **Ban a player**, in two steps like on Discord:\n  1. Type the **Player** (Roblox name or ID), pick **For** (1 h, 24 h, 7 days, 30 days or **Permanent**) and write a **Reason** (the banned player sees it).\n  2. Click **Check account**. The panel shows the exact account, e.g. *Account: Name (ID 123). Check it, then click Ban…*, and a red **Ban Name (123)** button appears.\n  3. Check that it's the right person, then click the red button. It asks **Sure?**: click again.\n\nThe ban hits exactly the account you checked, so a typo can't ban someone else. You can't ban yourself or the game's creator. **Unban** works with the name or ID typed in **Player**.\n\nThe game bans through Roblox's own ban system: every place of your game, also on the server where the player is now. Turn it on once: in Studio click **Players** in the **Explorer**, tick **BanningEnabled** in **Properties**, then publish the game. In Studio a ban is only checked: it works in the published game."
+        ],
+        [
+          "⚙️ Manager: forms not working?",
+          "- ⚠️ *DataStore is off in Studio*: Studio → **Game Settings** → **Security** → turn on **Enable Studio Access to API Services** → **Save**.\n- ⚠️ *Bans are off in this game*: in Studio click **Players** in the Explorer, tick **BanningEnabled** in Properties, then publish.\n- ⚠️ *… is not in DiscordCatalog*: pick the name from the list, or add it to `DiscordCatalog` (`/setup-guide` → *Game catalog*) and publish.\n- You don't see a form or a tab: the owner must tick that feature for you (the 🛡️ tab in the game or `/setup` → **🛡️ Permissions**); people in `ManagerUsers` see only Start.\n- A change doesn't show on Discord: the bot writes it to the log channel and its lists when it runs. Check that it is online and that the game connection in `/setup-roblox` is on."
+        ]
+      ]
+    },
+    {
+      "id": "permissions",
+      "emoji": "🛡️",
+      "title": "Permissions",
+      "menu": "Who may do what: roles and players in the Manager",
+      "intro": "By default only administrators run the game. In `/setup` → **🛡️ Permissions** you give other people access and tick **exactly what each may do**. Administrators can always do everything. The bot's settings (`/setup`, `/setup-roblox`) stay for administrators only.",
+      "fields": [
+        [
+          "💬 What each role may do",
+          "1. `/setup` → **🛡️ Permissions** → **💬 What each role may do**.\n2. On the first list pick the Discord roles that get access (e.g. Moderator).\n3. On the second list pick one of them.\n4. On the third list tick what it may do: **Promo codes**, **Events**, **Eggs**, **Gifts**, **Announcements**, **Player card**, **Bans**.\nA role with nothing ticked can do nothing. A person with several roles gets all their permissions together. A change works at once."
+        ],
+        [
+          "⌨️ Commands and buttons",
+          "The game commands (`/code-add`, `/code-remove`, `/give`, `/announce-game`, `/event-start`, `/event-stop`, `/egg-create`, `/egg-edit`, `/egg-remove`, `/roblox-ban`, `/roblox-unban`, `/roblox-ban-check`) are visible to everyone on the server, but the bot lets in only administrators and roles with the matching permission. Anyone else gets a refusal that names the permission. `/codes`, `/events` and `/eggs` stay for everyone. Every button of the 🕹️ control panel checks its permission too. A role added the old way (`/setup-roblox` → **🕹️ Control panel**, the role list) gets everything; that window also has a **🛡️ What each role may do** button."
+        ],
+        [
+          "🎮 Manager in the game",
+          "1. `/setup` → **🛡️ Permissions** → **🎮 Manager in the game** → **➕ Add player**.\n2. Type their Roblox username (not the display name). You'll see ✅ that they are on the list.\n3. Pick the player in the list and tick what they may do: the same as for roles except **Player card** – everyone with the Manager sees players – plus **Game settings** (only in the Manager).\n4. **📤 Send to the game** (the list also goes by itself). It needs **Game connection** turned on in `/setup-roblox`.\n\nThe player gets the **⚙️ Manager** button on their next join, or within a minute if playing. What they may not do is hidden in the Manager, and the game checks every action anyway. The game's owner can always do everything. People in `ManagerUsers` (**DiscordSettings**) see only the Start tab in the Manager. **🗑️ Remove player** takes the access away. Up to 25 players.\n\n**Or inside the game** (only the game's owner sees this tab):\n1. Open **⚙️ Manager** → the **🛡️ Manager access** tab.\n2. Type the Roblox username (not the display name) → **Find**.\n3. Tick what the person may do (Codes, Events, Eggs, Gifts, Announcements, Bans, Settings) → **Save**. They get the **⚙️ Manager** button right away.\nThe list below shows everyone with access: **Edit** and **🗑️** (take access away). It is the same list as on Discord: a change in the game shows up there and the other way round. The person sees only the **Start** tab in the Manager, plus the tabs for what you ticked (e.g. only Events → **Start** and **Events**); the game also refuses to read the other tabs.\n\nIn Studio (Play) everyone is the owner, so you won't see the limits, and saving the list needs: Game Settings → Security → **Enable Studio Access to API Services**. Test the limits in the published game from a second account."
+        ],
+        [
+          "❓ Not working?",
+          "- A command or button refuses: tick that permission for the person's role. A role the person doesn't have won't help.\n- **Send to the game** shows ⚠️: turn on **Game connection** in `/setup-roblox`, then click **📤 Send to the game** again.\n- The player has no ⚙️ Manager button: wait a minute or rejoin the game, and check you typed the username, not the display name.\n- A role isn't on the second list: first pick it on the first list."
+        ]
+      ]
+    },
+    {
+      "id": "bug_reports",
+      "emoji": "🐞",
+      "title": "Bugs and questions",
+      "menu": "Automatic error reports and where to ask",
+      "intro": "",
+      "fields": [
+        [
+          "Automatic error reports",
+          "When something in the bot fails unexpectedly, the bot posts a report on your own **🐛 Bug report channel** (`/setup` → **Channels**): what failed, the bot version, the Python and discord.py versions, the server and the language. Tokens, API keys and your computer's user name are removed from it. The same error is posted at most once every 10 minutes. The reports stay on your server: nothing is sent to the bot's author."
+        ],
+        [
+          "No bug report channel set?",
+          "Then errors show up only in the black window and in the file `data/logs/bot.log`. To set the channel: `/setup` → **Channels** → pick a private channel (one only your team sees) in the **🐛 Bug report channel** list. You'll see a message *✅ Bug report channel: #…*."
+        ],
+        [
+          "Bugs and questions",
+          "Ask on the project's GitHub Issues page. Need help installing? It's included: open a ticket (**Install help**). Write what you did, what you expected and what happened instead, and attach the file `data/logs/bot.log` or a screenshot of the error report. Tokens and keys are hidden in both, but don't show any tokens or passwords on other screenshots."
+        ]
+      ]
+    },
+    {
+      "id": "privacy",
+      "emoji": "🔒",
+      "title": "Data and privacy",
+      "menu": "What is stored and how to delete it",
+      "intro": "What the bot and the game keep about your members and players, and what to do when someone asks to delete it.",
+      "fields": [
+        [
+          "On your computer (data/bot.db)",
+          "Promo codes, eggs, events and the list of gifts sent from Discord (the player's Roblox name and ID, the reward and who sent it). Copies: `data/backups` (the last 7 days). To remove one player's gifts, delete their rows with any SQLite program (and in the copies)."
+        ],
+        [
+          "In your Roblox game (DataStores)",
+          "`PlayerRedeemedCodes_v1` – which codes each player redeemed (keys `<UserId>_<CODE>`); `DiscordGifts` – gifts waiting for a player (keys `gift_<UserId>_…`). When Roblox sends you a **Right to Erasure** request for a player, delete that player's keys in both (Creator Hub → your game → **Data Stores**). The game's report to the bot has only names of values, never player names; the ⚙️ Manager keeps a log of its newest 100 changes (`DiscordLiveContent`, key `PanelLog`) with the owner's name and the player of a gift or ban, so the bot can write them to your log channel."
+        ],
+        [
+          "Sent to other services",
+          "The bot talks only to Discord and to Roblox (with your API key). The bot's error reports stay on your own bug report channel: nothing is sent to the bot's author. More: chapter *Is it safe?*."
+        ]
+      ]
+    },
+    {
+      "id": "safety",
+      "emoji": "🛡️",
+      "title": "Is it safe?",
+      "menu": "Your keys, what the bot connects to, the code in your game",
+      "intro": "Short answers for anyone who worries about giving a bot access to their game.",
+      "fields": [
+        [
+          "You get the full source code",
+          "Everything the bot does is in the bot folder, readable: the Python files in `cogs/` and `utils/`, and the game scripts in `scripts/DiscordCodes/`. Nothing is hidden or downloaded later."
+        ],
+        [
+          "No telemetry, no outside servers",
+          "The bot connects only to **Discord** (as your bot account) and to **Roblox** (`apis.roblox.com` with your API key, plus Roblox's public pages for usernames, avatars and game names). It doesn't count users, doesn't report to the author and has no other address built in. Error reports go only to the bug report channel on **your** server and to the file `data/logs/bot.log` on your computer, with tokens and keys hidden. Nothing is sent to the bot's author."
+        ],
+        [
+          "Your keys stay with you",
+          "The bot token and the Roblox API key are kept only in the `.env` file on your computer (or your server). The bot sends the token only to Discord and the key only to Roblox. It never shows them on Discord, and it hides them in its log and error reports. Don't send `.env` to anyone, not even someone helping you."
+        ],
+        [
+          "The smallest API key that works",
+          "Give the key **only your game** and only these operations:\n- **universe-datastores**: `objects:create`, `objects:read`, `objects:update`, `control:create` (codes, eggs, events, gifts),\n- **messaging-service**: `universe-messaging-service:publish` (changes reach running servers in seconds),\n- only if you use them: **user-restrictions** `read` and `write` (bans) and **ordered-data-store** `entry:read` (leaderboard).\nThe bot doesn't use anything else (no delete, no assets, no group or account access). Leave the IP restriction off on a home computer (its address changes); on a server with a fixed IP address you can turn it on with that address. Set no expiration date. Roblox disables a key nobody used for 60 days: Creator Hub → **API Keys** → your key → **Enable Key**."
+        ],
+        [
+          "The smallest Discord permissions",
+          "The bot needs four permissions: **View Channels**, **Send Messages**, **Embed Links** and **Read Message History**. It doesn't need **Administrator**, doesn't give roles and doesn't moderate members. Its panels work only for people with Administrator on your server and the roles you choose for the control panel. Make the bot private (chapter *The bot account on Discord* → *Private bot*), and it leaves servers that aren't yours by itself."
+        ],
+        [
+          "The script in your game",
+          "`DiscordCodes.rbxmx` is plain readable code inserted into your game. It has no `require(<number>)` (it never loads code from the internet) and makes no HTTP requests (HttpService is used only to read and write JSON text). It talks to the bot only through your game's own DataStores and MessagingService. The ⚙️ Manager's changes are saved by the game itself, and its bans use Roblox's own ban system (`Players:BanAsync`). Players can't send commands to it: everything a player does is checked on the game server, and the ⚙️ Manager forms work only for the game's owner."
+        ]
+      ]
+    },
+    {
+      "id": "vps",
+      "emoji": "🐧",
+      "title": "A VPS step by step",
+      "menu": "Ubuntu or Debian, SSH, systemd, tmux",
+      "intro": "The full guide for a Linux VPS. Copy the commands with the **Copy** button next to each block.",
+      "fields": [
+        [
+          "1. Order a server",
+          "Choose the smallest VPS plan with **Ubuntu 22.04 or 24.04** (or Debian), at least 1 core and 512 MB–1 GB of RAM. After buying you get an IP address, a user name and a password (or an SSH key)."
+        ],
+        [
+          "2. Connect with SSH",
+          "On Windows open PowerShell and type (with your details):\n```bash\nssh user@ip_address\n```\nRecommended: don't run the bot as `root`. If you only have the `root` account, create a regular user: `adduser bot`, then `usermod -aG sudo bot` and log in as that user."
+        ],
+        [
+          "3. Install the required programs",
+          "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```"
+        ],
+        [
+          "4. Upload the bot to the server",
+          "The easiest way is **WinSCP** or **FileZilla** (SFTP protocol, the same login as SSH): upload `CodeHatch-1.0.0.zip` to your home directory. Then on the server unpack it and give the folder a name that stays the same after updates:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\ncd codehatch\n```\nCheck with `ls`: you should see `main.py`, `start.sh` and `.env.example` (`ls -a` shows files starting with a dot)."
+        ],
+        [
+          "5. First start",
+          "```bash\nbash start.sh\n```\nThe script creates the Python environment, copies `.env.example` to `.env` and stops, asking you to fill in the token (the libraries are installed on the next start). Open the file:\n```bash\nnano .env\n```\nEnter the bot token after `DISCORD_TOKEN=`, save (`Ctrl+O`, Enter) and exit (`Ctrl+X`). Start it again:\n```bash\nbash start.sh\n```\nThe log should show “Logged in as”. Check on Discord that the bot is online and type `/tutorial`. At this point the bot runs only while the SSH window is open. The next step makes it run without you."
+        ],
+        [
+          "6. Running in the background: choose one method",
+          "**Method 1: `systemd` (recommended).** The bot starts by itself after a server restart and comes back after a crash.\n\nStop the bot in the SSH window (`Ctrl+C`), then create a service file:\n```bash\nsudo nano /etc/systemd/system/codehatch.service\n```\nPaste the content below. **Replace `USERNAME` with your user name** (check it with `whoami`) and fix the path if the bot is somewhere else (check it with `pwd` in the bot folder):\n```ini\n[Unit]\nDescription=CodeHatch\nAfter=network-online.target\nWants=network-online.target\n\n[Service]\nType=simple\nUser=USERNAME\nWorkingDirectory=/home/USERNAME/codehatch\nExecStart=/bin/bash /home/USERNAME/codehatch/start.sh\nRestart=on-failure\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target\n```\nSave (`Ctrl+O`, Enter, `Ctrl+X`) and enable the service:\n```bash\nsudo systemctl daemon-reload\nsudo systemctl enable --now codehatch\n```\nUseful commands:\n```bash\nsudo systemctl status codehatch      # is it running\nsudo systemctl restart codehatch     # restart\nsudo systemctl stop codehatch        # stop\njournalctl -u codehatch -f           # live logs (exit: Ctrl+C)\n```\n\n**Method 2: `tmux` (simpler, but manual).**\n```bash\nsudo apt install -y tmux\ntmux new -s bot\nbash start.sh\n```\nDetach from the session without stopping the bot: `Ctrl+B`, release, then `D`. Go back with `tmux attach -t bot`. After a server restart you have to start the bot again manually."
+        ],
+        [
+          "7. Updates on a VPS",
+          "The same steps as in *Bot updates*, with commands. Upload the new zip to your home directory (WinSCP or FileZilla), then (example for version 1.0.1):\n```bash\ncd ~\nsudo systemctl stop codehatch          # or Ctrl+C in tmux\ncp -r codehatch codehatch-backup        # a backup copy\nunzip CodeHatch-1.0.1.zip -d codehatch_new\nsudo apt install -y rsync\nrsync -a --exclude /.env --exclude /config.json --exclude /data/ codehatch_new/CodeHatch-1.0.1/ codehatch/\nsudo systemctl start codehatch         # or: cd codehatch && bash start.sh\n```\nReplace `1.0.1` with your new version (twice). `rsync` copies everything except `.env`, `config.json` and `data`. `start.sh` installs new libraries by itself. When it works, delete `codehatch_new`."
+        ],
+        [
+          "Raspberry Pi / your own Linux computer",
+          "Follow the steps above from step 3 (no server to order). Make sure it has stable power and an internet connection. Ideally connect the device to the router with a cable."
+        ]
+      ]
+    },
+    {
+      "id": "hosting_more",
+      "emoji": "🗄️",
+      "title": "Hosting: comparison, backups and problems",
+      "menu": "Which option to choose, backups, common errors",
+      "intro": "The bot is a regular program. **It is online exactly as long as that program runs.** Turning the computer off, putting it to sleep, logging out or closing the bot's window means the bot goes offline. To keep it running all the time, start it on a machine that is always on.\n\n**Your game doesn't stop with the bot.** Codes, eggs, events and gifts keep working in the game while the bot is offline, and the ⚙️ Manager in your game creates and removes them without the bot. The bot is needed only for Discord (the commands, the panels and the log channel). So 24/7 is a convenience: many owners just start the bot when they want to change something from Discord.",
+      "fields": [
+        [
+          "Which option to choose?",
+          "| Option | Cost (approximate) | Difficulty | For whom |\n|---|---|---|---|\n| **A. Your own Windows computer** | free (electricity) | easiest | The computer is on all the time anyway |\n| **B. Discord bot hosting (panel)** | a few dollars/euros a month | easy | You want to click “Start” and forget about it |\n| **C. Linux VPS** | about 3–10 dollars/euros a month | medium | You want the most reliable solution |\n| **D. Raspberry Pi / old laptop with Linux** | electricity + one-time purchase | medium | Hobbyists, own hardware at home |\n\nPrices are approximate and change, check current offers.\n\n**Bot requirements:** Python 3.12–3.14 (tested on 3.14), about 512 MB of RAM, a stable internet connection. The bot only connects out to the internet. **It doesn't need any open ports** or router configuration.\n\n**The most important rule when choosing a service:** files must **stay on disk after a restart**. The bot saves its settings in `config.json` and codes, eggs, events and gifts in `data/bot.db`. On services where the disk is wiped after every restart (some free plans), this data disappears."
+        ],
+        [
+          "Backups and moving the bot to another host",
+          "All your data is three things: **`.env`**, **`config.json`** and the **`data/`** folder (with `bot.db` and `game_economy.json`). Copy them somewhere safe from time to time. To move the bot to another host, unpack a fresh bot package in the new place and overwrite these three things with your copies. Never run two copies of the bot with the same token at the same time."
+        ],
+        [
+          "Common hosting problems",
+          "| Problem | Solution |\n|---|---|\n| `bash: start.sh: No such file or directory` or an error with `\\r` | The file has Windows line endings. Fix: `sed -i 's/\\r$//' start.sh` |\n| `python3 -m venv` reports an error | Install: `sudo apt install -y python3-venv` |\n| `Permission denied` for `./start.sh` | Start it with `bash start.sh` or give permissions: `chmod +x start.sh` |\n| The bot stops when SSH is closed | Use `systemd` or `tmux` (*A VPS step by step*, step 6) |\n| The bot stops after a server restart | Use `systemd` (enabled with `enable`) |\n| `❌ Discord didn't accept the bot token` | Wrong or outdated `DISCORD_TOKEN`. Generate a new one in the Developer Portal and paste it into `.env` |\n| Settings disappear after the hosting restarts | The host wipes the disk. Choose a service with a persistent disk |\n| `❌ Discord refused the connection: the bot needs one intent.` in the log | Turn on **Server Members Intent** in the Developer Portal (*The bot account on Discord*) |"
+        ]
+      ]
+    },
+    {
+      "id": "developer",
+      "emoji": "🧑‍💻",
+      "title": "For programmers: the source code",
+      "menu": "Map of the files, changing the game scripts, updates without conflicts",
+      "intro": "You bought the full source code, so you can read and change everything. This chapter is a map for someone who knows Python or Luau. You don't need it to use the bot.",
+      "fields": [
+        [
+          "The start and the folders",
+          "- `main.py` – starts the bot: reads `.env`, loads the modules from `cogs/`, syncs the `/` commands, writes `DOCS.html`.\n- `cogs/` – the Discord features (one file per area, loaded as discord.py cogs).\n- `utils/` – shared code without commands.\n- `locales/` – every text in English, Polish and Spanish (`en/pl/es.json` for the bot, `tutorial_*`, `guide_*` and `docs_*` for `/tutorial`, `/setup-guide` and `DOCS.html`).\n- `scripts/` – the files for Roblox Studio; `scripts/DiscordCodes/*.luau` are the sources of `DiscordCodes.rbxmx`.\n- `tools/` – `build_roblox_kit.py` builds the Studio files from the sources.\n- `data/` (yours, made at start) – the SQLite database `bot.db`, backups and logs."
+        ],
+        [
+          "cogs/: one sentence per file",
+          "- `setup.py` – `/setup`: language, channels, diagnostics, the bot's servers.\n- `setup_roblox.py` – `/setup-roblox`: game link, API key, Studio file, names, catalog and the panels for every game feature.\n- `game_codes.py` – `/code-add`, `/code-remove`, `/codes` and the code rules.\n- `cloud_sync.py` – `/sync-codes` and retrying a failed code sync.\n- `live_game.py` – eggs, events, gifts and announcements (`/egg-create`, `/event-start`, `/give`, `/announce-game`…).\n- `roblox_admin.py` – bans, the player card and the leaderboard.\n- `game_panel.py` – the control panel message for your team.\n- `game_requests.py` – reads the log of the game's ⚙️ Manager (what it changed by itself) into the log channel and the lists; also the requests from older Studio files.\n- `tutorial.py` – `/tutorial` with its ✅/⚠️ checks.\n- `setup_guide.py` – `/setup-guide`.\n- `help.py` – `/help`."
+        ],
+        [
+          "utils/: one sentence per file",
+          "- `open_cloud.py` – the Roblox Open Cloud client (DataStores, MessagingService, bans, leaderboard) and its error texts.\n- `cloud_sync.py` – writes the active codes into the game.\n- `game_sync.py` – makes the codes, events and eggs in the game and in the bot's database agree: what the game's ⚙️ Manager changed comes here, what Discord changed goes there, and neither overwrites the other.\n- `roblox_kit.py` – the Studio file version and what the game reported (names, egg spots, hooks).\n- `catalog.py` – the game catalog (`DiscordCatalog`) and name checks.\n- `roblox_api.py` – public Roblox web APIs: users, games, avatars.\n- `database.py` – the SQLite database and its backups.\n- `config_store.py` – `config.json` and the files in `data/`.\n- `env_store.py` – reading and writing `.env`.\n- `i18n.py` – translations from `locales/`.\n- `access.py` – which servers and people may use the bot.\n- `action_log.py` – the log channel entries.\n- `error_reports.py` – error reports with secrets hidden.\n- `ui.py` – shared panel pieces (✖️ Close, admin-only views).\n- `logs.py`, `net.py`, `instance_lock.py`, `version.py`, `docs_site.py` – log file, HTTP session, one copy at a time, the version number, `DOCS.html`."
+        ],
+        [
+          "Changing the game scripts (Luau)",
+          "1. Edit the files in `scripts/DiscordCodes/` (`Core.luau` codes and rewards, `Live.luau` eggs, events, gifts, announcements, `Manager*.luau` the ⚙️ Manager, `Control.luau` what the ⚙️ Manager changes in the game, `Report.luau` what the game reports to the bot, `Loader.server.luau` the start).\n2. In the bot folder run `.venv\\Scripts\\python tools/build_roblox_kit.py` (Linux/macOS: `.venv/bin/python tools/build_roblox_kit.py`). It rebuilds `scripts/DiscordCodes.rbxmx` and raises the file version by one.\n3. Insert the new file in Studio like an update (`/setup-guide` → *Updating the Studio file*), test with **Play**, publish.\n\nUsing Rojo? The sources in `scripts/DiscordCodes/` can be synced directly; the bot only compares the file version the game reports."
+        ],
+        [
+          "Updates without conflicts",
+          "An update replaces every file of the bot except `.env`, `config.json` and `data/`. So:\n- **In the game:** don't change `DiscordCodes`. Keep your code in your own scripts with the hooks `Core.OnReward`, `Core.OnSpend`, `Live.OnHatch`, `Live.OnAnnouncement`, the events `Core.CodeRedeemed`, `Live.Hatched`, `Live.GiftReceived`, `Live.EventsChanged` and `Live.Config` values (all described at the top of `Core.luau` and `Live.luau`). Your settings go in `DiscordSettings`, your names in `DiscordCatalog`, your look in the window template: updates never touch them.\n- **In the bot:** if you change `.py`, `.luau` or `locales/` files, keep the bot folder in git (the zip has a ready `.gitignore` that leaves out your secrets and data). Commit your changes, put the new version over it and merge with `git diff`. A rebuilt Studio file can have the same version number as a later official one: after an update rebuild it again with your changes."
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="ModuleScript" referent="RBX466CE9DF388F4FCFA04BBFD879D5BD1F">
+		<Properties>
+			<string name="Name">DiscordSettings</string>
+			<ProtectedString name="Source"><![CDATA[--!nonstrict
+--[[
+	DiscordSettings  (ModuleScript, ServerScriptService)
+
+	Your settings of the DiscordCodes file. This module is YOURS: updating DiscordCodes never touches it, so you set
+	these once. Keep it in ServerScriptService, next to DiscordCodes (not inside it).
+
+	HOW TO CHANGE: edit a value after the "=", save, click Play. The Output window shows
+	"[DiscordCodes] Your settings from DiscordSettings: ...". A line you delete keeps the default value.
+
+	PLACES ON THE SCREEN (the ...Position settings): "Left", "Right", "Top", "Bottom", "Center", "TopLeft", "TopRight",
+	"BottomLeft" or "BottomRight". Add pixels after the name to move it from there: first right (+) or left (-), then
+	down (+) or up (-). "Left 0,-80" = 80 px higher, "BottomRight -20,0" = 20 px more to the left.
+	Try places live in the game first: ⚙️ Manager -> Settings, then "Copy for DiscordSettings".
+]]
+
+return {
+	-- The "Codes" button on the screen (true = shown, false = hidden, e.g. when you open the window from your own menu)
+	ShowButton = true,
+
+	-- Where the Codes button is (a place, see above)
+	ButtonPosition = "Left",
+
+	-- Language of the window, the events and the messages: "auto" (from the player's Roblox settings), "en", "pl", "es"
+	Language = "auto",
+
+	-- Where the round event icons are (a place, see above)
+	EventPosition = "BottomRight",
+
+	-- Your own event icons: an emoji or "rbxassetid://123456" (an image you uploaded), by what the event multiplies
+	-- (a currency name, EXP, Luck, All = every currency) or by the event's name. Without one: 💰, ⭐, 🍀.
+	-- Example: "Coins=💰, Gems=💎, Strength=💪, EXP=⭐, Luck=🍀, Weekend Boost=🎉"
+	EventIcons = "",
+
+	-- The animations of events (a coin storm, an aurora...): "full", "light" (fewer particles, no glow) or "off".
+	-- Phones and low graphics always get the light version.
+	EventEffects = "full",
+
+	-- Where announcements from Discord show (a place, see above)
+	AnnouncementPosition = "Top",
+
+	-- Where the messages about gifts and hatched pets show (a place, see above)
+	NotificationPosition = "Bottom",
+
+	-- The most currency one promo code or gift from Discord may give (0 = no limit). A bigger one is refused, the
+	-- code is not used up, and the Output window says why.
+	MaxCurrencyPerCode = 0,
+
+	-- The ⚙️ Manager panel for the game's owner (true = on, false = off)
+	Manager = true,
+
+	-- Where the ⚙️ Manager button is (only you and the people below see it; a place, see above)
+	ManagerPosition = "TopRight",
+
+	-- Other people who may open the Manager: their Roblox UserIds, separated by commas, e.g. "123456, 987654"
+	ManagerUsers = "",
+}
+]]></ProtectedString>
+		</Properties>
+	</Item>
+</roblox>

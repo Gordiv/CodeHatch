@@ -1,0 +1,561 @@
+[
+  {
+    "id": "welcome",
+    "emoji": "👋",
+    "title": "Witaj! Co potrafi ten bot",
+    "menu": "Przegląd funkcji i jak korzystać z samouczka",
+    "intro": "Ten samouczek przeprowadzi Cię przez całą konfigurację, krok po kroku. Nie musisz nic umieć: przy każdym kroku jest wyjaśnienie, co to daje, gdzie kliknąć i czy już działa (✅ zrobione, ⚠️ do zrobienia).",
+    "fields": [
+      [
+        "🤖 Co robi bot",
+        "• **Gra sterowana z Discorda:** kody promocyjne, jajka ze zwierzakami, eventy z mnożnikami, prezenty dla jednego gracza, ogłoszenia na ekranie, bany z kartą gracza, ranking.\n• **Dla Twojej ekipy:** panel sterowania z przyciskami do gry na kanale ekipy.\n• **Dla graczy:** `/codes`, `/eggs`, `/events` i `/leaderboard` pokazują, co teraz jest w grze.\n• **W Twojej grze:** gotowe okienko na kody i panel **⚙️ Manager** (widzi go tylko właściciel gry): sprawdzisz w nim wszystko i utworzysz kody, jajka, eventy, prezenty, ogłoszenia i bany prosto w grze, nawet gdy bot jest wyłączony."
+      ],
+      [
+        "🧭 Trzy komendy, które musisz znać",
+        "`/tutorial` – ten samouczek (zawsze możesz do niego wrócić).\n`/setup` – ustawienia Discorda: język, kanał zgłoszeń błędów, diagnostyka.\n`/setup-roblox` – wszystko o Twojej grze Roblox.\nDo tego `/setup-guide`: ściąga z odpowiedziami na częste pytania."
+      ],
+      [
+        "🕹️ Jak korzystać z samouczka",
+        "• **▶ Dalej / ◀ Wstecz** albo lista rozdziałów u góry.\n• Zielone przyciski pod spodem otwierają dokładnie to miejsce, o którym mowa w rozdziale.\n• **🔄 Sprawdź ponownie** odświeża stan, gdy coś już ustawisz.\n• Te wiadomości widzisz tylko Ty.\n• Okienko zamkniesz przyciskiem **✖️ Zamknij**. Samo znika, gdy nikt go nie klika: zwykłe okienka po 5 minutach, samouczek po 14."
+      ],
+      [
+        "⏱️ Ile to trwa",
+        "Instalacja bota zajmuje ok. 10–15 minut. Skonfigurowanie wszystkiego (Discord, połączenie z grą, plik do Studio, pierwszy kod) ok. godziny, i to tylko raz; utrzymanie bota 24/7 to osobna sprawa. Nie spiesz się i przetestuj, zanim opublikujesz. Możesz robić przerwy, nic się nie zgubi."
+      ]
+    ],
+    "checks": [],
+    "actions": [
+      "setup",
+      "setup_roblox",
+      "guide"
+    ]
+  },
+  {
+    "id": "permissions",
+    "emoji": "🤖",
+    "title": "Bot na serwerze: uprawnienia",
+    "menu": "Żeby bot mógł wysyłać swoje wiadomości i panele",
+    "intro": "Bot działa tylko tam, gdzie ma uprawnienia. Nie nadaje ról i nie moderuje członków, więc wystarczy mu kilka podstawowych uprawnień.",
+    "fields": [
+      [
+        "1. Uprawnienia",
+        "Jeśli w linku zaproszenia (OAuth2 → URL Generator) zaznaczyłeś **Administrator**, wszystko jest już ustawione. Jeśli nie:\n1. Ustawienia serwera → **Role** → kliknij rolę bota (ma nazwę bota).\n2. Zakładka **Uprawnienia** → włącz **Wyświetlanie kanałów**, **Wysyłanie wiadomości**, **Osadzanie linków** i **Czytanie historii wiadomości**.\n3. **Zapisz zmiany**.\nPotem kliknij poniżej **🔄 Sprawdź ponownie**: linijka o uprawnieniach pokaże ✅."
+      ],
+      [
+        "2. Kanały, których bot nie widzi",
+        "Pojedynczy kanał może ukryć się przed botem. Jeśli bot nie może pisać na jakimś kanale (np. wysłać panelu sterowania): kanał → ⚙️ **Edytuj kanał** → **Uprawnienia** → **+** → wybierz rolę bota → zezwól na cztery uprawnienia z punktu 1 → **Zapisz zmiany**."
+      ],
+      [
+        "3. Intent (jednorazowo)",
+        "Na discord.com/developers/applications → Twoja aplikacja → zakładka **Bot** włącz **Server Members Intent** → **Save Changes**. Bez niego bot się nie uruchomi. Pozostałe intenty (Presence, Message Content) nie są potrzebne."
+      ],
+      [
+        "4. Prywatny bot",
+        "**discord.com/developers/applications** → Twoja aplikacja → najpierw **Installation**: **Install Link** ustaw na **None** i odznacz **User Install** → **Save Changes**; potem **Bot** → wyłącz **Public Bot** → **Save Changes**. W tej kolejności: przy ustawionym Install Link Discord odmawia z błędem „Private application cannot have a default authorization link”. Bota dalej zapraszasz linkiem z OAuth2 → URL Generator. Bot działa tylko na Twoich serwerach: przycisk 🌐 pokazuje ich listę."
+      ]
+    ],
+    "checks": [
+      "bot_permissions",
+      "servers"
+    ],
+    "actions": [
+      "diagnostics",
+      "servers"
+    ]
+  },
+  {
+    "id": "language",
+    "emoji": "🌐",
+    "title": "Język bota",
+    "menu": "Polski, angielski albo hiszpański",
+    "intro": "Bot mówi jednym językiem na całym serwerze. Domyślny jest angielski.",
+    "fields": [
+      [
+        "Jak zmienić",
+        "`/setup` → na samym dole lista **🌐 Language / Język / Idioma** → wybierz język. Zmiana działa od razu."
+      ],
+      [
+        "Wiadomości już wysłane",
+        "Panele wysłane wcześniej (np. panel sterowania grą) zmienią język po wysłaniu ich ponownie. Opisy komend `/` każdy widzi w języku swojego Discorda."
+      ]
+    ],
+    "checks": [
+      "language"
+    ],
+    "actions": [
+      "setup"
+    ]
+  },
+  {
+    "id": "channels",
+    "emoji": "📡",
+    "title": "Kanały dla bota",
+    "menu": "Gdzie bot wysyła raporty błędów i wiadomości dla Ciebie",
+    "intro": "Oba kanały są opcjonalne, ale pierwszy jest zalecany: bez niego nie zobaczysz błędów bota na Discordzie. Możesz użyć kanałów, które już masz, albo najpierw utworzyć nowe: na liście kanałów kliknij plus (**+**) obok nazwy kategorii → wpisz nazwę, np. `bledy-bota` → **Utwórz kanał**.",
+    "fields": [
+      [
+        "📡 Jak je ustawić",
+        "1. Wpisz `/setup` i kliknij **📡 Kanały** (albo zielony przycisk **Kanały** poniżej). Pojawią się dwie listy.\n2. Z pierwszej listy wybierz **🐛 Kanał zgłoszeń błędów**. Zobaczysz wiadomość *✅ Kanał zgłoszeń błędów: #…*.\n3. Opcjonalnie: z drugiej listy wybierz **📋 Kanał logów**.\n4. Zamknij okienko przyciskiem **✖️ Zamknij** i kliknij tutaj **🔄 Sprawdź ponownie**: linijka o kanale pokaże ✅."
+      ],
+      [
+        "🐛 Kanał zgłoszeń błędów (zalecany)",
+        "Gdy coś w bocie nieoczekiwanie się zepsuje, bot wysyła tu raport: co nie zadziałało i jaka jest wersja bota. Tokeny i klucze są w nim ukryte. Bez tego kanału błędy widać tylko w czarnym oknie bota i w pliku `data/logs/bot.log`."
+      ],
+      [
+        "📋 Kanał logów (opcjonalny)",
+        "Wiadomości dla Ciebie, właściciela: np. gdy bot nie mógł zaktualizować swoich komend `/` na Discordzie. Trafia tu też zapis każdej zmiany w grze zrobionej z Discorda (przez Ciebie, adminów albo role z panelu sterowania) albo z **⚙️ Managera** w grze: kody, jajka, eventy, prezenty, ogłoszenia, bany i odbanowania, z informacją, kto to zrobił (to, co ⚙️ Manager zmienił, gdy bot był wyłączony, trafi tu po starcie bota). Przydaje się, gdy grę obsługuje kilka osób."
+      ],
+      [
+        "💡 Wskazówka: zrób je prywatne",
+        "Te kanały powinna widzieć tylko Twoja ekipa: kanał → ⚙️ **Edytuj kanał** → **Uprawnienia** → dla **@everyone** wyłącz **Wyświetlanie kanału** → dodaj rolę swojej ekipy i rolę bota i zezwól im na **Wyświetlanie kanału** → **Zapisz zmiany**."
+      ],
+      [
+        "⚠️ Nie działa?",
+        "• *Kanału nie ma na liście:* bot go nie widzi. Zezwól roli bota na **Wyświetlanie kanału** w uprawnieniach tego kanału.\n• *`/setup` → 🩺 Diagnostyka mówi, że botowi brakuje uprawnień:* zezwól botowi na tym kanale na **Wysyłanie wiadomości** i **Osadzanie linków**.\n• *Nie ma żadnych raportów:* to dobra wiadomość, jeszcze nic się nie zepsuło."
+      ]
+    ],
+    "checks": [
+      "channels"
+    ],
+    "actions": [
+      "channels"
+    ]
+  },
+  {
+    "id": "roblox",
+    "emoji": "🎮",
+    "title": "Podłączenie gry Roblox",
+    "menu": "Link do gry i klucz API (raz)",
+    "intro": "Od tego miejsca wszystko o grze jest w `/setup-roblox`. Najpierw łączysz bota z grą: bot musi wiedzieć, która to gra, i dostać od Robloxa klucz, którym może zmieniać dane gry.",
+    "fields": [
+      [
+        "1. Link do gry",
+        "`/setup-roblox` → **🎮 Gra Roblox** → wklej link do swojej gry (np. `https://www.roblox.com/games/123456789/Nazwa`). Bot sam znajdzie resztę. Gra nie jest jeszcze opublikowana albo jest prywatna? Zobacz `/setup-guide` → *Place ID i Universe ID*."
+      ],
+      [
+        "2. Klucz API (część 1)",
+        "1. Wejdź na **create.roblox.com** i zaloguj się.\n2. Gra należy do grupy? Przełącz się u góry na tę grupę.\n3. W menu po lewej kliknij **All tools** → **API Keys** → **Create API Key**.\n4. **Name:** proste słowo bez spacji i bez słowa „Bot”, np. `kluczgry`. **Description:** zostaw puste (inaczej Roblox może zgłosić *inappropriate content*)."
+      ],
+      [
+        "2. Klucz API (część 2)",
+        "5. **Access Permissions** → **universe-datastores** → **Add Experience** (Twoja gra) → zaznacz `objects:create`, `objects:read`, `objects:update`, `control:create`.\n6. Dodaj **messaging-service** → ta sama gra → `universe-messaging-service:publish`.\n7. Tylko jeśli chcesz banów i rankingu: dodaj **user-restrictions** (`read`, `write`) i **ordered-data-store** (`entry:read`).\n8. **Security:** ograniczenie IP zostaw wyłączone. **Expiration:** brak.\n9. **Save & Generate Key** → **Copy**. Klucz pokazuje się tylko raz!"
+      ],
+      [
+        "3. Wklej klucz w bocie",
+        "`/setup-roblox` → **🔑 Połączenie z grą** → **Wklej klucz API** (wklej go w okienku, które się otworzy) → **Włącz / wyłącz** (ma być włączone; każde kliknięcie przełącza) → **Testuj i synchronizuj**. Zobaczysz ✅ albo dokładny opis, co poprawić. Klucza nigdy nikomu nie wysyłaj."
+      ]
+    ],
+    "checks": [
+      "game",
+      "connection"
+    ],
+    "actions": [
+      "game",
+      "connection",
+      "setup_roblox"
+    ]
+  },
+  {
+    "id": "studio",
+    "emoji": "📥",
+    "title": "Plik do Roblox Studio",
+    "menu": "Jeden plik w grze, bez pisania kodu",
+    "intro": "Żeby gra rozumiała polecenia z Discorda, wstawiasz do niej jeden plik: `DiscordCodes.rbxmx`. Leży w folderze bota, w folderze `scripts`.",
+    "fields": [
+      [
+        "1. Wstaw plik",
+        "1. Otwórz swoją grę w **Roblox Studio**: najnowszą wersję (**File** → **Open from Roblox**), a nie stary plik z dysku.\n2. W oknie **Explorer** (lista wszystkiego, co jest w grze, zwykle po prawej; nie widzisz go? menu **Window** → **Explorer**) znajdź **ServerScriptService**.\n3. Kliknij go prawym przyciskiem → **Insert** → **Import Roblox Model** (w starszym Studio: **Insert from File…**). Nie ma tej pozycji? Zaznacz **ServerScriptService** i wybierz menu **File** → **Import Roblox Model**. Nie ma takiej opcji (nowe Studio)? Zrób własną kartę: **+** za kartami → **Add tools** → `model` → zaznacz **Model** → kliknij go i wybierz plik.\n4. Wybierz plik `DiscordCodes.rbxmx` z folderu bota (tego ze `start.bat`) → folder `scripts`.\n5. Sprawdź, czy w ServerScriptService pojawił się **DiscordCodes**. Jeśli trafił gdzie indziej, przeciągnij go tam."
+      ],
+      [
+        "⚙️ Opcjonalnie: Twoje ustawienia",
+        "Tylko jeśli chcesz coś zmienić: ukryć lub przesunąć przycisk **Codes**, język okienka, limit waluty na kod albo panel **⚙️ Manager**. Jeśli nie, pomiń ten krok: działają ustawienia domyślne.\n1. Prawy przycisk na **ServerScriptService** → **Insert** → **Import Roblox Model** → `DiscordSettings.rbxmx` z tego samego folderu `scripts`.\n2. Sprawdź, czy **DiscordSettings** leży obok **DiscordCodes**, a nie w środku. Jeśli trafił do środka, przeciągnij go na ServerScriptService.\n3. Kliknij go dwukrotnie. Każda linia ma swój opis: zmień wartość po `=` i zostaw cudzysłowy i przecinki, np. `ShowButton = false`.\n4. Kliknij **Play**: **Output** pokaże `[DiscordCodes] Your settings from DiscordSettings: …`. Literówka w nazwie albo zła wartość da tam ostrzeżenie, a gra użyje wartości domyślnej.\nRobisz to raz (w każdym place gry, który ma DiscordCodes): aktualizacje pliku DiscordCodes go nie ruszają."
+      ],
+      [
+        "2. Zezwól na dane",
+        "Menu **File** → **Experience Settings** (w starszym Studio: **Home** → **Game Settings**) → **Security** → włącz **Enable Studio Access to API Services** → **Save**. Bez tego gra w Studio nie widzi kodów z bota."
+      ],
+      [
+        "⚠️ Zanim opublikujesz",
+        "**Publish** wysyła graczom całą grę otwartą w Studio, nie tylko plik bota. Dlatego otwórz najnowszą wersję gry (**File** → **Open from Roblox**), a nie stary plik z dysku. Gra ma już graczy? Najpierw sprawdź wszystko przez **Play** w Studio albo na kopii gry, a opublikuj, gdy jesteś gotowy."
+      ],
+      [
+        "3. Opublikuj i sprawdź",
+        "1. Najpierw test: kliknij **Play** w Studio. W oknie **Output** (nie widzisz go? menu **Window** → **Output**) zobaczysz `[DiscordCodes] File version …`.\n2. **File → Publish to Roblox**.\n3. Wejdź do **opublikowanej** gry (na roblox.com albo w aplikacji Roblox, nie przez **Play** w Studio) i poczekaj ok. minutę.\n4. W `/tutorial` kliknij **🔄 Sprawdź ponownie** albo otwórz `/setup-roblox`: przy pliku pojawi się ✅.\n✅ daje tylko opublikowana gra, bo to jej serwer zgłasza wersję pliku. Po samym **Play** w Studio zobaczysz ⚠️ *jest w Studio, ale opublikowana gra jeszcze jej nie używa*: przed publikacją to normalne."
+      ],
+      [
+        "👀 Co dalej",
+        "Od razu po wstawieniu pliku w grze jest fioletowy przycisk **Codes**. Jak go używać, sprawdzić i dopasować do swojej gry, wyjaśnia rozdział *Okienko na kody w grze*."
+      ],
+      [
+        "🔄 Po aktualizacji bota (kroki)",
+        "1. Otwórz najnowszą wersję gry w Roblox Studio (**File** → **Open from Roblox**, nie stary plik z dysku).\n2. W **ServerScriptService** przeciągnij stary **DiscordCodes** do **ServerStorage** (kopia zapasowa: skrypty stamtąd nie działają). **DiscordSettings** zostaw tam, gdzie jest.\n3. Prawy przycisk na **ServerScriptService** → **Insert** → **Import Roblox Model** → plik `DiscordCodes.rbxmx` z folderu bota (tego ze `start.bat`) → folder `scripts`. W starszym Studio: **Insert from File…**. Sprawdź, czy **DiscordCodes** jest w ServerScriptService (jeśli trafił gdzie indziej, przeciągnij go tam). Nie ma takiej opcji? Użyj własnej karty (patrz wyżej).\n4. Kliknij **Play**. W oknie **Output** ma być `[DiscordCodes] File version …` i żadnego czerwonego błędu.\n5. Opublikuj grę (**File → Publish to Roblox**), w każdym place z tym plikiem. Gdy wszystko działa, usuń kopię z ServerStorage.\n6. Wejdź raz do gry i otwórz `/setup-roblox`: pokaże ✅."
+      ]
+    ],
+    "checks": [
+      "kit"
+    ],
+    "actions": [
+      "kit"
+    ]
+  },
+  {
+    "id": "names",
+    "emoji": "🔍",
+    "title": "Co ma Twoja gra (nazwy)",
+    "menu": "Dokładne nazwy rzeczy z Twojej gry",
+    "intro": "Bot nie tworzy w grze nowych rzeczy. Kod może dać tylko to, co gra **już ma**, i musi znać dokładną nazwę. Dlatego gra sama mówi botowi, co ma u graczy.",
+    "fields": [
+      [
+        "Skąd bot zna nazwy",
+        "Gdy ktoś gra, plik DiscordCodes zgłasza botowi **nazwy** wartości w danych gracza (np. `leaderstats.Coins`, `Pets.Dragon`), miejsca na jajka, modele jajek i mnożniki używane w kodzie gry. Tylko nazwy, nigdy ilości ani nicki."
+      ],
+      [
+        "⚠️ Czy Twoja gra zadziała od razu?",
+        "**1. Czy waluta jest widoczna?** W Studio kliknij **Play**, w oknie **Explorer** otwórz **Players** → swój nick. Widzisz swoją walutę (np. folder **leaderstats** → **Coins**)?\n**2. Czy zostaje?** Po pierwszym kodzie (rozdział *Kody promocyjne*) wyjdź z opublikowanej gry, wejdź ponownie i sprawdź walutę. Jest? Nagrody działają same.\nZniknęła po ponownym wejściu albo w ogóle jej nie widać? Gra zapisuje dane własnymi skryptami (np. ProfileStore, DataStore2), a `leaderstats` to tylko kopia. Wtedy Ty (albo asystent AI, z którym robisz grę) dodajesz `Core.OnReward` (kody **i** prezenty), `Core.OnSpend` (ceny jajek) i `Live.OnHatch` (zwierzaki). Gotowe teksty: `DOCS.html`, rozdział *Nagrody: dla programisty gry*."
+      ],
+      [
+        "Co kliknąć",
+        "`/setup-roblox` → **🔍 Co ma Twoja gra** → z trzech list wybierz:\n• **Waluty** – np. Coins, Gems (liczby, które gracze zbierają),\n• **Przedmioty i passy** – np. VIP, Speed Coil,\n• **Zwierzaki** – nazwy zwierzaków z jajek.\nWybrane nazwy pojawią się jako podpowiedzi w komendach i panelach."
+      ],
+      [
+        "Lista jest pusta?",
+        "Gra jeszcze nic nie zgłosiła: sprawdź rozdział *Plik do Roblox Studio*, kliknij **Play** w Studio, poczekaj minutę i w panelu **🔍 Co ma Twoja gra** kliknij **🔄 Odśwież**. Nazwy możesz też wpisać ręcznie (**✏️ Wpisz nazwy**), ale muszą być takie same jak w grze."
+      ]
+    ],
+    "checks": [
+      "names"
+    ],
+    "actions": [
+      "names"
+    ]
+  },
+  {
+    "id": "catalog",
+    "emoji": "📒",
+    "title": "Katalog gry: dokładne nazwy",
+    "menu": "Bot zna wszystkie nazwy z Twojej gry",
+    "intro": "Bot musi znać **dokładne** nazwy z Twojej gry. Bez katalogu widzi tylko to, co gracze akurat mają w danych, więc łatwo o literówkę i kod, którego nikt nie odbierze. Katalog to jedna lista w grze, którą wypełniasz raz.",
+    "fields": [
+      [
+        "Po co to jest",
+        "Wpisujesz `/code-add` z walutą „Gem”, a w grze nazywa się ona „Gems”? Z katalogiem bot od razu odpowie: *nie ma takiej waluty, może chodziło o `Gems`?* i nie stworzy kodu, który nie działa. Komendy same podpowiadają nazwy z katalogu."
+      ],
+      [
+        "1. Wstaw plik (raz)",
+        "Roblox Studio → prawy przycisk na **ServerScriptService** → **Insert** → **Import Roblox Model** → `DiscordCatalog.rbxmx` z folderu bota → `scripts`. Potrzebny jest aktualny plik **DiscordCodes** (rozdział *Plik do Roblox Studio*)."
+      ],
+      [
+        "2. Wpisz nazwy",
+        "Kliknij dwa razy **DiscordCatalog**. W miejsce przykładów wpisz nazwy ze swojej gry:\n• `Catalog.Currencies`: waluty, np. `\"Coins\"`,\n• `Catalog.Items`: przedmioty i passy,\n• `Catalog.Pets`: zwierzaki z rzadkością, np. `{ Name = \"Dragon\", Rarity = \"Legendary\" }`,\n• `Catalog.Eggs`: jajka z gry ze zwierzakami i szansami (`/egg-create` skopiuje je jednym kliknięciem),\n• `Catalog.Multipliers`: mnożniki do eventów,\n• `Catalog.SoldForRobux`: co gracze kupują za Robuxy, np. `\"Gems\"`. Bot ostrzeże przy nagrodzie z tej listy: Roblox nie pozwala na takie nagrody w kodach ogłaszanych poza Robloxem (np. na Discordzie).\nNiepotrzebną listę zostaw pustą: `{ }`.\nTo kod Lua: zostaw cudzysłowy `\"…\"`, przecinki i nawiasy `{ }`. Literówkę zobaczysz w **Output**."
+      ],
+      [
+        "3. Sprawdź",
+        "Kliknij **Play** w Studio. W **Output** zobaczysz `[DiscordCodes] Game catalog: …`. Opublikuj grę i otwórz **📒 Katalog gry** (przycisk pod tym rozdziałem w `/tutorial` albo w `/setup-roblox`): zobaczysz wszystkie nazwy i to, co ewentualnie poprawić."
+      ],
+      [
+        "Masz już listy w grze?",
+        "Jeśli gra ma już moduł z listą zwierzaków (np. `PetsConfig`), katalog może go wczytać zamiast przepisywania nazw: przykład jest na dole szablonu. Nie wiesz, jak? W katalogu kliknij **🤖 Opis dla AI** i wklej tekst swojemu asystentowi razem ze skryptami gry."
+      ],
+      [
+        "🔄 Aktualizacje",
+        "**DiscordCatalog** jest Twój: aktualizacje bota i pliku DiscordCodes go nie ruszają. Dodajesz coś do gry? Dopisz to w katalogu i opublikuj grę."
+      ]
+    ],
+    "checks": [
+      "catalog"
+    ],
+    "actions": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "codes",
+    "emoji": "📜",
+    "title": "Kody promocyjne",
+    "menu": "Kody działające w grze w kilka sekund",
+    "intro": "Kod to słowo, które gracz wpisuje w grze (przycisk **Codes**) i dostaje nagrodę. Dodajesz go na Discordzie, a w grze działa po kilku sekundach, bez publikowania gry.",
+    "fields": [
+      [
+        "Dodaj kod",
+        "Najpierw wybierz swoje waluty i przedmioty w `/setup-roblox` → **🔍 Co ma Twoja gra** (rozdział *Co ma Twoja gra*), żeby formularz mógł je podpowiedzieć. Potem kliknij przycisk **📜 Kody promocyjne** poniżej (albo `/setup-roblox` → **📜 Kody promocyjne**) → **➕ Nowy kod**. Wpisz kod (litery A–Z, cyfry, `_` i `-`, najwyżej 30 znaków, np. `START2026`), wybierz, jak długo działa, i nagrodę: walutę z ilością albo przedmiot. Bot pokaże podgląd: tam przyciskiem **⚙️** dodasz EXP i przedmiot na czas (np. VIP na 24 h), a kod zacznie działać po kliknięciu **✅ Zapisz kod**. Bot podpowiada nazwy z Twojej gry i ostrzega, jeśli gra nie ma miejsca na nagrodę. Wolisz komendy? `/code-add` robi to samo."
+      ],
+      [
+        "Sprawdź w Studio",
+        "Kliknij **Play** w Studio. Przy lewej krawędzi ekranu jest fioletowy przycisk **Codes**: kliknij go, wpisz kod i naciśnij **Redeem**. Zielony napis = nagroda dodana. Czerwony = okno **Output** mówi dokładnie, czego brakuje, a kod **nie przepada**. Wygląd okienka zmienisz w następnym rozdziale."
+      ],
+      [
+        "Usuń i pokaż",
+        "**🗑️ Usuń kody** w panelu (albo `/code-remove`) usuwa kilka kodów naraz. `/codes` pokazuje graczom aktywne kody."
+      ]
+    ],
+    "checks": [
+      "codes"
+    ],
+    "actions": [
+      "codes",
+      "names"
+    ]
+  },
+  {
+    "id": "window",
+    "emoji": "🪟",
+    "title": "Okienko na kody w grze",
+    "menu": "Jak gracz wpisuje kod i jak zmienić wygląd",
+    "intro": "Po wstawieniu pliku `DiscordCodes.rbxmx` gracze **od razu** mają okienko na kody. Nic nie rysujesz i nie piszesz kodu. Tu zobaczysz, jak to wygląda, jak to sprawdzić, jak zmienić wygląd, skąd biorą się nagrody i jak aktualizować plik, nie tracąc swoich zmian.",
+    "fields": [
+      [
+        "👀 Co zobaczy gracz",
+        "Przy lewej krawędzi ekranu jest fioletowy przycisk **Codes** (po polsku **Kody**, po hiszpańsku **Códigos**: język bierze się z ustawień gracza). Gracz klika go, wpisuje kod i naciska **Redeem** (**Odbierz**). Okienko pokazuje, co dostał, np. *Kod odebrany! Otrzymujesz: +500 Coins*."
+      ],
+      [
+        "🧪 Jak to sprawdzić (2 minuty)",
+        "1. Na Discordzie dodaj kod `TEST1` (`/setup-roblox` → **📜 Kody promocyjne** → **➕ Nowy kod** → **✅ Zapisz kod** albo `/code-add`) z nagrodą, którą Twoja gra ma (np. waluta `Coins`).\n2. W Studio kliknij **Play** i poczekaj chwilę (gra pobiera kody najwyżej co minutę).\n3. Kliknij **Codes**, wpisz `TEST1` i naciśnij **Redeem**.\n4. Zielony napis = nagroda dodana. Czerwony = otwórz okno **Output**: napisze dokładnie, czego brakuje. Kod, którego nie da się odebrać, **nie przepada**."
+      ],
+      [
+        "🎨 Własny wygląd (szablon)",
+        "Wbudowane okienko jest gotowe do użycia. Chcesz je dopasować do gry? Wstaw szablon **raz**:\n1. Explorer → prawy przycisk na **StarterGui** → **Insert** → **Import Roblox Model**.\n2. Wybierz `DiscordCodesWindow.rbxmx` z folderu bota → `scripts`. Sprawdź, czy **DiscordCodesGui** jest w StarterGui (jeśli trafił gdzie indziej, przeciągnij go tam).\n3. Klikaj jego części i zmieniaj je w oknie **Properties**: kolor okna jest w **Panel** (*BackgroundColor3*), kolor nagłówka w **Header** i **HeaderFill** → *UIGradient → Color*, kolor przycisku w przycisku i w jego ciemnej krawędzi (np. **RedeemEdge**), napis (*Text*), rozmiar (*Size*), miejsce (*Position*), czcionkę (*FontFace*). Język napisów: *DiscordCodesGui → Settings → Language*.\n4. **Nie zmieniaj nazw** części: `Window`, `CodeBox`, `Redeem`, `Message` (i `OpenCodes`, `Close`, `Title`, `Hint`). Przycisk przesuwaj lub usuwaj razem z jego krawędzią (`…Edge`).\nGra sama użyje Twojego okienka. W **Output** zobaczysz *Code window: your template*."
+      ],
+      [
+        "🔘 Własny przycisk (opcjonalnie)",
+        "Okno możesz otwierać też przyciskiem z Twojego menu. W jego **LocalScript** wpisz:\n```lua\ngame.Players.LocalPlayer.PlayerGui.DiscordCodesGui:FindFirstChild(\"Window\", true).Visible = true\n```\nWbudowany przycisk usuniesz, kasując **OpenCodes** w szablonie (jego krawędź **OpenCodesEdge** sama się schowa). Bez szablonu: `ShowButton = false` w **DiscordSettings** (rozdział *Plik do Roblox Studio*)."
+      ],
+      [
+        "🎁 Skąd się biorą nagrody",
+        "Bot nie tworzy w grze walut ani przedmiotów. Nagroda trafia tam, gdzie gra już trzyma dane gracza (np. `leaderstats.Coins`), a nazwa musi być taka sama jak w `/setup-roblox` → *Co ma Twoja gra*. Gra zapisuje dane własnym systemem (np. ProfileStore)? W **ServerScriptService** dodaj **Script** o nazwie `CodeRewards` (prawy przycisk → **Insert Object** → **Script**) i wklej:\n```lua\nlocal Core = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Core\"))\nCore.OnReward = function(player, reward)\n\t-- reward.currency, reward.exp, reward.item\n\t-- Dodaj nagrodę w swoim systemie zapisu, a potem zmień poniższe na: return true\n\treturn false\nend\n```\nDopóki jest `return false`, nic nie jest dawane i kod nie przepada. Opis do wklejenia dla AI jest na stronie `DOCS.html`, rozdział *Nagrody: dla programisty gry*."
+      ],
+      [
+        "🔄 Aktualizacje bez utraty zmian",
+        "Cztery zasady: **(1)** nic nie zmieniaj *wewnątrz* `DiscordCodes` (plik jest podmieniany przy aktualizacji), **(2)** własny kod trzymaj w osobnym skrypcie (np. `CodeRewards`), **(3)** własny wygląd trzymaj w szablonie `StarterGui → DiscordCodesGui`, **(4)** swoje ustawienia trzymaj w **DiscordSettings**, obok DiscordCodes. Aktualizacja to wtedy: stary `DiscordCodes` do **ServerStorage** (kopia), nowy plik, **Play**, **Publish**. Coś nie działa? Wrzuć starą kopię z ServerStorage z powrotem. Kroki są w rozdziale *Plik do Roblox Studio*."
+      ]
+    ],
+    "checks": [
+      "kit"
+    ],
+    "actions": [
+      "kit"
+    ]
+  },
+  {
+    "id": "eggs",
+    "emoji": "🥚",
+    "title": "Jajka i zwierzaki",
+    "menu": "Jajko na stojaku: cena, zwierzaki, szanse",
+    "intro": "Jajko stoi w grze w wybranym miejscu. Gracz podchodzi, płaci walutą i losuje zwierzaka. Jajka dodajesz i zmieniasz z Discorda.",
+    "fields": [
+      [
+        "1. Miejsce w grze (Studio)",
+        "Postaw w grze Part, czyli zwykły klocek (karta **Home** → **Part**), płasko na podłodze: zestaw postawi na nim okrągły podest. Zaznacz go → okno **Properties** → na dole **Tags** → **+** → wpisz `DiscordEggSpot`. Jeden part = jedno jajko: gdy aktywnych jajek jest więcej niż klocków z tagiem, nadmiarowe jajka nie pojawią się w grze, a bot Cię ostrzeże. Po **Play** panel **🥚 Jajka** pokaże to miejsce w polu *📍 Miejsca na jajka w grze*. Opublikuj grę."
+      ],
+      [
+        "2. Wygląd (opcjonalnie)",
+        "1. Prawy przycisk na **ReplicatedStorage** → **Insert Object** → **Folder** → nazwij go `DiscordEggs`.\n2. Wrzuć do niego swój model jajka i nazwij go `Default` (używa go każde jajko).\nBez modelu gra pokaże proste kolorowe jajko. Z modelem jajko wygląda jak ten model, a kolor wybrany w bocie nie działa: działa tylko dla zwykłego jajka."
+      ],
+      [
+        "3. Nowe jajko",
+        "`/setup-roblox` → **🥚 Jajka** → **Nowe jajko** (albo **📋 Jajko z katalogu gry**: zwierzaki i szanse wpiszą się same): nazwa, waluta, cena i zwierzaki z szansami, np. `Cat:60, Dog:35, Dragon:5`. Pod gotowym jajkiem wybierzesz kolor, czas i model, a **✏️ Edytuj jajko** zmienia je później. Komendy `/egg-create` i `/egg-edit` robią to samo.\nLimity: najwyżej 20 aktywnych jajek i 25 zwierzaków w jednym jajku. Szanse są pokazywane z dokładnością do 4 cyfr za pierwszą cyfrą różną od zera (np. 33,333%); gdy któraś jest zaokrąglona, jajko pokazuje też wymagane przez Robloxa zdanie (po angielsku): *Probabilities are rounded; total of displayed individual probabilities may not equal 100%.*"
+      ],
+      [
+        "⚠️ Ważne: zwierzaki",
+        "Wylosowany zwierzak trafia do wartości o jego nazwie w danych gracza (np. `Pets.Dragon`). Panel Jajka pokazuje ✅/⚠️ przy każdym zwierzaku. Gra ma własny system zwierzaków? Programista dodaje `Live.OnHatch`. Jajka kupowane walutą, którą da się kupić za Robuxy, to w zasadach Robloxa „płatne przedmioty losowe”: napis nad jajkiem pokazuje dokładne szanse (także w czasie eventu szczęścia, z dopiskiem ⚡), a gra sama nie sprzeda jajka graczowi, któremu Roblox na to nie pozwala. Gdy żadnej waluty jajek nie da się kupić za Robuxy, możesz to wyłączyć linijką `Live.Config.PaidRandomItems = false` we własnym skrypcie, pod `local Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))` (nie w pliku `Live`: aktualizacja by ją cofnęła). Własny sklep jajek pokazuje szanse z `Live.GetChances(id)`, a kupno z własnego przycisku to `Live.OpenEgg(player, id)` (szczegóły w `DOCS.html`)."
+      ],
+      [
+        "🧪 Sprawdź w grze",
+        "1. W Studio kliknij **Play** i poczekaj do minuty. W Studio gra sprawdza zmiany z Discorda co ok. minutę, w opublikowanej grze dochodzą w kilka sekund.\n2. Na Twoim klocku z tagiem stoi jajko, a nad nim nazwa, cena i szanse.\n3. Podejdź i przytrzymaj **E**. Zobaczysz napis *Nowy zwierzak: …!* z szansą, a waluta spadnie o cenę.\n*Za mało …* = masz za mało waluty. *To jajko nie jest jeszcze gotowe w tej grze* = gra nie ma miejsca na zwierzaka albo walutę: okno **Output** napisze, czego brakuje."
+      ]
+    ],
+    "checks": [
+      "eggs"
+    ],
+    "actions": [
+      "eggs"
+    ]
+  },
+  {
+    "id": "events",
+    "emoji": "⚡",
+    "title": "Eventy z mnożnikami",
+    "menu": "2x monety, 2x EXP, więcej szczęścia",
+    "intro": "Event włącza mnożnik na wszystkich serwerach gry na wybrany czas. Gracze widzą licznik na ekranie.",
+    "fields": [
+      [
+        "🍀 Szczęście w jajkach",
+        "Działa od razu, bez zmian w grze: zwiększa szanse na rzadkie zwierzaki (5% i mniej)."
+      ],
+      [
+        "💰 Waluta i EXP",
+        "Żeby gracze naprawdę dostawali więcej, gra musi pytać o mnożnik. Programista dodaje **jedną linijkę** tam, gdzie gra daje walutę lub EXP:\n```lua\nlocal Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))\namount = amount * Live.GetMultiplier(\"Coins\")\n```\nPanel Eventy pokazuje ✅ przy walutach, dla których gra już to robi."
+      ],
+      [
+        "⚡ Nowy event",
+        "`/setup-roblox` → **⚡ Eventy** → **Nowy event**: nazwa, czas (z listy, od 1 minuty do 7 dni, albo wpisany, np. `45m`, `2h30m`; sama liczba to minuty), co mnożyć (możesz wybrać kilka rzeczy naraz, np. Coins, EXP i szczęście) i ile razy. Różne mnożniki dla różnych rzeczy (np. 2× Coins i 3× EXP): `/event-start`. Koniec przed czasem: **⏹️ Zakończ ten event** pod eventem, **Zakończ event** w panelu albo `/event-stop`.\nNajwyżej 10 eventów naraz. Eventy działające w tym samym czasie mnożą się: 2× Coins i drugi 2× Coins = 4× Coins (najwyżej ×100).\nW grze w prawym dolnym rogu pojawi się okrągła ikona z mnożnikiem i odliczaniem (po najechaniu widać, co event daje) (w Studio do minuty, w opublikowanej grze w kilka sekund).\nEvent może też mieć **animację**, którą widzi każdy gracz (💰 🌌 🍀 ☄️ 🌸): pierwszy krok **Nowego eventu**, `/event-start` → `animation` albo **Animation** w ⚙️ Managerze w grze. Startuje po 10-sekundowym odliczaniu na ekranach graczy."
+      ]
+    ],
+    "checks": [
+      "events"
+    ],
+    "actions": [
+      "events"
+    ]
+  },
+  {
+    "id": "gifts",
+    "emoji": "🎁",
+    "title": "Prezenty, ogłoszenia, bany, ranking",
+    "menu": "Pozostałe narzędzia gry",
+    "intro": "Te narzędzia nie wymagają zmian w grze, wystarczy plik DiscordCodes i połączenie z grą.",
+    "fields": [
+      [
+        "🎁 Prezent",
+        "Nagroda dla jednego gracza, bez kodu: `/setup-roblox` → **🎁 Prezenty i ogłoszenia** → **Wyślij prezent**. Gracza wpisujesz nickiem albo ID Roblox. Najpierw dostajesz szkic z dokładnym kontem: przyciskiem **⚙️** dodasz EXP i czas przedmiotu (np. VIP na 24 h), a gracz dostanie prezent dopiero po **✅ Wyślij prezent**. `/give` robi to samo jedną komendą, ale wysyła od razu, bez szkicu. Gracz offline dostanie go przy wejściu do gry. Prezent, którego nagroda nie pasuje do gry, czeka dalej (okno **Output** mówi dlaczego) i dojdzie, gdy poprawisz nazwę; wysłanego prezentu nie da się anulować przyciskiem (`DOCS.html` → *Gra z Discorda: szczegóły*)."
+      ],
+      [
+        "📢 Ogłoszenie",
+        "Wiadomość na ekranie każdego gracza: **Ogłoszenie** w tym samym panelu (albo `/announce-game`). Tekst przechodzi przez filtr Robloxa. Bez linków: z linkiem Roblox zakryje całe ogłoszenie (####), więc bot go nie wyśle: w panelu da przyciski **✏️ Popraw** i **Wyślij mimo to**, a `/announce-game` odda tekst do skopiowania."
+      ],
+      [
+        "🔨 Bany",
+        "`/setup-roblox` → **👤 Karta gracza** → nick albo ID: widzisz zdjęcie, wiek konta, bana i ostatnie prezenty, a obok **Zbanuj**, **Odbanuj** i **Wyślij prezent**. Komendy robią to samo: `/roblox-ban`, `/roblox-unban`, `/roblox-ban-check`. Ban działa na wszystkich serwerach **opublikowanej** gry; w Studio (**Play**) nic nie robi. Klucz API musi mieć **user-restrictions**. Testuj na drugim koncie, nigdy na swoim."
+      ],
+      [
+        "🏆 Ranking",
+        "`/leaderboard` pokazuje najlepszych graczy z rankingu, który Twoja gra już zapisuje (OrderedDataStore). Bot tylko go czyta: nie tworzy rankingu i niczego w nim nie zmienia. Podłączasz go w `/setup-roblox` → **🏆 Ranking**. Twoja gra nie ma takiego rankingu? Pomiń to."
+      ],
+      [
+        "🧪 Sprawdź wszystko",
+        "Przycisk w `/setup-roblox` sprawdza połączenie, uprawnienia klucza, plik w grze, nazwy, jajka i eventy, i mówi, co poprawić."
+      ]
+    ],
+    "checks": [
+      "connection"
+    ],
+    "actions": [
+      "gifts",
+      "player",
+      "check"
+    ]
+  },
+  {
+    "id": "control_panel",
+    "emoji": "🕹️",
+    "title": "Panel sterowania grą",
+    "menu": "Przyciski do gry dla adminów i moderatorów",
+    "intro": "Jedna wiadomość na kanale ekipy z przyciskami do gry. Ty i wybrane przez Ciebie role (np. Moderator gry) obsługujecie grę bez komend: każdy przycisk otwiera okienko widoczne tylko dla klikającego. Okienko zamykasz przyciskiem **✖️ Zamknij**, a samo znika po 5 minutach bez klikania.",
+    "fields": [
+      [
+        "🕹️ Co jest na panelu",
+        "**📜 Kody promocyjne**, **👤 Karta gracza** (ban, odbanowanie, prezent), **🎁 Wyślij prezent**, **📢 Ogłoszenie**, **⚡ Eventy** i **🥚 Jajka**. To te same okienka co w `/setup-roblox`."
+      ],
+      [
+        "👥 Kto może",
+        "Administratorzy zawsze. Dodatkowo role, które wybierzesz z listy w `/setup-roblox` → **🕹️ Panel sterowania**. Te role mogą wszystko, co jest na panelu, **także banować**, ale nie zmienią ustawień bota i nie użyją komend administratora. Usunięcie roli z listy od razu zabiera dostęp."
+      ],
+      [
+        "📤 Jak wysłać panel",
+        "1. `/setup-roblox` → **🕹️ Panel sterowania** → wybierz role z listy.\n2. Wejdź na kanał, który widzi tylko ekipa (np. #panel-gry), otwórz tam `/setup-roblox` → **🕹️ Panel sterowania** i kliknij **📤 Wyślij panel na tym kanale**.\nWysłanie panelu w innym miejscu usuwa stary. Panel działa też po restarcie bota."
+      ]
+    ],
+    "checks": [
+      "control_panel"
+    ],
+    "actions": [
+      "control_panel"
+    ]
+  },
+  {
+    "id": "permissions",
+    "emoji": "🛡️",
+    "title": "Uprawnienia",
+    "menu": "Kto co może: role i gracze w Managerze",
+    "intro": "Domyślnie grą zarządzają tylko administratorzy. Tutaj dajesz dostęp innym osobom i zaznaczasz, **co dokładnie każda z nich może**. Otwórz `/setup` → **🛡️ Uprawnienia**. Administratorzy zawsze mogą wszystko. Ustawienia bota (`/setup`, `/setup-roblox`) zostają tylko dla administratorów.",
+    "fields": [
+      [
+        "💬 Co może każda rola",
+        "1. `/setup` → **🛡️ Uprawnienia** → **💬 Co może każda rola**.\n2. Na pierwszej liście wybierz role z Discorda, które dostają dostęp (np. Moderator).\n3. Na drugiej liście wybierz jedną z nich.\n4. Na trzeciej liście zaznacz, co może: **Kody promocyjne**, **Eventy**, **Jajka**, **Prezenty**, **Ogłoszenia**, **Karta gracza**, **Bany**.\nW oknie zobaczysz role i to, co każda może. Rola bez zaznaczeń nic nie może. Osoba z kilkoma rolami ma sumę ich uprawnień. Zmiana działa od razu."
+      ],
+      [
+        "⌨️ Komendy i przyciski",
+        "Komendy do gry (`/code-add`, `/code-remove`, `/give`, `/announce-game`, `/event-start`, `/event-stop`, `/egg-create`, `/egg-edit`, `/egg-remove`, `/roblox-ban`, `/roblox-unban`, `/roblox-ban-check`) są teraz widoczne dla wszystkich na serwerze, ale bot wpuszcza tylko administratorów i role z odpowiednim uprawnieniem. Pozostali dostają odmowę z nazwą uprawnienia. `/codes`, `/events` i `/eggs` dalej są dla każdego.\nKażdy przycisk 🕹️ panelu sterowania też sprawdza swoje uprawnienie. Rola dodana po staremu (`/setup-roblox` → **🕹️ Panel sterowania**, lista ról) dostaje wszystko; to okno ma też przycisk **🛡️ Co może każda rola**."
+      ],
+      [
+        "🎮 Manager w grze",
+        "Daje graczowi **⚙️ Managera** w Twojej grze, z jego własnymi uprawnieniami.\n1. `/setup` → **🛡️ Uprawnienia** → **🎮 Manager w grze** → **➕ Dodaj gracza**.\n2. Wpisz jego nazwę użytkownika Roblox (nie nazwę wyświetlaną). Zobaczysz ✅, że jest na liście.\n3. Wybierz gracza na liście i zaznacz, co może: to samo co dla ról oprócz **Karty gracza** – każdy z Managerem widzi graczy – plus **Ustawienia gry** (tylko w Managerze).\n4. **📤 Wyślij do gry** (lista idzie też sama). Wymaga włączonego **Połączenia z grą** w `/setup-roblox`.\n**🗑️ Usuń gracza** zabiera dostęp. Maksymalnie 25 graczy."
+      ],
+      [
+        "🛡️ Dostęp nadany w samej grze",
+        "To samo zrobi właściciel gry bez Discorda (tylko on widzi tę zakładkę):\n1. Otwórz **⚙️ Manager** → zakładka **🛡️ Dostęp do Managera**.\n2. Wpisz nazwę użytkownika Roblox (nie wyświetlaną) → **Znajdź**.\n3. Zaznacz, co osoba może (Kody, Eventy, Jajka, Prezenty, Ogłoszenia, Bany, Ustawienia) → **Zapisz**. Osoba od razu dostaje przycisk **⚙️ Manager**.\nLista pod spodem pokazuje wszystkich z dostępem: **Zmień** i **🗑️** (odbierz dostęp). Maksymalnie 25 graczy. To ta sama lista co na Discordzie: zmiana w grze pokazuje się tam i odwrotnie.\nOsoba widzi w Managerze tylko zakładkę **Start** i zakładki tego, co zaznaczono (np. tylko Eventy → **Start** i **Eventy**). Gra odmawia też odczytu pozostałych zakładek."
+      ],
+      [
+        "🧪 Sprawdzanie w Studio",
+        "W Studio (Play) każdy jest właścicielem, więc ograniczeń nie zobaczysz. Zapis listy w Studio wymaga: Game Settings → Security → **Enable Studio Access to API Services**. Ograniczenia sprawdzisz w opublikowanej grze, grając z drugiego konta."
+      ],
+      [
+        "🎮 Co widzi gracz",
+        "Gracz dostaje przycisk **⚙️ Manager** przy następnym wejściu do gry albo w ciągu minuty, jeśli właśnie gra. Czego nie może, tego w Managerze nie widzi (formularze są ukryte), a gra i tak sprawdza każdą akcję. Twórca gry zawsze może wszystko. Osoby w `DiscordSettings` → `ManagerUsers` widzą w Managerze tylko zakładkę Start."
+      ],
+      [
+        "❓ Nie działa?",
+        "- Komenda lub przycisk odmawia: zaznacz to uprawnienie dla roli tej osoby (druga i trzecia lista). Rola, której osoba nie ma, nie pomoże.\n- **Wyślij do gry** pokazuje ⚠️: włącz **Połączenie z grą** w `/setup-roblox`, potem znowu kliknij **📤 Wyślij do gry**.\n- Gracz nie ma przycisku ⚙️ Manager: poczekaj minutę albo niech wejdzie do gry od nowa, i sprawdź, czy wpisałeś nazwę użytkownika, a nie wyświetlaną.\n- Roli nie ma na drugiej liście: najpierw wybierz ją na pierwszej."
+      ]
+    ]
+  },
+  {
+    "id": "hosting",
+    "emoji": "🌐",
+    "title": "Bot 24/7 i aktualizacje",
+    "menu": "Żeby bot nie wyłączał się z komputerem",
+    "intro": "Bot działa tylko wtedy, gdy działa jego program na komputerze albo serwerze. Wyłączysz komputer = bot jest offline.",
+    "fields": [
+      [
+        "▶️ Uruchamianie",
+        "Uruchamiaj bota zawsze przez `start.bat` (Windows) albo `start.sh` (Linux). Przy każdym starcie instalują one biblioteki potrzebne botowi, więc nowa wersja od razu działa. Gdy bot jest online, jego okno pokazuje Twoją wersję, np. `📦 CodeHatch 1.0.0` (jest też na dole `/help`).\nWindows: kliknięcie w czarne okno nie zatrzymuje bota. Jeśli mimo to tytuł okna zaczyna się od *Zaznacz*, naciśnij **Esc**. Nie trzymaj folderu bota w OneDrive ani w Dropboxie (blokują pliki): dobre miejsce to `C:\\Boty`."
+      ],
+      [
+        "🎮 Gra bez bota",
+        "Kody, jajka, eventy i prezenty działają w grze dalej, gdy bot jest wyłączony: są zapisane w Twojej grze, a **⚙️ Manager** w grze tworzy je i usuwa bez bota. Bot jest potrzebny tylko do Discorda (komendy `/`, panele i kanał logów). Dlatego 24/7 to wygoda, nie wymóg."
+      ],
+      [
+        "🌐 24/7",
+        "Komputer włączony cały czas, hosting dla botów Discord (z panelem) albo serwer VPS. Instrukcje krok po kroku: `/setup-guide` → *Hosting 24/7* i strona `DOCS.html` w folderze bota."
+      ],
+      [
+        "🔄 Aktualizacje",
+        "Nową wersję pobierasz z kanału #buyers na serwerze Discord CodeHatch HQ (rolę 💎 Buyer dostajesz przy zakupie). W `CHANGELOG.md` przeczytaj wszystkie wpisy między Twoją wersją a nową, nie tylko najnowszy.\n1. Zamknij okno bota.\n2. Rozpakuj nową wersję i skopiuj jej pliki na stary folder bota. **Zostaw** `.env`, `config.json` i folder `data`: nigdy ich nie nadpisuj.\n3. Uruchom bota znowu przez `start.bat` / `start.sh`.\nCzy `/setup-roblox` pokazuje potem ⚠️ przy pliku DiscordCodes? Podmień go w Studio: `/setup-guide` → *Aktualizacja pliku w Studio*."
+      ]
+    ],
+    "checks": [
+      "launcher"
+    ],
+    "actions": [
+      "guide"
+    ]
+  },
+  {
+    "id": "done",
+    "emoji": "✅",
+    "title": "Gotowe! Co dalej",
+    "menu": "Podsumowanie i pomoc",
+    "intro": "Brawo! Poniżej stan najważniejszych kroków. ⚠️ oznacza, że coś możesz jeszcze ustawić: wybierz rozdział z listy u góry.",
+    "fields": [
+      [
+        "🆘 Gdy coś nie działa",
+        "• `/setup` → **🩺 Diagnostyka** (Discord) i `/setup-roblox` → **🧪 Sprawdź wszystko** (gra) mówią, co poprawić.\n• `/setup-guide` – odpowiedzi na częste problemy.\n• Błędy bota trafiają na Twój własny **🐛 Kanał zgłoszeń błędów** (`/setup` → **Kanały**).\n• Błędy i pytania: strona Issues projektu na GitHubie."
+      ],
+      [
+        "👥 Dla graczy",
+        "Napisz na serwerze, że mogą używać `/codes` (aktywne kody), `/eggs` (jajka z szansami), `/events` (aktywne eventy) i `/leaderboard` (najlepsi gracze). Pełna lista: `/help`."
+      ]
+    ],
+    "checks": [
+      "channels",
+      "game",
+      "connection",
+      "kit",
+      "names"
+    ],
+    "actions": [
+      "setup",
+      "setup_roblox",
+      "check"
+    ]
+  }
+]

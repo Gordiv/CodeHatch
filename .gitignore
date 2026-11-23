@@ -1,0 +1,23 @@
+# Secrets: tokens, API keys
+.env
+.env.tmp
+*.tmp
+
+# Bot data at runtime (database, state) and its settings (the bot creates config.json itself)
+data/
+config.json
+
+# Built automatically
+dist/
+DOCS.html
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# lupa, only for the Luau tests (pip install --target .lupa lupa)
+.lupa/
+
+# Event graphics rendered from Blender (tools/vfx/<effect>.py rebuilds them)
+tools/vfx/out/

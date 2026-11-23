@@ -1,0 +1,3 @@
+# Pliki zapisywane i przywracane bajt w bajt, bez zamiany końców linii.
+# Bez tego start.sh przywrócony na Windows dostałby CRLF i przestałby działać na Linuksie.
+* -text

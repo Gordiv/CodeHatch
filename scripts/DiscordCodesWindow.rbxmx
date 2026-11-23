@@ -1,0 +1,330 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="ScreenGui" referent="RBXE23D9DC333DE432D80EFAE8B3D3562F4">
+		<Properties>
+			<string name="Name">DiscordCodesGui</string>
+			<bool name="ResetOnSpawn">false</bool>
+			<int name="DisplayOrder">50</int>
+			<token name="ZIndexBehavior">1</token>
+		</Properties>
+		<Item class="TextButton" referent="RBX16E5CC0A19884905A32D8F09D4C82EA6">
+			<Properties>
+				<string name="Name">OpenCodes</string>
+				<UDim2 name="Size"><XS>0</XS><XO>148</XO><YS>0</YS><YO>54</YO></UDim2>
+				<UDim2 name="Position"><XS>0</XS><XO>12</XO><YS>0.5</YS><YO>0</YO></UDim2>
+				<Vector2 name="AnchorPoint"><X>0</X><Y>0.5</Y></Vector2>
+				<float name="BackgroundTransparency">1</float>
+				<int name="BorderSizePixel">0</int>
+				<bool name="AutoButtonColor">false</bool>
+				<string name="Text"></string>
+			</Properties>
+			<Item class="ImageLabel" referent="RBXBEA7D2F93C374E9FBB16DB37D23B790D">
+				<Properties>
+					<string name="Name">Skin</string>
+					<float name="BackgroundTransparency">1</float>
+					<Content name="Image"><url>rbxassetid://127576122383640</url></Content>
+					<UDim2 name="Position"><XS>0</XS><XO>-10.8</XO><YS>0</YS><YO>-10.8</YO></UDim2>
+					<UDim2 name="Size"><XS>1</XS><XO>21.6</XO><YS>1</YS><YO>21.6</YO></UDim2>
+				</Properties>
+			</Item>
+			<Item class="TextLabel" referent="RBXD0E7BECCB38B402BA3739E3547DE185D">
+				<Properties>
+					<string name="Name">Label</string>
+					<float name="BackgroundTransparency">1</float>
+					<UDim2 name="Size"><XS>1</XS><XO>0</XO><YS>1</YS><YO>0</YO></UDim2>
+					<float name="TextTransparency">1</float>
+					<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+					<string name="Text">CODES</string>
+					<float name="TextSize">18</float>
+					<Color3 name="TextColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Frame" referent="RBX415886A039A34F8597310A9A40B1C9C0">
+			<Properties>
+				<string name="Name">Window</string>
+				<UDim2 name="Size"><XS>0</XS><XO>380</XO><YS>0</YS><YO>300</YO></UDim2>
+				<UDim2 name="Position"><XS>0.5</XS><XO>0</XO><YS>0.5</YS><YO>0</YO></UDim2>
+				<Vector2 name="AnchorPoint"><X>0.5</X><Y>0.5</Y></Vector2>
+				<float name="BackgroundTransparency">1</float>
+				<int name="BorderSizePixel">0</int>
+				<bool name="Visible">false</bool>
+			</Properties>
+			<Item class="Frame" referent="RBXDBFFAFC527D340DBA38AAB2D6ABC962E">
+				<Properties>
+					<string name="Name">Shadow</string>
+					<UDim2 name="Size"><XS>1</XS><XO>0</XO><YS>1</YS><YO>0</YO></UDim2>
+					<UDim2 name="Position"><XS>0</XS><XO>0</XO><YS>0</YS><YO>6</YO></UDim2>
+					<Color3 name="BackgroundColor3"><R>0.054902</R><G>0.031373</G><B>0.109804</B></Color3>
+					<int name="BorderSizePixel">0</int>
+					<float name="BackgroundTransparency">0.45</float>
+				</Properties>
+				<Item class="UICorner" referent="RBX500ADC43D99B4577B19E1BF5EB9CC2D0">
+					<Properties>
+						<string name="Name">UICorner</string>
+						<UDim name="CornerRadius"><S>0</S><O>22</O></UDim>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Frame" referent="RBX988559A9C95B43BBA72082CD82172E99">
+				<Properties>
+					<string name="Name">Panel</string>
+					<UDim2 name="Size"><XS>1</XS><XO>0</XO><YS>1</YS><YO>0</YO></UDim2>
+					<UDim2 name="Position"><XS>0</XS><XO>0</XO><YS>0</YS><YO>0</YO></UDim2>
+					<Color3 name="BackgroundColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+					<int name="BorderSizePixel">0</int>
+					<float name="BackgroundTransparency">0</float>
+				</Properties>
+				<Item class="UICorner" referent="RBXC469F174B0BA481ABA1C59E4AA7C60B9">
+					<Properties>
+						<string name="Name">UICorner</string>
+						<UDim name="CornerRadius"><S>0</S><O>22</O></UDim>
+					</Properties>
+				</Item>
+				<Item class="UIGradient" referent="RBXAECDDBCE66F948DEB2D4C1A4422CCE8C">
+					<Properties>
+						<string name="Name">UIGradient</string>
+						<ColorSequence name="Color">0 0.156863 0.094118 0.266667 0 1 0.070588 0.039216 0.12549 0 </ColorSequence>
+						<float name="Rotation">90</float>
+					</Properties>
+				</Item>
+				<Item class="UIStroke" referent="RBX63687EAD6E1A49958E73DA161E35F603">
+					<Properties>
+						<string name="Name">UIStroke</string>
+						<Color3 name="Color"><R>0.701961</R><G>0.419608</G><B>1.0</B></Color3>
+						<float name="Thickness">2</float>
+						<token name="ApplyStrokeMode">1</token>
+					</Properties>
+				</Item>
+				<Item class="TextLabel" referent="RBX1DC06FBA49B94F25B683AFB99E4BBE41">
+					<Properties>
+						<string name="Name">Title</string>
+						<float name="BackgroundTransparency">1</float>
+						<UDim2 name="Size"><XS>1</XS><XO>-90</XO><YS>0</YS><YO>64</YO></UDim2>
+						<UDim2 name="Position"><XS>0</XS><XO>22</XO><YS>0</YS><YO>0</YO></UDim2>
+						<token name="TextXAlignment">0</token>
+						<token name="Font">26</token>
+						<string name="Text">REDEEM CODE</string>
+						<float name="TextSize">26</float>
+						<Color3 name="TextColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+					</Properties>
+				</Item>
+				<Item class="TextButton" referent="RBX171554A5872C43439E5081BC18786F53">
+					<Properties>
+						<string name="Name">Close</string>
+						<UDim2 name="Size"><XS>0</XS><XO>40</XO><YS>0</YS><YO>40</YO></UDim2>
+						<UDim2 name="Position"><XS>1</XS><XO>-54</XO><YS>0</YS><YO>12</YO></UDim2>
+						<Vector2 name="AnchorPoint"><X>0</X><Y>0</Y></Vector2>
+						<Color3 name="BackgroundColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+						<int name="BorderSizePixel">0</int>
+						<bool name="AutoButtonColor">false</bool>
+						<string name="Text"></string>
+					</Properties>
+					<Item class="UICorner" referent="RBXCF4095E3895345B3BEF5D3CA63F5276B">
+						<Properties>
+							<string name="Name">UICorner</string>
+							<UDim name="CornerRadius"><S>0</S><O>14</O></UDim>
+						</Properties>
+					</Item>
+					<Item class="UIStroke" referent="RBXEBBEFDBDB2744BD982DDF08DBB0EE655">
+						<Properties>
+							<string name="Name">UIStroke</string>
+							<Color3 name="Color"><R>0.960784</R><G>0.839216</G><B>1.0</B></Color3>
+							<float name="Thickness">1.5</float>
+							<token name="ApplyStrokeMode">1</token>
+						</Properties>
+					</Item>
+					<Item class="UIGradient" referent="RBX8601341536774780AA90729F04EAA5A6">
+						<Properties>
+							<string name="Name">UIGradient</string>
+							<ColorSequence name="Color">0 1.0 0.419608 0.541176 0 1 0.878431 0.2 0.352941 0 </ColorSequence>
+							<float name="Rotation">90</float>
+						</Properties>
+					</Item>
+					<Item class="Frame" referent="RBX21EAC5C667F943428650DFB3BF8C3F0B">
+						<Properties>
+							<string name="Name">Gloss</string>
+							<UDim2 name="Size"><XS>1</XS><XO>-12</XO><YS>0.42</YS><YO>0</YO></UDim2>
+							<UDim2 name="Position"><XS>0</XS><XO>6</XO><YS>0</YS><YO>4</YO></UDim2>
+							<Color3 name="BackgroundColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+							<int name="BorderSizePixel">0</int>
+							<float name="BackgroundTransparency">0.8</float>
+						</Properties>
+						<Item class="UICorner" referent="RBX346DF2E1853240BFAF2EF641817ACA82">
+							<Properties>
+								<string name="Name">UICorner</string>
+								<UDim name="CornerRadius"><S>0</S><O>10</O></UDim>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="TextLabel" referent="RBXAD710AC07E3344079D897FD651C98D93">
+						<Properties>
+							<string name="Name">Label</string>
+							<float name="BackgroundTransparency">1</float>
+							<UDim2 name="Size"><XS>1</XS><XO>-12</XO><YS>1</YS><YO>0</YO></UDim2>
+							<UDim2 name="Position"><XS>0</XS><XO>6</XO><YS>0</YS><YO>0</YO></UDim2>
+							<Color3 name="TextStrokeColor3"><R>0.27451</R><G>0.094118</G><B>0.470588</B></Color3>
+							<float name="TextStrokeTransparency">0.55</float>
+							<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+							<string name="Text">X</string>
+							<float name="TextSize">20</float>
+							<Color3 name="TextColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextBox" referent="RBX9295340F584F465999DCBFCAEBFCA7F2">
+					<Properties>
+						<string name="Name">CodeBox</string>
+						<UDim2 name="Size"><XS>1</XS><XO>-40</XO><YS>0</YS><YO>52</YO></UDim2>
+						<UDim2 name="Position"><XS>0</XS><XO>20</XO><YS>0</YS><YO>86</YO></UDim2>
+						<Color3 name="BackgroundColor3"><R>0.094118</R><G>0.054902</G><B>0.172549</B></Color3>
+						<int name="BorderSizePixel">0</int>
+						<string name="PlaceholderText">Enter code</string>
+						<Color3 name="PlaceholderColor3"><R>0.658824</R><G>0.592157</G><B>0.839216</B></Color3>
+						<bool name="ClearTextOnFocus">false</bool>
+						<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+						<string name="Text"></string>
+						<float name="TextSize">22</float>
+						<Color3 name="TextColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+					</Properties>
+					<Item class="UICorner" referent="RBX7F6EB52601914335B082A2F5C01D0E97">
+						<Properties>
+							<string name="Name">UICorner</string>
+							<UDim name="CornerRadius"><S>0</S><O>14</O></UDim>
+						</Properties>
+					</Item>
+					<Item class="UIStroke" referent="RBX57AFA271A9F044E18BC83FBAD1741830">
+						<Properties>
+							<string name="Name">UIStroke</string>
+							<Color3 name="Color"><R>0.27451</R><G>0.188235</G><B>0.470588</B></Color3>
+							<float name="Thickness">2</float>
+							<token name="ApplyStrokeMode">1</token>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextButton" referent="RBXE00694883DA34CC69B8D515D1221B324">
+					<Properties>
+						<string name="Name">Redeem</string>
+						<UDim2 name="Size"><XS>1</XS><XO>-40</XO><YS>0</YS><YO>52</YO></UDim2>
+						<UDim2 name="Position"><XS>0</XS><XO>20</XO><YS>0</YS><YO>150</YO></UDim2>
+						<Vector2 name="AnchorPoint"><X>0</X><Y>0</Y></Vector2>
+						<Color3 name="BackgroundColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+						<int name="BorderSizePixel">0</int>
+						<bool name="AutoButtonColor">false</bool>
+						<string name="Text"></string>
+					</Properties>
+					<Item class="UICorner" referent="RBX0F2A9ED509134552BECB60E71C577502">
+						<Properties>
+							<string name="Name">UICorner</string>
+							<UDim name="CornerRadius"><S>0</S><O>14</O></UDim>
+						</Properties>
+					</Item>
+					<Item class="UIStroke" referent="RBXFF0F425100A34B3099B40DF35D216703">
+						<Properties>
+							<string name="Name">UIStroke</string>
+							<Color3 name="Color"><R>0.960784</R><G>0.839216</G><B>1.0</B></Color3>
+							<float name="Thickness">1.5</float>
+							<token name="ApplyStrokeMode">1</token>
+						</Properties>
+					</Item>
+					<Item class="UIGradient" referent="RBXC66C0EA8F9704DF28A919D6AC800CA89">
+						<Properties>
+							<string name="Name">UIGradient</string>
+							<ColorSequence name="Color">0 0.376471 0.886275 0.501961 0 1 0.117647 0.627451 0.282353 0 </ColorSequence>
+							<float name="Rotation">90</float>
+						</Properties>
+					</Item>
+					<Item class="Frame" referent="RBXAD2D32EE506948DEB7766472CCFD7DDD">
+						<Properties>
+							<string name="Name">Gloss</string>
+							<UDim2 name="Size"><XS>1</XS><XO>-12</XO><YS>0.42</YS><YO>0</YO></UDim2>
+							<UDim2 name="Position"><XS>0</XS><XO>6</XO><YS>0</YS><YO>4</YO></UDim2>
+							<Color3 name="BackgroundColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+							<int name="BorderSizePixel">0</int>
+							<float name="BackgroundTransparency">0.8</float>
+						</Properties>
+						<Item class="UICorner" referent="RBX182E7C9CF75A49D089FDED6B58E4DEB2">
+							<Properties>
+								<string name="Name">UICorner</string>
+								<UDim name="CornerRadius"><S>0</S><O>10</O></UDim>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="TextLabel" referent="RBXDD027C52C0BE4B09B6003DF1891E7AFA">
+						<Properties>
+							<string name="Name">Label</string>
+							<float name="BackgroundTransparency">1</float>
+							<UDim2 name="Size"><XS>1</XS><XO>-12</XO><YS>1</YS><YO>0</YO></UDim2>
+							<UDim2 name="Position"><XS>0</XS><XO>6</XO><YS>0</YS><YO>0</YO></UDim2>
+							<Color3 name="TextStrokeColor3"><R>0.27451</R><G>0.094118</G><B>0.470588</B></Color3>
+							<float name="TextStrokeTransparency">0.55</float>
+							<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+							<string name="Text">REDEEM</string>
+							<float name="TextSize">24</float>
+							<Color3 name="TextColor3"><R>1.0</R><G>1.0</G><B>1.0</B></Color3>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextLabel" referent="RBXFF2E4B9535CC4467A7FBF01993646386">
+					<Properties>
+						<string name="Name">Message</string>
+						<float name="BackgroundTransparency">0</float>
+						<Color3 name="BackgroundColor3"><R>0.109804</R><G>0.258824</G><B>0.188235</B></Color3>
+						<UDim2 name="Size"><XS>1</XS><XO>-40</XO><YS>0</YS><YO>48</YO></UDim2>
+						<UDim2 name="Position"><XS>0</XS><XO>20</XO><YS>0</YS><YO>216</YO></UDim2>
+						<bool name="TextWrapped">true</bool>
+						<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+						<string name="Text">Result of the code appears here</string>
+						<float name="TextSize">17</float>
+						<Color3 name="TextColor3"><R>0.431373</R><G>0.901961</G><B>0.54902</B></Color3>
+					</Properties>
+					<Item class="UICorner" referent="RBX678440285CAB4E36BA6627682AAA0B72">
+						<Properties>
+							<string name="Name">UICorner</string>
+							<UDim name="CornerRadius"><S>0</S><O>12</O></UDim>
+						</Properties>
+					</Item>
+					<Item class="UIStroke" referent="RBXAF860A9E25834DB294555FEEADE01F0B">
+						<Properties>
+							<string name="Name">Edge</string>
+							<Color3 name="Color"><R>0.313725</R><G>0.823529</G><B>0.470588</B></Color3>
+							<float name="Thickness">2</float>
+							<token name="ApplyStrokeMode">1</token>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextLabel" referent="RBXE85191361BA64692B4FD168896A45745">
+					<Properties>
+						<string name="Name">Hint</string>
+						<float name="BackgroundTransparency">1</float>
+						<UDim2 name="Size"><XS>1</XS><XO>-40</XO><YS>0</YS><YO>22</YO></UDim2>
+						<UDim2 name="Position"><XS>0</XS><XO>20</XO><YS>0</YS><YO>270</YO></UDim2>
+						<Font name="FontFace"><Family><url>rbxasset://fonts/families/Nunito.json</url></Family><Weight>900</Weight><Style>Normal</Style></Font>
+						<string name="Text">Check back for new codes!</string>
+						<float name="TextSize">15</float>
+						<Color3 name="TextColor3"><R>0.658824</R><G>0.592157</G><B>0.839216</B></Color3>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="StringValue" referent="RBXF043D59E43ED4564BE1AE721C23DAF6B">
+			<Properties>
+				<string name="Name">READ_ME_FIRST</string>
+				<string name="Value">Change colors, texts, sizes and positions in the Properties window. Keep these names: Window, CodeBox, Redeem, Message (and OpenCodes, Close, Title, Hint). The text of a button (OpenCodes, Redeem, Close) is the TextLabel Label inside it: its gradient is a UIGradient on the button. Message colors its background by the result only when it has a visible background. Do not delete this window when you update DiscordCodes. The Window is hidden so it does not cover the screen in Studio: to edit it, select Window and tick Visible, then untick it again when you finish. In the game it opens with the OpenCodes button.</string>
+			</Properties>
+		</Item>
+		<Item class="Configuration" referent="RBX2547169A1C574CA29B2850C8323BC998">
+			<Properties>
+				<string name="Name">Settings</string>
+			</Properties>
+			<Item class="StringValue" referent="RBX206746FBA61948F8B72A592ABF826297">
+				<Properties>
+					<string name="Name">Language</string>
+					<string name="Value">auto</string>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+</roblox>

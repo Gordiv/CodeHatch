@@ -1,0 +1,31 @@
+{
+  "bot_settings": {
+    "language": "en",
+    "status_message": "CodeHatch | /help",
+    "embed_color": "0x00A2FF"
+  },
+  "roblox": {
+    "universe_id": 0,
+    "place_id": 0
+  },
+  "ai_support": {
+    "developer_bug_channel_id": 0
+  },
+  "moderation": {
+    "log_channel_id": 0
+  },
+  "cloud_sync": {
+    "enabled": false,
+    "datastore_name": "DiscordCodeSync",
+    "entry_key": "ActiveCodes",
+    "topic": "DiscordCodes",
+    "live_datastore": "DiscordLiveContent",
+    "gifts_datastore": "DiscordGifts",
+    "live_topic": "DiscordLive"
+  },
+  "leaderboard": {
+    "datastore": "",
+    "scope": "global",
+    "label": "Coins"
+  }
+}

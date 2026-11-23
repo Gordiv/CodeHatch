@@ -1,0 +1,68 @@
+{
+  "coin_storm": {
+    "CoinSpin": "rbxassetid://89934896355831",
+    "CoinGlint": "rbxassetid://106062802639237",
+    "GoldDust": "rbxassetid://83190800475097",
+    "GoldRing": "rbxassetid://99316226641015",
+    "Icon": "rbxassetid://113726138582814"
+  },
+  "aurora": {
+    "CurtainA": [
+      "rbxassetid://82602981780404",
+      "rbxassetid://81126774119326",
+      "rbxassetid://109902153943815",
+      "rbxassetid://90801715548379"
+    ],
+    "CurtainB": [
+      "rbxassetid://103985561782060",
+      "rbxassetid://105921095949362",
+      "rbxassetid://72753442265799",
+      "rbxassetid://70423568076826"
+    ],
+    "ExpOrb": "rbxassetid://109722080215681",
+    "StarTwinkle": "rbxassetid://80851362108176",
+    "Glow": "rbxassetid://112477620062528",
+    "Ring": "rbxassetid://90099011858639",
+    "Icon": "rbxassetid://91996613202319",
+    "Haze": [
+      "rbxassetid://104924224594581",
+      "rbxassetid://72430673003232",
+      "rbxassetid://86500980060231"
+    ]
+  },
+  "lucky_breeze": {
+    "CloverTumble": "rbxassetid://135897347061561",
+    "CloverTurn": "rbxassetid://89899181886566",
+    "Rainbow": "rbxassetid://118996897668806",
+    "WindStreak": "rbxassetid://137063294341044",
+    "Icon": "rbxassetid://128732215811234",
+    "Wisp": "rbxassetid://138831948392027",
+    "LightShafts": "rbxassetid://104988609683173"
+  },
+  "meteor_shower": {
+    "CrystalTumble": "rbxassetid://83277975113735",
+    "MeteorCore": "rbxassetid://97930189274268",
+    "MeteorTrail": "rbxassetid://139243006169452",
+    "ShockRing": "rbxassetid://136023763777061",
+    "Dust": "rbxassetid://136876618809962",
+    "Icon": "rbxassetid://94161661355073",
+    "Planet": "rbxassetid://91226138789942",
+    "NebulaCloud": [
+      "rbxassetid://129944075633370",
+      "rbxassetid://122810385251376"
+    ],
+    "CrystalCluster": "rbxassetid://108791677999763"
+  },
+  "sakura_festival": {
+    "PetalTumble": "rbxassetid://128062726849884",
+    "Lantern": "rbxassetid://75573904815122",
+    "Blossom": "rbxassetid://91077803069762",
+    "SakuraTree": "rbxassetid://130089470109807",
+    "Moon": "rbxassetid://79662437268873",
+    "Mist": "rbxassetid://140337350603461",
+    "Icon": "rbxassetid://81810477884031",
+    "Mountain": "rbxassetid://108407132932548",
+    "Pagoda": "rbxassetid://100862408987258",
+    "Torii": "rbxassetid://83793023379366"
+  }
+}

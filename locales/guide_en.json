@@ -1,0 +1,607 @@
+[
+  {
+    "id": "quick_start",
+    "emoji": "🚀",
+    "title": "Quick start",
+    "menu": "Where to begin – the order of steps",
+    "intro": "Setup takes a few minutes and happens almost entirely on Discord. Go through the steps in this order:",
+    "fields": [
+      [
+        "📖 Start with /tutorial",
+        "Type `/tutorial`: a step-by-step course that shows what already works (✅/⚠️) and has buttons that open the right panels. This cheat sheet (`/setup-guide`) answers specific questions."
+      ],
+      [
+        "🌐 Bot language",
+        "The bot speaks English by default. Change the language in `/setup` → the **🌐 Language / Język / Idioma** list at the very bottom (English, Polski, Español). Everyone sees the `/` command descriptions in their own Discord language."
+      ],
+      [
+        "1️⃣ Bot on the server",
+        "The bot has its permissions and the **Server Members Intent** is on (topic: *Bot on the server*)."
+      ],
+      [
+        "2️⃣ `/setup` (Discord)",
+        "Click **📡 Channels** and pick the **🐛 Bug report channel** (recommended: the bot posts its errors there). If you want, also pick the **📋 Log channel**: it gets every change in the game made from Discord or the ⚙️ Manager (codes, eggs, events, gifts, announcements, bans) with who made it, so use a private channel for your team. You'll see a green ✅ message after each choice."
+      ],
+      [
+        "3️⃣ `/setup-roblox` (your game)",
+        "Go from the top: **🎮 Roblox game** → **🔑 Game connection** (API key) → **📥 Studio file** → **🔍 What your game has** (pick your currencies and items before the first code). Then the game features."
+      ],
+      [
+        "4️⃣ Check",
+        "`/setup` → **🩺 Diagnostics** and `/setup-roblox` → **🧪 Check everything** tell you what still needs fixing."
+      ],
+      [
+        "5️⃣ Test",
+        "Add a test code (`/setup-roblox` → **📜 Promo codes** → **➕ New code** → **✅ Save the code**), type it in your game (Studio → **Play** → the **Codes** button) and check that `/codes` on Discord lists it."
+      ],
+      [
+        "⚠️ Codes in game",
+        "A code can only give what your game already has under the same name. Pick the names in `/setup-roblox` → **🔍 What your game has**."
+      ],
+      [
+        "6️⃣ 24/7 hosting",
+        "The bot goes offline when the computer it runs on is turned off. Your game keeps working: codes, eggs, events and gifts already sent stay in the game, the game's ⚙️ Manager changes them without the bot, and the bot is needed only for Discord. To keep it running all the time, see the topic *24/7 hosting*."
+      ]
+    ]
+  },
+  {
+    "id": "bot_server",
+    "emoji": "🤖",
+    "title": "Bot on the server",
+    "menu": "Intent, invite, permissions",
+    "intro": "You do these settings once in the Discord Developer Portal (discord.com/developers/applications) and in your server settings.",
+    "fields": [
+      [
+        "Intent (Bot tab)",
+        "Turn on **Server Members Intent** → **Save Changes**. Without it the bot won't start. The other intents (Presence, Message Content) are not needed."
+      ],
+      [
+        "Inviting the bot",
+        "OAuth2 → URL Generator → tick the **bot** and **applications.commands** scopes → copy the link and open it."
+      ],
+      [
+        "Bot permissions",
+        "**View Channels**, **Send Messages**, **Embed Links** and **Read Message History**. The bot doesn't give roles and doesn't moderate members, so it needs nothing more: you don't have to give it **Administrator**."
+      ],
+      [
+        "Channels with their own permissions",
+        "A channel can hide itself from the bot. If the bot can't post somewhere (e.g. the control panel or error reports): channel → ⚙️ **Edit Channel** → **Permissions** → add the bot's role and allow the four permissions above. `/setup` → **🩺 Diagnostics** shows which channel is missing what."
+      ],
+      [
+        "Token",
+        "Bot tab → Reset Token → paste it into the `.env` file as `DISCORD_TOKEN=`. **Never show it to anyone.**"
+      ],
+      [
+        "🔒 Private bot (do this!)",
+        "**discord.com/developers/applications** → your app → first **Installation**: set **Install Link** to **None** and untick **User Install** → **Save Changes**; then **Bot** → turn **Public Bot** off → **Save Changes**. In this order: with an Install Link set, Discord refuses with “Private application cannot have a default authorization link”. You still invite the bot with the OAuth2 → URL Generator link. The bot works only on your servers anyway (it leaves strangers' servers by itself), but this way nobody can even try to add it. `/setup` → **🌐 Servers** shows the list: a server is added by itself when you (the account that created the bot) own it or have **Administrator** or **Manage Server** there."
+      ],
+      [
+        "🌐 The bot's servers",
+        "The bot's settings are shared by all its servers, so it works only on its owner's servers (the account that created the bot in the Developer Portal). A server is added by itself when that account owns it or has **Administrator** or **Manage Server** there; the bot leaves any other.\n\nA friend's server where you have no such rights? Add it first: `/setup` → **🌐 The bot's servers** → **Add a server ID** → paste the ID (17–20 digits). Get it like this: Discord → ⚙️ **User Settings** → **Advanced** → turn on **Developer Mode**, then right-click the server → **Copy Server ID**. You'll see ✅ *Server … was added*. Then invite the bot there: it stays.\n\nTo remove one: the **Remove a server (bot leaves)** list. Only the bot's owner can change the list. A warning *Public Bot is ON* means: follow the Private bot steps above."
+      ]
+    ]
+  },
+  {
+    "id": "place_id",
+    "emoji": "🎮",
+    "title": "Place ID & Universe ID",
+    "menu": "How to find your game's IDs",
+    "intro": "In `/setup-roblox` → **🎮 Roblox game** just paste the **link to your game**. The bot detects the Universe ID on its own.",
+    "fields": [
+      [
+        "Place ID from the link",
+        "Open your game on roblox.com. In the address `roblox.com/games/`**`189707`**`/Name` the number after `/games/` is the Place ID. You can paste the whole link."
+      ],
+      [
+        "Universe ID manually",
+        "Only needed when the game is private or detection fails: create.roblox.com → Creations → your game → ⋯ menu → **Copy Universe ID**."
+      ],
+      [
+        "“No game was found”?",
+        "The game is probably private or not published yet, so Roblox doesn't show it by its link. In the same form fill in the second field, **Universe ID (only if not detected)**, as described above, and click **Submit**. You'll see *✅ Game: …* with both numbers."
+      ]
+    ]
+  },
+  {
+    "id": "codes",
+    "emoji": "📜",
+    "title": "Promo codes",
+    "menu": "Adding, removing and showing codes",
+    "intro": "You manage promo codes on Discord: with the buttons in `/setup-roblox` or with commands. A new code works in the game within seconds, without publishing the game.",
+    "fields": [
+      [
+        "Codes",
+        "The easiest way: `/setup-roblox` → **📜 Promo codes** → **➕ New code**. The form lists the currencies and items of your game (`/setup-roblox` → **🔍 What your game has**); EXP and a time-limited item are added with ⚙️ in the draft, before you click **✅ Save the code**. Commands do the same: `/code-add` – new code, `/code-remove` – remove one code or, without giving a code, **several at once** from a list, `/codes` – list of active codes for players. Expired codes disappear automatically. A code: letters A–Z, digits, `_` and `-` (no accented letters, no spaces), up to 30 characters, e.g. `SUMMER_2026`. A code that already exists is replaced only after you confirm."
+      ],
+      [
+        "Codes in game",
+        "For codes to work in the game itself you set up the connection once: see the topics *Codes in game: API key* and *Codes in game: Studio install*. After that every new or removed code reaches the game by itself; `/sync-codes` sends the codes manually."
+      ],
+      [
+        "⚠️ Doesn't work?",
+        "• *The player sees “can't be redeemed in this game yet”:* the reward name doesn't match the game (topic *Codes in game: names & look*). The code is not used up.\n• *The code doesn't work in the game at all:* `/setup-roblox` → **🔑 Game connection** → **Test & sync** shows the cause (topic *Codes in game: problems*).\n• *A removed code still works in Studio:* Studio checks for changes about once a minute, so wait a moment."
+      ]
+    ]
+  },
+  {
+    "id": "setup_roblox",
+    "emoji": "🎮",
+    "title": "The /setup-roblox panel",
+    "menu": "Everything about your game: the buttons and what they do",
+    "intro": "`/setup-roblox` is one place for everything about your Roblox game. Steps 1–4 are done once; the green buttons are the features.",
+    "fields": [
+      [
+        "1️⃣–4️⃣ Connecting the game",
+        "**🎮 Roblox game** – the link to your game.\n**🔑 Game connection** – API key and test (topic *Codes in game: API key*).\n**📥 Studio file** – inserting and updating `DiscordCodes.rbxmx`.\n**🔍 What your game has** – pick currencies, items and pets from the names your game reported.\n**📒 Game catalog** – the exact names from the `DiscordCatalog` module (topic *Game catalog*)."
+      ],
+      [
+        "🔍 How the bot knows your game",
+        "While someone plays (also **Play** in Studio), the DiscordCodes file sends the bot **names**: values in player data (e.g. `leaderstats.Coins`, `Pets.Dragon`), egg spots and models, the multipliers your game code uses and your own functions (`OnReward`, `OnHatch`…). Never amounts or usernames. So the panels only offer names that exist, and commands warn you when something can't work."
+      ],
+      [
+        "📜 Promo codes",
+        "**📜 Promo codes** – the active codes and **➕ New code** (a form: code, how long it works, currency with an amount, item). The bot shows a draft: **⚙️ EXP and item time** is there, and the code reaches the game only after **✅ Save the code**. **🗑️ Remove codes** removes several at once."
+      ],
+      [
+        "🕹️ Control panel",
+        "**🕹️ Control panel** – roles that, besides admins, may use the panel in your team's channel (codes, the player card with bans, gifts, events, eggs and announcements), and **📤 Post the panel here**. Details: `/tutorial` → *Game control panel*."
+      ],
+      [
+        "🥚 ⚡ 🎁 Features",
+        "**Eggs** – spots in the game, pets ✅/⚠️, **New egg**, **Egg from the game catalog**, **Edit an egg**, **Remove an egg**; color, time and model under the finished egg.\n**Events** – which multipliers your game applies, the code line to add, **New event** (first the animation from a list, then several things at once, one multiplier, a time from the list or typed, e.g. `45m`), **Stop an event**; **⏹️ End this event** under an event.\n**Gifts & announcements** – **Send a gift**, **Announcement**.\n**👤 Player card** – username or ID: avatar, account age, ban and latest gifts; **Ban**, **Unban**, **Send a gift**.\n**Bans**, **Leaderboard** – explanation and settings."
+      ],
+      [
+        "🧪 Check everything",
+        "Checks in order: the game, the connection, reading and sending data, messages to game servers, the file in the game, names, the game catalog, eggs, events, bans and the leaderboard. Every ❌/⚠️ says what to fix."
+      ],
+      [
+        "⌨️ Commands",
+        "The panels have the most common options. Every option is in the commands: `/egg-create`, `/egg-edit`, `/event-start`, `/give`, `/announce-game`, `/roblox-ban`, `/leaderboard-setup`. Commands suggest names and egg spots from your game."
+      ]
+    ]
+  },
+  {
+    "id": "permissions",
+    "emoji": "🛡️",
+    "title": "Permissions",
+    "menu": "Who may do what: roles and players in the Manager",
+    "intro": "By default only administrators run the game. In `/setup` → **🛡️ Permissions** you give other people access and tick exactly what each may do. Administrators can always do everything; the bot's settings stay for administrators only.",
+    "fields": [
+      [
+        "💬 What each role may do",
+        "**🛡️ Permissions** → **💬 What each role may do**: first list – the roles with access (e.g. Moderator), second list – one of them, third list – what it may do (**Promo codes**, **Events**, **Eggs**, **Gifts**, **Announcements**, **Player card**, **Bans**). A role with nothing ticked can do nothing; a person with several roles gets all their permissions. It works at once, for the game commands (`/code-add`, `/give`, `/event-start`, `/egg-create`, `/roblox-ban`...) and the buttons of the 🕹️ control panel. Everyone sees these commands, but anyone without the permission gets a refusal that names it."
+      ],
+      [
+        "🎮 Manager in the game",
+        "**🛡️ Permissions** → **🎮 Manager in the game** → **➕ Add player** (their Roblox username) → pick the player and tick what they may do (the same as for roles except **Player card** – everyone with the Manager sees players – plus **Game settings**) → **📤 Send to the game**. It needs **Game connection** turned on in `/setup-roblox`. The player gets the **⚙️ Manager** button on their next join, or within a minute if playing, and doesn't see what they may not do. Up to 25 players; the game's owner can always do everything.\n\nYou can do the same in the game (owner only): **⚙️ Manager** → **🛡️ Manager access** tab (the same list as on Discord). A person with access sees only **Start** and the tabs for what you ticked."
+      ],
+      [
+        "❓ Not working?",
+        "- A refusal on a command: tick the permission for the person's role.\n- **Send to the game** shows ⚠️: turn on **Game connection** in `/setup-roblox` and send again.\n- No ⚙️ Manager button: wait a minute or rejoin; use the username, not the display name.\nFull steps: `/tutorial` → *Permissions*."
+      ]
+    ]
+  },
+  {
+    "id": "api_key",
+    "emoji": "🔑",
+    "title": "Codes in game: API key",
+    "menu": "Step by step: an Open Cloud key in Creator Hub",
+    "intro": "The bot saves codes in your game through the official Roblox Open Cloud. It needs an API key that you create once. It takes about 3 minutes.",
+    "fields": [
+      [
+        "1. Where the keys are",
+        "Go to **create.roblox.com** → **Creator Dashboard** → in the **left menu** click **All tools** → **API Keys**. Don't look in the game settings or in Analytics. Click **Create API Key**."
+      ],
+      [
+        "2. Name and description",
+        "Name: simple, without spaces and without the word “Bot”, e.g. `apikey`. **Leave the description empty.** Otherwise the Roblox filter shows an *inappropriate content* error."
+      ],
+      [
+        "3. Permission: saving codes",
+        "In **Access Permissions** → *Select API System* choose **universe-datastores** (Data Stores). **Add your game** (search for it in the experience field). Tick the operations:\n• `universe-datastores.objects:create`\n• `universe-datastores.objects:read`\n• `universe-datastores.objects:update`\n• `universe-datastores.control:create`\nWithout *create* and *control:create* the first save in a new game fails (the bot creates its data store then). Other operations are not needed."
+      ],
+      [
+        "4. Permission: notifications",
+        "Add a second system: **messaging-service**, choose **the same game** and tick `universe-messaging-service:publish`."
+      ],
+      [
+        "5. Security and expiration",
+        "Leave **Restrict which IP addresses…** **off** (a home internet connection changes its IP address). Only on a server with a fixed IP address you can turn it on and enter that address. **Expiration: none** (No Expiration). With an expiration date the sync stops working on that day. Note: Roblox disables a key nobody has used for 60 days by itself (then click **Enable Key** at the key)."
+      ],
+      [
+        "6. Save and copy the key",
+        "Click **Save & Generate Key** and **copy the key right away**, it is shown only once. Changing permissions of an existing key: **Save Changes**, the key stays the same."
+      ],
+      [
+        "7. Paste the key in the bot",
+        "`/setup-roblox` → **🔑 Game connection** → **Paste API key** → **On / off** (turn on) → **Test & sync**. You should see “Synced with the game”. The key goes into the `.env` file and is never displayed."
+      ],
+      [
+        "Game owned by a group",
+        "Switch Creator Hub to your group (account switcher in the top left) and create the key there. You need a group role allowed to manage API keys."
+      ],
+      [
+        "Security",
+        "Give the key only your game and only the operations above: the bot uses nothing else (bans need **user-restrictions** and the leaderboard **ordered-data-store**, only if you use them). The key stays on your computer in the `.env` file: the bot sends it only to Roblox. Don't paste it in public channels. If it leaks, delete it in Creator Hub and create a new one."
+      ]
+    ]
+  },
+  {
+    "id": "studio_install",
+    "emoji": "📥",
+    "title": "Codes in game: Studio install",
+    "menu": "One file to insert, no coding",
+    "intro": "The whole game side is **one file**: `scripts/DiscordCodes.rbxmx` (in the bot folder). It holds the server script, the code window and the **Codes** button. Optional: `DiscordCodesWindow.rbxmx` (your own look, point 4) and `DiscordSettings.rbxmx` (your settings, point ⚙️).",
+    "fields": [
+      [
+        "1. Insert the file",
+        "In Roblox Studio right-click **ServerScriptService** → **Insert** → **Import Roblox Model** and pick the file `DiscordCodes.rbxmx` from the bot folder (the one with `start.bat`) → `scripts` folder. In older Studio: **Insert from File…**. No such option? See `/tutorial` (your own tab with **Model**). Check that **DiscordCodes** appeared inside ServerScriptService. If the game has several places, insert it in every place where players should enter codes."
+      ],
+      [
+        "2. Settings and publishing",
+        "**File** → **Experience Settings** (older Studio: **Home** → **Game Settings**) → **Security** → turn on **Enable Studio Access to API Services**. Publish the game (**File → Publish to Roblox**). ⚠️ Publishing sends players the whole game open in Studio, so open its newest version (**File** → **Open from Roblox**), not an old file from your disk."
+      ],
+      [
+        "3. What players see and how to test",
+        "After you insert the file, players have a purple **Codes** button on the left edge of the screen: they click it, type the code, press **Redeem** and see what they got. Test: the code `TEST1` (`/setup-roblox` → **📜 Promo codes** or `/code-add`), **Play** in Studio, the **Codes** button, type `TEST1`. Green text = works, red = the **Output** window says what is missing. Hide or move the button, change the language: point *⚙️ Your settings*."
+      ],
+      [
+        "4. Your own look (window template)",
+        "Want your own colors, texts, size? Insert the template **once**: right-click **StarterGui** → **Insert** → **Import Roblox Model** → `DiscordCodesWindow.rbxmx` from the `scripts` folder, and check that **DiscordCodesGui** is inside StarterGui. Change it in the Properties window, but keep the names of the parts (`Window`, `CodeBox`, `Redeem`, `Message`, `OpenCodes`, `Close`, `Title`, `Hint`); move or delete a button together with its dark edge (`…Edge`)."
+      ],
+      [
+        "5. How rewards are given",
+        "Only where the game already keeps them (names as in `/setup-roblox` → 🔍 What your game has):\n• currency: a value or attribute named like the currency (e.g. `leaderstats.Coins`)\n• EXP: a value named EXP, XP or Experience\n• permanent item: a value or attribute named like the item or `Has<Item>`\n• timed item: a value `<Item>_ExpiresAt`"
+      ],
+      [
+        "6. When something is missing",
+        "If the script finds no place for a reward or several places match, it **doesn't guess and doesn't use up the code**. The player sees a message and the server log (Output) says exactly what is missing. An error halfway through undoes all changes."
+      ],
+      [
+        "7. A game with its own save system (e.g. ProfileStore)",
+        "**Test:** redeem a code in the published game, leave and join again. Is the currency still there? Then you're fine. Gone? `leaderstats` is only a copy of the game's own save (ProfileStore, DataStore2…), and no outside script can see that data. Add in a **separate** script (ServerScriptService → Script `CodeRewards`), not inside `DiscordCodes` (that file is replaced on updates): `Core.OnReward` (codes and gifts), `Core.OnSpend` (egg prices) and `Live.OnHatch` (pets). Template and a text for an AI assistant: `DOCS.html` → *Rewards: for the game's developer*."
+      ],
+      [
+        "8. After a bot update",
+        "When `/setup-roblox` shows ⚠️ next to the DiscordCodes file, replace it: topic *Updating the Studio file*. Your own scripts, the window template and **DiscordSettings** stay."
+      ],
+      [
+        "⚙️ Your settings (optional)",
+        "Only if you want to change something. Insert the file **once**:\n1. Right-click **ServerScriptService** → **Insert** → **Import Roblox Model** → `DiscordSettings.rbxmx` from the `scripts` folder. It must sit next to **DiscordCodes**, not inside it.\n2. Double-click it and change the value after `=` (keep the quotes and commas). Each line has its description: `ShowButton`, `ButtonPosition`, `Language`, `MaxCurrencyPerCode`, `Manager`, `ManagerUsers`.\n3. Click **Play**: the **Output** shows `[DiscordCodes] Your settings from DiscordSettings: …`.\n🔒 `MaxCurrencyPerCode` (0 = no limit): a reward from Discord with more currency is refused in the game (the code isn't used up), and the bot won't save or send one."
+      ]
+    ]
+  },
+  {
+    "id": "names_look",
+    "emoji": "⚠️",
+    "title": "Codes in game: names & look",
+    "menu": "Important: reward names must exist in the game",
+    "intro": "The bot doesn't create new things in your game. A code can only give what the game **already has**. Read this before adding your first code.",
+    "fields": [
+      [
+        "Names must match the game",
+        "Currencies and items picked in `/setup-roblox` → **🔍 What your game has** and chosen in a code must exist in the game under the same name (letter case, spaces and `_` don't matter). Example: a code gives **Uncle Pet** and the game has nothing named *UnclePet* → that code **can't be redeemed**."
+      ],
+      [
+        "What the player sees",
+        "The message “This code can't be redeemed in this game yet”. The player gets nothing, but **the code is not used up**, so it works once you fix the name."
+      ],
+      [
+        "How to check what's missing",
+        "Add a test code (`/setup-roblox` → **📜 Promo codes** or `/code-add`), start the game (Studio → Play) and enter it. In Studio's **Output** window a `[DiscordCodes]` message shows the exact missing name, or a list of places when several match."
+      ],
+      [
+        "How to fix it",
+        "Choose one:\n• fix the name in `/setup-roblox` → **🔍 What your game has**, remove the wrong code (`/code-remove`) and add it again with the right name,\n• add this item or currency to the game under that name,\n• in a game with its own data saving (e.g. ProfileStore) add the `OnReward` function (`DOCS.html`, chapter *Rewards: for the game's developer*)."
+      ],
+      [
+        "The window's look",
+        "The built-in window and the **Codes** button are simple so they work in every game right away. Want to match it to your game? Insert the template `DiscordCodesWindow.rbxmx` into **StarterGui** and change it in Properties (topic *Codes in game: Studio install*, point 4). Without the template you can only change the button's visibility, its position and the language (the **DiscordSettings** module, same topic, point *⚙️ Your settings*)."
+      ],
+      [
+        "What support does not cover",
+        "Colors, texts, size and position are changed in the template without code. Animations, sounds, pictures and fitting the window into your own menu are up to you or your developer or AI: set `ShowButton = false` in **DiscordSettings** and connect your own window to the `DiscordCodesRedeem` function (described in `DOCS.html`, chapter *Rewards: for the game's developer*). That is not part of the bot."
+      ],
+      [
+        "Who is responsible for what",
+        "**The bot and the DiscordCodes file** provide: codes, syncing, protection against double redeeming, rewards in typical games and a ready window (also as an editable template). **Your game** must have: currencies and items with matching names or an `OnReward` function, and a published version with the DiscordCodes file."
+      ]
+    ]
+  },
+  {
+    "id": "catalog",
+    "emoji": "📒",
+    "title": "Game catalog",
+    "menu": "The exact names from your game for the bot",
+    "intro": "The catalog is the **DiscordCatalog** module in your game with the list of currencies, items and other things in the game. With it the bot's commands suggest the exact names and refuse typos before a code that doesn't work is created.",
+    "fields": [
+      [
+        "Inserting (once)",
+        "Studio → right-click **ServerScriptService** → **Insert** → **Import Roblox Model** → `DiscordCatalog.rbxmx` from the bot folder → `scripts`. The module is yours: updates never touch it."
+      ],
+      [
+        "Currencies and items",
+        "`Catalog.Currencies = { \"Coins\", \"Gems\" }` and `Catalog.Items = { \"VIP Pass\" }`. Letter case, spaces and `_` don't matter."
+      ],
+      [
+        "Pets, eggs, multipliers",
+        "`Catalog.Pets` with rarity (`{ Name = \"Dragon\", Rarity = \"Legendary\" }`), `Catalog.Eggs` with pets and chances (`/egg-create` suggests them as ready eggs), `Catalog.Multipliers` with the names the game's code reads with `Live.GetMultiplier`, `Catalog.SoldForRobux` with what players buy with Robux. A code posted outside Roblox (e.g. on Discord) may not give anything sold for Robux, must be the same for everyone, need no purchase and, if it expires, say when (Roblox rules). The bot warns you about a reward from that list."
+      ],
+      [
+        "Checking",
+        "**Play** in Studio → **Output** shows `[DiscordCodes] Game catalog: …`. Then `/setup-roblox` → **📒 Game catalog**: the list of names and what to fix. **🧪 Check everything** also lists codes with names outside the catalog."
+      ],
+      [
+        "When the bot refuses a name",
+        "The bot says what's missing and suggests similar names. Add the missing name to the catalog, click **Play** or publish the game and refresh the catalog in `/setup-roblox`."
+      ],
+      [
+        "Don't know the names?",
+        "In `/setup-roblox` → **📒 Game catalog** click **🤖 Text for an AI assistant**: you get a text to paste into an AI assistant together with the game scripts. If the game already has modules with these lists, the catalog can read them with `require`."
+      ],
+      [
+        "An old catalog with examples",
+        "A new `DiscordCatalog` has empty lists with an example above each: type your names between the braces. A catalog that still has only the old example names (Coins, Gems, VIP Pass, Speed Coil…) is ignored by the bot until you change it; **📒 Game catalog** and the Output window say so."
+      ]
+    ]
+  },
+  {
+    "id": "codes_problems",
+    "emoji": "🧰",
+    "title": "Codes in game: problems",
+    "menu": "What to do when the sync test shows an error",
+    "intro": "Click `/setup-roblox` → **🔑 Game connection** → **Test & sync**. The bot shows the cause, and below is what to do about it.",
+    "fields": [
+      [
+        "“inappropriate content” when creating the key",
+        "The Roblox filter rejected the name or description. Use a simple name without spaces and without the word “Bot” (e.g. `apikey`) and leave the description empty."
+      ],
+      [
+        "“doesn't have enough permissions”",
+        "The key is missing operations or the game. API Keys → your key → Access Permissions → **universe-datastores**: is **your game** added with `objects:create`, `objects:read`, `objects:update`, `control:create` ticked? Save with **Save Changes**."
+      ],
+      [
+        "“blocked by the IP restriction”",
+        "In Security turn off **Restrict which IP addresses…**, or add the current IP address of the computer or server that runs the bot (a home connection's address changes from time to time). Also check that the right game is chosen in the permissions."
+      ],
+      [
+        "“key is invalid, disabled or expired”",
+        "Check that the key is enabled (**Enable Key**) and has no expiration date. Roblox disables a key nobody has used for 60 days by itself: Creator Hub → **API Keys** → your key → **Enable Key**. If you don't have the key anymore, generate a new one and paste it in `/setup-roblox` → **🔑 Game connection**."
+      ],
+      [
+        "“Game not found”",
+        "The Universe ID is wrong. Paste the link to your game in `/setup-roblox` → **🎮 Roblox game**."
+      ],
+      [
+        "“Notifying game servers” (warning)",
+        "The codes are saved, only the **messaging-service** permission → `universe-messaging-service:publish` is missing. Without it the game fetches the codes on its own within about a minute."
+      ],
+      [
+        "In Studio a code change arrives late",
+        "That's how Roblox works: **Play** in Studio doesn't get notifications from Discord. A new code works at once when a player types it, but a changed or removed code arrives only with the check about once a minute. In the published game it takes a few seconds."
+      ],
+      [
+        "The test works, but the code doesn't in game",
+        "Check that `DiscordCodes.rbxmx` is in the game, the game is published and *Enable Studio Access to API Services* is on in Studio. The player message “can't be redeemed yet” means there is no place for the reward: Studio's **Output** window says what is missing."
+      ],
+      [
+        "My settings in DiscordSettings don't work",
+        "1. **DiscordSettings** must sit directly in **ServerScriptService**, next to DiscordCodes, not inside it.\n2. Click **Play** and read the **Output**: `Your settings from DiscordSettings: …` lists the settings that were used. *there is no setting named…* = a typo in the name; *must be…* = a wrong kind of value (`true`/`false` without quotes, text in quotes, a whole number); *must be a ModuleScript* = insert `DiscordSettings.rbxmx` again; *could not be read* = a missing quote, comma or brace.\n3. Publish the game after the change: players get the published version."
+      ]
+    ]
+  },
+  {
+    "id": "studio_update",
+    "emoji": "🔄",
+    "title": "Updating the Studio file",
+    "menu": "When a bot update changes DiscordCodes.rbxmx",
+    "intro": "`DiscordCodes.rbxmx` lives inside your game, so a bot update does **not** replace it there. When a new bot version changes the file, insert the new one in Studio once. The bot tells you when.",
+    "fields": [
+      [
+        "How do I know?",
+        "• `CHANGELOG.md` in the bot folder (the list of what changed) mentions `DiscordCodes.rbxmx`,\n• `/setup-roblox` shows ⚠️ at step **3. The file in your game**,\n• `/setup-roblox` → **📥 Studio file** shows a newer version in the bot than in your game."
+      ],
+      [
+        "Step by step",
+        "1. Open the newest version of your game in Roblox Studio (**File** → **Open from Roblox**, not an old file).\n2. In **ServerScriptService** drag the old **DiscordCodes** into **ServerStorage** (a safe backup: scripts there do not run). Leave **DiscordSettings** where it is.\n3. Right-click **ServerScriptService** → **Insert** → **Import Roblox Model** → pick `DiscordCodes.rbxmx` from the bot folder (the one with `start.bat`) → `scripts` folder. In older Studio: **Insert from File…**. Check that **DiscordCodes** is inside ServerScriptService (if it landed elsewhere, drag it there).\n4. Click **Play**. The **Output** window should show `[DiscordCodes] File version …` and no red errors.\n5. Publish the game (**File → Publish to Roblox**), in every place that has the file. When everything works, delete the backup from ServerStorage.\n6. Join the game once and open `/setup-roblox`: it shows ✅."
+      ],
+      [
+        "Your own changes",
+        "**Stays untouched:** your own scripts (e.g. `CodeRewards` with `Core.OnReward`), the window `StarterGui → DiscordCodesGui` (if you inserted the template) and your settings `DiscordSettings`. **Everything inside `DiscordCodes` is lost**, so change nothing in there: keep your own code in a separate script, your window design in the template and your settings in `DiscordSettings`. Did you change values in *DiscordCodes → Settings* of an older file? Insert `DiscordSettings.rbxmx` once and type them there (the backup in ServerStorage still shows them). Something broke after the update? Drag the old backup from ServerStorage back into ServerScriptService (and delete the new script)."
+      ],
+      [
+        "Check",
+        "`/setup-roblox` → **📥 Studio file** shows the file version in the bot and in your game (published game and Studio separately). ✅ = the game has the new file. ⚠️ *is in Studio, but…* = publish the game and join it once."
+      ],
+      [
+        "Something went wrong?",
+        "Drag the old backup from **ServerStorage** back into **ServerScriptService**, delete the new `DiscordCodes` (Delete key) and publish the game. The **Output** warning *Found 2 DiscordCodes scripts* means two scripts sit next to each other: keep one."
+      ],
+      [
+        "The game doesn't report a version",
+        "Every game server reports the version when it starts, through the DataStore (it needs the API key from *Codes in game: API key* and *Enable Studio Access to API Services* in Studio). Files from before this feature report nothing: if you still see ❔ after joining the game, replace the file."
+      ]
+    ]
+  },
+  {
+    "id": "game_live",
+    "emoji": "🥚",
+    "title": "Game from Discord",
+    "menu": "Eggs, events, gifts, announcements, bans, leaderboard",
+    "intro": "Change your game from Discord without publishing it. Eggs, events, gifts and announcements use the same game connection as the codes: the API key in `/setup-roblox` and the `DiscordCodes.rbxmx` file in the game.",
+    "fields": [
+      [
+        "🥚 Eggs",
+        "In Studio give a Part the tag `DiscordEggSpot` (select it → **Properties** window → **Tags** → **+**): an egg will stand there. Then `/setup-roblox` → **🥚 Eggs** → **New egg** (or `/egg-create`) with the price and pets, e.g. `Cat:60, Dog:35, Dragon:5`. In the game a player walks up to the egg and holds **E**. Your own egg model: ReplicatedStorage → folder `DiscordEggs` → model `Default`. Up to 20 active eggs, 25 pets per egg; each egg needs its own spot (the bot warns when there are more eggs than spots)."
+      ],
+      [
+        "🐾 Pets",
+        "A rolled pet is added like a code item: an IntValue/BoolValue named like the pet in the player's data. With your own pet system set `Live.OnHatch` (example at the top of the `Live` script). Nothing is taken from the player if something doesn't fit. An egg shows the exact chances (rounded the way Roblox requires; ⚡ during a luck event) and isn't sold to a player Roblox doesn't allow paid random items. If no egg currency can be bought with Robux, turn this off with `Live.Config.PaidRandomItems = false` in your own script, under the `require` line below."
+      ],
+      [
+        "⚡ Events",
+        "`/event-start` turns on 2x currency, EXP or egg luck on every server, with a timer on the screen. For currency and EXP add one line where your game gives them:\n```lua\nlocal Live = require(game.ServerScriptService:WaitForChild(\"DiscordCodes\"):WaitForChild(\"Live\"))\namount = amount * Live.GetMultiplier(\"Coins\")\n```\nUp to 10 events at once. Events running together multiply: 2× and 2× = 4× (at most ×100)."
+      ],
+      [
+        "🎁 Gifts and 📢 announcements",
+        "`/give` sends a reward to one player, by username or Roblox ID (offline players get it when they join). The **Send a gift** button in `/setup-roblox` first shows a draft with the exact account: **⚙️** adds EXP and the item's time, and the gift goes to the game only after **✅**. `/announce-game` shows a message on every player's screen. Texts go through Roblox's filter. No links: Roblox hides a whole text with a link (####), so the bot won't send an announcement with one and warns you about it in a gift. A gift whose reward doesn't fit the game keeps waiting and arrives once you fix the name (removing it: `DOCS.html`)."
+      ],
+      [
+        "🧪 Testing in Studio",
+        "**Play** in Studio doesn't get notifications from Discord. Eggs and events arrive there with the check about once a minute, a gift only after pressing **Play** again, and an announcement doesn't show in Studio. In the published game everything arrives within a few seconds."
+      ],
+      [
+        "⚙️ Manager in your game",
+        "**⚙️ Manager** (purple, top right; owner, `ManagerUsers`, Studio): codes, events, eggs, gifts, your data, **Settings**, **Test tools**, log. Owner only: forms **New code**, **New event**, **New egg**, **Gift to a player**, **Announcement**, **Ban a player**, and **Remove**/**Stop**/**Move**. The game does them by itself at once, also with the bot off; the bot writes them to the log channel and its lists when it runs. Studio: *Enable Studio Access to API Services*; bans: *Players → BanningEnabled*."
+      ],
+      [
+        "🔨 Bans and 🏆 leaderboard",
+        "No script needed, only API key permissions: **user-restrictions** (`universe.user-restriction:read`, `:write`) for `/roblox-ban`, and **ordered-data-store** (`universe.ordered-data-store.scope.entry:read`) for `/leaderboard`. Connect the leaderboard in `/setup-roblox` → **🏆 Leaderboard** (name of the OrderedDataStore your game already saves); the bot tests it right away. The bot only reads it and never creates one. The easiest way to ban: `/setup-roblox` → **👤 Player card**. Bans work only in the published game, not in Studio (**Play**). Not sure the key can ban? `/setup-roblox` → **🔨 Bans** → **Check the permission** (next to **🔍 Find a player**): ✅ *The key can manage bans.* or ❌ with what is missing. It only reads and bans nobody."
+      ],
+      [
+        "📋 Status",
+        "`/setup-roblox` shows the active eggs and events, where eggs stand in the game and which multipliers your game already applies. It also has the buttons **New egg**, **New event**, **Send a gift** and **Announcement**. Lists for players: `/eggs`, `/events`."
+      ],
+      [
+        "🔄 After a bot update",
+        "New in-game features often come with a new `DiscordCodes.rbxmx`. When `/setup-roblox` shows ⚠️ next to the DiscordCodes file, replace it (topic *Updating the Studio file*)."
+      ]
+    ]
+  },
+  {
+    "id": "hosting",
+    "emoji": "🌐",
+    "title": "24/7 hosting",
+    "menu": "How to keep the bot running all the time",
+    "intro": "The bot works only while its program is running. A computer that is off or asleep, or a closed window, means the bot is offline. To run 24/7, start it somewhere that is always on. Options:",
+    "fields": [
+      [
+        "1. Your own computer (free)",
+        "Enough if the computer is on all the time anyway. The bot stops at every shutdown, restart or sleep. Guide: topic *Hosting: Windows & panel*."
+      ],
+      [
+        "2. Discord bot hosting (easiest)",
+        "A service with a panel: upload the files, enter the token and click Start. Usually a few dollars/euros a month, no Linux knowledge needed. Guide: topic *Hosting: Windows & panel*."
+      ],
+      [
+        "3. Linux VPS (full control)",
+        "A small rented server, roughly 3–10 dollars/euros a month. The most reliable option, but it needs typing commands. Guide: topic *Hosting: VPS server*."
+      ],
+      [
+        "🎮 The game works without the bot",
+        "Codes, eggs, events and gifts keep working in the game while the bot is off: they are saved in your game, and the game's ⚙️ Manager creates and removes them without the bot. The bot is needed only for Discord: the `/` commands, the panels and the log channel. So 24/7 is a convenience, not a must."
+      ],
+      [
+        "Watch out",
+        "Choose a service where **files stay on disk after a restart**. The bot saves its settings in `config.json` and the database in `data/bot.db`. Where the disk is wiped on restart, your settings, codes, eggs and events disappear."
+      ],
+      [
+        "Requirements",
+        "Python 3.12, 3.13 or 3.14 (the bot is tested on 3.14; 3.10 and 3.11 also start, newer than 3.14 isn't tested), about 512 MB of RAM and a stable internet connection. The bot doesn't need any open ports."
+      ]
+    ]
+  },
+  {
+    "id": "hosting_panel",
+    "emoji": "🖥️",
+    "title": "Hosting: Windows & panel",
+    "menu": "Windows autostart and panel hosting",
+    "intro": "The two simplest options: your own Windows computer or a ready-made hosting with a panel.",
+    "fields": [
+      [
+        "Windows: autostart",
+        "1) Press `Win+R`, type `shell:startup` and press Enter.\n2) Put a shortcut to `start.bat` there (right-click the file → Create shortcut).\nThe bot starts after every Windows login."
+      ],
+      [
+        "Windows: prevent sleep",
+        "Settings → System → Power (names depend on the Windows version): when plugged in, set sleep to **Never**. After a computer restart (e.g. Windows updates) the bot starts only after you log in."
+      ],
+      [
+        "Panel hosting: steps",
+        "1) Unpack `CodeHatch-1.0.0.zip` on your computer and open the `CodeHatch-1.0.0` folder.\n2) Upload its content to the panel (file manager or SFTP), **without the `.venv` folder**.\n3) Set Python 3.12–3.14 and the start file `main.py`.\n4) The zip has no `.env` file: in the panel's file manager copy `.env.example` as `.env` (or rename it), open it and enter the bot token after `DISCORD_TOKEN=`.\n5) Make sure the panel installs `requirements.txt`.\n6) Click Start, then type `/tutorial` on Discord."
+      ],
+      [
+        "Panel hosting: updates",
+        "Download the new version from the #buyers channel on the CodeHatch HQ Discord server (you get the 💎 Buyer role when you buy) and read in `CHANGELOG.md` every entry between your version and the new one.\n1) Download a copy of `.env`, `config.json` and the `data` folder to your computer, just in case.\n2) Stop the bot in the panel.\n3) Upload the new files over the old ones, but **never overwrite** `.env`, `config.json` or the `data` folder.\n4) Click Start. Make sure the panel installs `requirements.txt` again (new versions can add libraries)."
+      ]
+    ]
+  },
+  {
+    "id": "hosting_vps",
+    "emoji": "🐧",
+    "title": "Hosting: VPS server",
+    "menu": "Linux step by step (Ubuntu/Debian)",
+    "intro": "Guide for a regular VPS with Ubuntu or Debian. You connect to it with SSH (on Windows: PowerShell → `ssh user@ip_address`).",
+    "fields": [
+      [
+        "1. Prepare the server",
+        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nUpload `CodeHatch-1.0.0.zip` to your home folder (e.g. with WinSCP or FileZilla), then unpack it and give the folder a name that stays:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\n```"
+      ],
+      [
+        "2. First start",
+        "```bash\ncd codehatch\nbash start.sh\nnano .env\nbash start.sh\n```\nThe first `start.sh` creates `.env` from `.env.example` and stops. In `nano` enter the bot token after `DISCORD_TOKEN=`, save (`Ctrl+O`, Enter) and exit (`Ctrl+X`)."
+      ],
+      [
+        "3a. Running in the background: tmux (simple)",
+        "```bash\nsudo apt install -y tmux\ntmux new -s bot\nbash start.sh\n```\nDetach: `Ctrl+B`, then `D`. Back: `tmux attach -t bot`. After a server restart you have to start the bot manually."
+      ],
+      [
+        "3b. Running in the background: systemd (recommended)",
+        "The bot starts by itself after a server restart and comes back after a crash. A ready service file and commands are on the page `DOCS.html` (in the bot folder), chapter *A VPS step by step*."
+      ],
+      [
+        "Logs and updates",
+        "Update: stop the bot (`sudo systemctl stop codehatch`, or `Ctrl+C` in tmux), upload the new files over the old ones without overwriting `.env`, `config.json` and the `data` folder, then start it again (`sudo systemctl start codehatch` or `bash start.sh`). `start.sh` installs new libraries by itself. Commands with `rsync`: `DOCS.html` → *A VPS step by step*, step 7. Service logs: `journalctl -u codehatch -f`."
+      ]
+    ]
+  },
+  {
+    "id": "troubleshooting",
+    "emoji": "🛠️",
+    "title": "Troubleshooting",
+    "menu": "The most common problems and fixes",
+    "intro": "Start with `/setup` → **🩺 Diagnostics** (Discord) and `/setup-roblox` → **🧪 Check everything** (game). It points out most problems.",
+    "fields": [
+      [
+        "`/` commands are not visible",
+        "Check that the bot was invited with the *applications.commands* scope. Wait a moment or restart Discord."
+      ],
+      [
+        "A moderator gets “You don't have permission”",
+        "Panels (`/setup`, `/setup-roblox`) and admin commands work only for people with **Administrator** (or the server owner). Allowing the command for another role in **Server Settings → Integrations** only shows it on the list: the bot still checks the permissions itself, so nobody gets past them. Give the person a role with *Administrator* or do the change yourself. People who only need to run the game don't need Administrator: choose their role in `/setup-roblox` → **🕹️ Control panel** and post the panel in your team's channel."
+      ],
+      [
+        "The bot can't post a panel or a report",
+        "In that channel the bot needs **View Channels**, **Send Messages** and **Embed Links** (channel → ⚙️ Edit Channel → Permissions → the bot's role). `/setup` → **🩺 Diagnostics** checks the bug report and log channels."
+      ],
+      [
+        "No error reports appear",
+        "Pick the **🐛 Bug report channel** in `/setup` → **📡 Channels**. Without it errors show up only in the black window and in `data/logs/bot.log`. No reports with the channel set means nothing has failed. The **📋 Log channel** (optional; best a private channel for your team) is something else: it gets every change in the game made from Discord or from the ⚙️ Manager (codes, eggs, events, gifts, announcements, bans), with who made it."
+      ],
+      [
+        "The code works on Discord but not in the game",
+        "Click `/setup-roblox` → **🔑 Game connection** → **Test & sync**: the bot shows the cause and what to do (topic *Codes in game: problems*). Also make sure `DiscordCodes.rbxmx` is in the game and the game is published. Game servers refresh codes within about a minute."
+      ],
+      [
+        "The bot is offline from time to time",
+        "It works only while its program runs. A computer that is off or asleep, a closed window or a closed SSH session means offline. See the topic *24/7 hosting*."
+      ],
+      [
+        "The bot froze (Windows)",
+        "The bot turns off the window's select mode itself, so a click into the black window doesn't stop it. If the window title still starts with *Select*, press **Esc**. Keep the bot folder out of OneDrive and Dropbox: they lock its files (e.g. `C:\\Bots` is fine)."
+      ],
+      [
+        "Changing `.env`",
+        "Always restart the bot after changing `.env`. Settings from `/setup` apply without a restart."
+      ],
+      [
+        "The bot left my server",
+        "The bot works only on its owner's servers. The account that created the bot in the Developer Portal must own the server or have Administrator / Manage Server there (or add the server ID in `/setup` → **🌐 Servers** on another of your servers). Then invite the bot again."
+      ],
+      [
+        "Where is the log?",
+        "Everything the bot window shows is also saved in `data/logs/bot.log` (tokens and keys hidden). Attach this file when you ask for help on the project's GitHub Issues page. `start.bat` saying the bot is *already running* means another copy is open: close that window."
+      ]
+    ]
+  }
+]
