@@ -518,11 +518,11 @@
       ],
       [
         "Panel hosting: steps",
-        "1) Unpack `CodeHatch-1.0.0.zip` on your computer and open the `CodeHatch-1.0.0` folder.\n2) Upload its content to the panel (file manager or SFTP), **without the `.venv` folder**.\n3) Set Python 3.12–3.14 and the start file `main.py`.\n4) The zip has no `.env` file: in the panel's file manager copy `.env.example` as `.env` (or rename it), open it and enter the bot token after `DISCORD_TOKEN=`.\n5) Make sure the panel installs `requirements.txt`.\n6) Click Start, then type `/tutorial` on Discord."
+        "1) Unpack `CodeHatch-main.zip` on your computer and open the `CodeHatch-main` folder.\n2) Upload its content to the panel (file manager or SFTP), **without the `.venv` folder**.\n3) Set Python 3.12–3.14 and the start file `main.py`.\n4) The zip has no `.env` file: in the panel's file manager copy `.env.example` as `.env` (or rename it), open it and enter the bot token after `DISCORD_TOKEN=`.\n5) Make sure the panel installs `requirements.txt`.\n6) Click Start, then type `/tutorial` on Discord."
       ],
       [
         "Panel hosting: updates",
-        "Download the new version from the #buyers channel on the CodeHatch HQ Discord server (you get the 💎 Buyer role when you buy) and read in `CHANGELOG.md` every entry between your version and the new one.\n1) Download a copy of `.env`, `config.json` and the `data` folder to your computer, just in case.\n2) Stop the bot in the panel.\n3) Upload the new files over the old ones, but **never overwrite** `.env`, `config.json` or the `data` folder.\n4) Click Start. Make sure the panel installs `requirements.txt` again (new versions can add libraries)."
+        "Pull the latest version from GitHub (git pull, or download the repository again) and read in `CHANGELOG.md` every entry between your version and the new one.\n1) Download a copy of `.env`, `config.json` and the `data` folder to your computer, just in case.\n2) Stop the bot in the panel.\n3) Upload the new files over the old ones, but **never overwrite** `.env`, `config.json` or the `data` folder.\n4) Click Start. Make sure the panel installs `requirements.txt` again (new versions can add libraries)."
       ]
     ]
   },
@@ -535,7 +535,7 @@
     "fields": [
       [
         "1. Prepare the server",
-        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nUpload `CodeHatch-1.0.0.zip` to your home folder (e.g. with WinSCP or FileZilla), then unpack it and give the folder a name that stays:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\n```"
+        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nUpload `CodeHatch-main.zip` to your home folder (e.g. with WinSCP or FileZilla), then unpack it and give the folder a name that stays:\n```bash\nunzip CodeHatch-main.zip\nmv CodeHatch-main codehatch\n```"
       ],
       [
         "2. First start",

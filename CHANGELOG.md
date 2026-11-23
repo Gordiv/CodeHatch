@@ -2,10 +2,14 @@
 
 What changed in each version of the bot. The newest version is at the top.
 
+## Free and open source (MIT) — sales ended (2026-11-23)
+
+CodeHatch is no longer sold. The whole project is free and open source under the MIT license (see `LICENSE`). Updates: pull the latest version from GitHub. Help: GitHub Issues. The bot itself did not change.
+
 **How to update** (details: `DOCS.html` → *Bot updates*):
-0. Download the new version from the project GitHub page. Your current version is shown in the bot window (`📦 CodeHatch …`) and at the bottom of `/help`. Read **every** entry between your version and the new one, not only the newest: a skipped version can still ask you to replace the Studio file.
+0. Pull the latest version from GitHub (`git pull`, or download the repository again). Your current version is shown in the bot window (`📦 CodeHatch …`) and at the bottom of `/help`. Read **every** entry between your version and the new one, not only the newest: a skipped version can still ask you to replace the Studio file.
 1. Close the bot window.
-2. Unzip the new version and copy its files over your bot folder. The zip never contains `.env`, `config.json` or the `data` folder, so your token, settings and database stay as they are.
+2. Copy the new files over your bot folder (with `git pull` this is already done). Never overwrite `.env`, `config.json` or the `data` folder, so your token, settings and database stay as they are.
 3. Start the bot again with `start.bat` (Windows) or `bash start.sh` (Linux). It installs new libraries by itself and posts *The bot was updated…* on your log channel.
 4. Look at the **Studio file** line of the version below: when it says *replace it*, put the new `scripts/DiscordCodes.rbxmx` into your game (`/setup-guide` → *Updating the Studio file*), test with **Play** and publish.
 

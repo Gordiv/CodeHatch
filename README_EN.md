@@ -8,7 +8,7 @@ CodeHatch is a Discord bot for Roblox game creators: you run your game straight 
 
 ## 👉 Start here: `DOCS.html`
 
-The bot folder has a file called **`DOCS.html`**. Double-click it and the whole documentation opens in your browser:
+**`DOCS.html`** appears in the bot folder only after the bot's first start (step 4 below); until then use this README. After that, double-click it and the whole documentation opens in your browser:
 
 - **step-by-step quests**, e.g. *Bot online from zero* or *Your first code in the game*, with a progress bar and badges,
 - search (type e.g. “token” or “API key”),
@@ -17,7 +17,7 @@ The bot folder has a file called **`DOCS.html`**. Double-click it and the whole 
 
 The page works offline and saves your progress in the browser by itself. The bot refreshes it at every start, so after an update the instructions are always current. Is the bot on a server without a browser? Copy `DOCS.html` to your computer and open it there.
 
-## 🛠️ Installation: from the zip to your first code in the game
+## 🛠️ Installation: from the download to your first code in the game
 
 ### What you need
 
@@ -35,8 +35,8 @@ The page works offline and saves your progress in the browser by itself. The bot
 
 ### Step by step
 
-1. **Unzip.** Right-click `CodeHatch-1.0.0.zip` → **Extract All…** → pick a folder that stays, e.g. `C:\Bots`. Open the `CodeHatch-1.0.0` folder inside: you'll see `start.bat`, `main.py` and `DOCS.html`. That's your bot folder.
-   - Don't run anything from the zip preview.
+1. **Download or clone the repository.** Either clone it with `git clone`, or on the GitHub page click **Code** → **Download ZIP**, then right-click the ZIP → **Extract All…**. Pick a folder that stays, e.g. `C:\Bots`. Open the extracted folder: you'll see `start.bat` and `main.py` (`DOCS.html` appears there after the first start). That's your bot folder.
+   - Extract the ZIP you downloaded from GitHub first, then run things (not from the archive preview).
    - Don't keep the bot folder in OneDrive or Dropbox (often the Desktop and Documents are synced): they lock its files.
    *Details: `DOCS.html` → What you need and Python.*
 2. **Python** (once per computer). **python.org** → **Downloads** → **Windows** → under Python 3.14 click **Windows installer (64-bit)** → run it. On the first screen tick **“Add python.exe to PATH”** → **Install Now**.
@@ -69,7 +69,7 @@ The page works offline and saves your progress in the browser by itself. The bot
    - **Save & Generate Key** → **Copy**. The key is shown only once: lost it? Create a new one.
    - `/setup-roblox` → **🔑 Game connection** → **Paste API key** → **On / off** (it must be on) → **Test & sync**. You'll see ✅ or what to fix.
    *Details: `/tutorial` → Connecting your Roblox game.*
-8. **The Studio file.** From the `scripts` folder you need only `DiscordCodes.rbxmx` (`DiscordSettings` is optional; `DiscordCatalog` and `DiscordCodesWindow` are optional extras explained later).
+8. **The Studio file.** From the `scripts` folder you need only `DiscordCodes.rbxmx` (`DiscordSettings` is optional; `DiscordCatalog` and `DiscordCodesWindow` are optional extras explained in `DOCS.html`). The file is ready in the repository: you don't need to build anything.
    - Open the newest version of your game in Roblox Studio (**File** → **Open from Roblox**).
    - In the **Explorer** window right-click **ServerScriptService** → **Insert** → **Import Roblox Model** → `scripts/DiscordCodes.rbxmx` from the bot folder.
    - No such option (new Studio)? Make your own tab: **+** after the tabs → **Add tools** → `model` → tick **Model** → click it, pick the file.
@@ -113,17 +113,18 @@ Full description: `DOCS.html` → *What the bot can do*.
 
 ## 🛡️ Is it safe?
 
-You get the full source code. The bot has no telemetry and connects only to Discord and Roblox; its error reports go only to your own Discord channel. Your bot token and API key stay in the `.env` file on your computer. The script in your game has no `require(id)` and makes no web requests. The bot needs only four Discord permissions and an API key limited to your game. Details: `DOCS.html` → *Is it safe?*.
+All the source code is open (MIT license), so you can read it. The bot has no telemetry and connects only to Discord and Roblox; its error reports go only to your own Discord channel. Your bot token and API key stay in the `.env` file on your computer. The script in your game has no `require(id)` and makes no web requests. The bot needs only four Discord permissions and an API key limited to your game. Details: `DOCS.html` → *Is it safe?*.
 
 ## 🆘 Something doesn't work?
 
 - `/setup` → **🩺 Diagnostics** (Discord) and `/setup-roblox` → **🧪 Check everything** (game) tell you what to fix.
 - `/setup-guide`: answers to common questions.
 - In `DOCS.html` type the problem into the search or open *Problems at the start*.
+- Help: open an issue in **Issues** of this GitHub repository. The project is finished and not actively maintained, but issues and pull requests are welcome.
 
 ## 🔄 A new version
 
-Your version is shown in the bot window (`📦 CodeHatch 1.0.0`) and at the bottom of `/help`. Download a new version from the #buyers channel on the CodeHatch HQ Discord server (you get the 💎 Buyer role when you buy) and read in `CHANGELOG.md` every entry between your version and the new one. Close the bot, copy the new files over the old bot folder, but **keep** `.env`, `config.json` and the `data` folder (never overwrite them), then start the bot again with `start.bat` / `start.sh`. If `/setup-roblox` then shows ⚠️ next to the DiscordCodes file, replace that file in Studio too. Step by step: `DOCS.html` → *Bot updates*.
+Your version is shown in the bot window (`📦 CodeHatch 1.0.0`) and at the bottom of `/help`. Pull the latest version from GitHub (`git pull`, or download the repository again) and read in `CHANGELOG.md` every entry between your version and the new one. Close the bot, copy the new files over the old bot folder, but **keep** `.env`, `config.json` and the `data` folder (never overwrite them), then start the bot again with `start.bat` / `start.sh`. If `/setup-roblox` then shows ⚠️ next to the DiscordCodes file, replace that file in Studio too. Step by step: `DOCS.html` → *Bot updates*.
 
 ## 📁 What's in the folder
 
@@ -131,10 +132,10 @@ Your version is shown in the bot window (`📦 CodeHatch 1.0.0`) and at the bott
 |---|---|
 | `DOCS.html` | The documentation: open it in your browser |
 | `start.bat` / `start.sh` | Starting the bot (Windows / Linux and macOS) |
-| `.env` | Your bot token and Roblox key (made from `.env.example` on the first start, not in the zip). **Never send it to anyone** |
-| `config.json`, `data/` | Your settings and database. The bot creates them on the first start (they are not in the zip). Never overwrite them when you update |
+| `.env` | Your bot token and Roblox key (made from `.env.example` on the first start, not in the repository). **Never send it to anyone** |
+| `config.json`, `data/` | Your settings and database. The bot creates them on the first start (they are not in the repository). Never overwrite them when you update |
 | `CHANGELOG.md` | What changed in each version |
-| `LICENSE.md` | What you may and may not do with the code (license) |
+| `LICENSE` | MIT license: free to use, change and share |
 | `scripts/` | Files to insert in Roblox Studio (sources in `scripts/DiscordCodes/`) |
 | `cogs/`, `utils/`, `main.py` | The bot's source code: map in `DOCS.html` → *For programmers: the source code* |
 | `locales/` | Texts of the bot and the documentation (EN, PL, ES) |

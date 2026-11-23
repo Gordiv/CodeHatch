@@ -518,11 +518,11 @@
       ],
       [
         "Hosting con panel: pasos",
-        "1) Descomprime `CodeHatch-1.0.0.zip` en tu ordenador y abre la carpeta `CodeHatch-1.0.0`.\n2) Sube su contenido al panel (gestor de archivos o SFTP), **sin la carpeta `.venv`**.\n3) Elige Python 3.12–3.14 y el archivo de inicio `main.py`.\n4) El zip no trae archivo `.env`: en el gestor de archivos del panel copia `.env.example` como `.env` (o cámbiale el nombre), ábrelo y escribe el token del bot después de `DISCORD_TOKEN=`.\n5) Asegúrate de que el panel instala `requirements.txt`.\n6) Pulsa Start y luego escribe `/tutorial` en Discord."
+        "1) Descomprime `CodeHatch-main.zip` en tu ordenador y abre la carpeta `CodeHatch-main`.\n2) Sube su contenido al panel (gestor de archivos o SFTP), **sin la carpeta `.venv`**.\n3) Elige Python 3.12–3.14 y el archivo de inicio `main.py`.\n4) El zip no trae archivo `.env`: en el gestor de archivos del panel copia `.env.example` como `.env` (o cámbiale el nombre), ábrelo y escribe el token del bot después de `DISCORD_TOKEN=`.\n5) Asegúrate de que el panel instala `requirements.txt`.\n6) Pulsa Start y luego escribe `/tutorial` en Discord."
       ],
       [
         "Hosting con panel: actualizaciones",
-        "Descarga la versión nueva desde el canal #buyers del servidor de Discord CodeHatch HQ (recibes el rol 💎 Buyer al comprar) y lee en `CHANGELOG.md` todas las entradas entre tu versión y la nueva.\n1) Por si acaso, descarga a tu ordenador una copia de `.env`, `config.json` y la carpeta `data`.\n2) Detén el bot en el panel.\n3) Sube los archivos nuevos encima de los antiguos, pero **nunca sobrescribas** `.env`, `config.json` ni la carpeta `data`.\n4) Pulsa Start. Asegúrate de que el panel vuelve a instalar `requirements.txt` (una versión nueva puede añadir bibliotecas)."
+        "Descarga la versión nueva desde GitHub (git pull o vuelve a descargar el repositorio) y lee en `CHANGELOG.md` todas las entradas entre tu versión y la nueva.\n1) Por si acaso, descarga a tu ordenador una copia de `.env`, `config.json` y la carpeta `data`.\n2) Detén el bot en el panel.\n3) Sube los archivos nuevos encima de los antiguos, pero **nunca sobrescribas** `.env`, `config.json` ni la carpeta `data`.\n4) Pulsa Start. Asegúrate de que el panel vuelve a instalar `requirements.txt` (una versión nueva puede añadir bibliotecas)."
       ]
     ]
   },
@@ -535,7 +535,7 @@
     "fields": [
       [
         "1. Preparar el servidor",
-        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nSube `CodeHatch-1.0.0.zip` a tu carpeta personal (p. ej. con WinSCP o FileZilla), descomprímelo y dale a la carpeta un nombre fijo:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\n```"
+        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nSube `CodeHatch-main.zip` a tu carpeta personal (p. ej. con WinSCP o FileZilla), descomprímelo y dale a la carpeta un nombre fijo:\n```bash\nunzip CodeHatch-main.zip\nmv CodeHatch-main codehatch\n```"
       ],
       [
         "2. Primer inicio",

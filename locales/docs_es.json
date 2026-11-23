@@ -153,7 +153,7 @@
         ],
         [
           "🔄 Actualizaciones y reportes de errores",
-          "- Descargas una versión nueva desde el canal #buyers del servidor de Discord CodeHatch HQ (recibes el rol 💎 Buyer al comprar): copias los archivos nuevos encima de los antiguos y tus ajustes y datos se quedan (`CHANGELOG.md` dice qué cambió). La ventana del bot y el final de `/help` muestran tu versión, p. ej. `CodeHatch 1.0.0`.\n- Reportes de errores automáticos en tu propio canal de reportes de errores (`/setup` → 📡 Canales). Nunca salen de tu servidor.\n- El canal de registro (`/setup` → 📡 Canales) apunta cada cambio en el juego hecho desde Discord o desde el ⚙️ Manager, con quién lo hizo. Los cambios hechos en el juego con el bot apagado se apuntan ahí cuando vuelve a arrancar."
+          "- Descargas una versión nueva desde GitHub: copias los archivos nuevos encima de los antiguos y tus ajustes y datos se quedan (`CHANGELOG.md` dice qué cambió). La ventana del bot y el final de `/help` muestran tu versión, p. ej. `CodeHatch 1.0.0`.\n- Reportes de errores automáticos en tu propio canal de reportes de errores (`/setup` → 📡 Canales). Nunca salen de tu servidor.\n- El canal de registro (`/setup` → 📡 Canales) apunta cada cambio en el juego hecho desde Discord o desde el ⚙️ Manager, con quién lo hizo. Los cambios hechos en el juego con el bot apagado se apuntan ahí cuando vuelve a arrancar."
         ],
         [
           "🎮 Tu juego controlado desde Discord",
@@ -174,11 +174,11 @@
       "fields": [
         [
           "Qué necesitas",
-          "- un ordenador con Windows (o Linux, o un hosting para bots),\n- una cuenta de Discord y tu propio servidor de Discord en el que seas administrador,\n- un juego de Roblox que puedas editar en Roblox Studio,\n- el archivo ZIP del bot (lo recibes en tu ticket de compra, Purchase, en el servidor de Discord CodeHatch HQ)."
+          "- un ordenador con Windows (o Linux, o un hosting para bots),\n- una cuenta de Discord y tu propio servidor de Discord en el que seas administrador,\n- un juego de Roblox que puedas editar en Roblox Studio,\n- los archivos del bot (descarga o clona el repositorio de GitHub: **Code** → **Download ZIP**)."
         ],
         [
           "Descomprime el paquete del bot",
-          "1. Clic derecho en el archivo ZIP (`CodeHatch-1.0.0.zip`) → **Extraer todo…**.\n2. Elige una carpeta fija, p. ej. `C:\\Bots`, y pulsa **Extraer**.\n3. Abre la carpeta descomprimida y dentro la carpeta `CodeHatch-1.0.0`: verás, entre otros, `start.bat`, `main.py` y `DOCS.html`. Esa es la carpeta de tu bot.\n\nNo ejecutes nada directamente desde la vista previa del ZIP: descomprímelo primero. No pongas la carpeta del bot en **OneDrive** ni en **Dropbox** (en muchos ordenadores OneDrive sincroniza el Escritorio y Documentos): bloquean los archivos mientras el bot los usa. `C:\\Bots` es un lugar seguro."
+          "1. Clic derecho en el archivo ZIP (`CodeHatch-main.zip`) → **Extraer todo…**.\n2. Elige una carpeta fija, p. ej. `C:\\Bots`, y pulsa **Extraer**.\n3. Abre la carpeta descomprimida y dentro la carpeta `CodeHatch-main`: verás, entre otros, `start.bat`, `main.py` y `DOCS.html`. Esa es la carpeta de tu bot.\n\nNo ejecutes nada directamente desde la vista previa del ZIP: descomprímelo primero. No pongas la carpeta del bot en **OneDrive** ni en **Dropbox** (en muchos ordenadores OneDrive sincroniza el Escritorio y Documentos): bloquean los archivos mientras el bot los usa. `C:\\Bots` es un lugar seguro."
         ],
         [
           "Instala Python (una vez por ordenador)",
@@ -460,7 +460,7 @@
         ],
         [
           "¿Dónde consigo una versión nueva?",
-          "En el servidor de Discord CodeHatch HQ, en el canal #buyers (lo ves con el rol 💎 Buyer que recibiste al comprar el bot): descarga el zip más reciente (p. ej. `CodeHatch-1.0.1.zip`)."
+          "Descarga la versión más reciente desde GitHub (`git pull`) o, en la página del proyecto, pulsa **Code** → **Download ZIP** para obtener los archivos nuevos (p. ej. `CodeHatch-main.zip`)."
         ],
         [
           "1. Mira qué cambió",
@@ -476,7 +476,7 @@
         ],
         [
           "4. Copia los archivos nuevos",
-          "1. Abre la versión nueva descomprimida, selecciona todo lo que hay dentro (**Ctrl+A**) y cópialo (**Ctrl+C**). Verás una carpeta (p. ej. `CodeHatch-1.0.1`): ábrela primero.\n2. Abre tu carpeta del bot (la que tiene `start.bat`) y pega (**Ctrl+V**).\n3. Windows pregunta por los archivos con el mismo nombre: elige **Reemplazar los archivos en el destino**.\n\n**Nunca sobrescribas** `.env`, `config.json` ni la carpeta `data`. Si la versión nueva trae un archivo o carpeta con uno de esos nombres, no lo copies."
+          "1. Abre la versión nueva descomprimida, selecciona todo lo que hay dentro (**Ctrl+A**) y cópialo (**Ctrl+C**). Verás una carpeta (p. ej. `CodeHatch-main`): ábrela primero.\n2. Abre tu carpeta del bot (la que tiene `start.bat`) y pega (**Ctrl+V**).\n3. Windows pregunta por los archivos con el mismo nombre: elige **Reemplazar los archivos en el destino**.\n\n**Nunca sobrescribas** `.env`, `config.json` ni la carpeta `data`. Si la versión nueva trae un archivo o carpeta con uno de esos nombres, no lo copies."
         ],
         [
           "5. Vuelve a arrancar el bot",
@@ -723,7 +723,7 @@
         ],
         [
           "Errores y preguntas",
-          "Pregunta en la página de Issues del proyecto en GitHub. ¿Necesitas ayuda con la instalación? Está incluida: abre un ticket (**Install help**). Escribe qué hiciste, qué esperabas y qué pasó en su lugar, y adjunta el archivo `data/logs/bot.log` o una captura del reporte de error. En ambos los tokens y claves están ocultos, pero no muestres tokens ni contraseñas en otras capturas."
+          "Pregunta en la página de Issues del proyecto en GitHub. En el reporte escribe qué hiciste, qué esperabas y qué pasó en su lugar, y adjunta el archivo `data/logs/bot.log` o una captura del reporte de error. En ambos los tokens y claves están ocultos, pero no muestres tokens ni contraseñas en otras capturas."
         ]
       ]
     },
@@ -756,7 +756,7 @@
       "intro": "Respuestas cortas para quien tiene dudas antes de dar a un bot acceso a su juego.",
       "fields": [
         [
-          "Recibes el código fuente completo",
+          "El código fuente completo es abierto",
           "Todo lo que hace el bot está en la carpeta del bot, a la vista: los archivos de Python en `cogs/` y `utils/`, y los scripts del juego en `scripts/DiscordCodes/`. No hay nada oculto ni nada que se descargue después."
         ],
         [
@@ -802,7 +802,7 @@
         ],
         [
           "4. Sube el bot al servidor",
-          "Lo más fácil es **WinSCP** o **FileZilla** (protocolo SFTP, los mismos datos que SSH): sube `CodeHatch-1.0.0.zip` a tu carpeta personal. Después, en el servidor, descomprímelo y dale a la carpeta un nombre que no cambie con las actualizaciones:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\ncd codehatch\n```\nCompruébalo con `ls`: deberías ver `main.py`, `start.sh` y `.env.example` (`ls -a` muestra los archivos que empiezan por punto)."
+          "Lo más fácil es **WinSCP** o **FileZilla** (protocolo SFTP, los mismos datos que SSH): sube `CodeHatch-main.zip` a tu carpeta personal. Después, en el servidor, descomprímelo y dale a la carpeta un nombre que no cambie con las actualizaciones:\n```bash\nunzip CodeHatch-main.zip\nmv CodeHatch-main codehatch\ncd codehatch\n```\nCompruébalo con `ls`: deberías ver `main.py`, `start.sh` y `.env.example` (`ls -a` muestra los archivos que empiezan por punto)."
         ],
         [
           "5. Primer inicio",
@@ -814,7 +814,7 @@
         ],
         [
           "7. Actualizaciones en un VPS",
-          "Los mismos pasos que en *Actualizaciones del bot*, con comandos. Sube el zip nuevo a tu directorio personal (WinSCP o FileZilla) y luego (ejemplo para la versión 1.0.1):\n```bash\ncd ~\nsudo systemctl stop codehatch          # o Ctrl+C en tmux\ncp -r codehatch codehatch-copia         # copia de seguridad\nunzip CodeHatch-1.0.1.zip -d codehatch_new\nsudo apt install -y rsync\nrsync -a --exclude /.env --exclude /config.json --exclude /data/ codehatch_new/CodeHatch-1.0.1/ codehatch/\nsudo systemctl start codehatch         # o: cd codehatch && bash start.sh\n```\nCambia `1.0.1` por tu versión nueva (dos veces). `rsync` copia todo menos `.env`, `config.json` y `data`. `start.sh` instala por sí solo las bibliotecas nuevas. Cuando todo funcione, borra `codehatch_new`."
+          "Los mismos pasos que en *Actualizaciones del bot*, con comandos. Sube el zip nuevo a tu directorio personal (WinSCP o FileZilla) y luego (ejemplo para la versión 1.0.1):\n```bash\ncd ~\nsudo systemctl stop codehatch          # o Ctrl+C en tmux\ncp -r codehatch codehatch-copia         # copia de seguridad\nunzip CodeHatch-main.zip -d codehatch_new\nsudo apt install -y rsync\nrsync -a --exclude /.env --exclude /config.json --exclude /data/ codehatch_new/CodeHatch-main/ codehatch/\nsudo systemctl start codehatch         # o: cd codehatch && bash start.sh\n```\nCambia `1.0.1` por tu versión nueva (dos veces). `rsync` copia todo menos `.env`, `config.json` y `data`. `start.sh` instala por sí solo las bibliotecas nuevas. Cuando todo funcione, borra `codehatch_new`."
         ],
         [
           "Raspberry Pi / tu propio ordenador con Linux",
@@ -848,7 +848,7 @@
       "emoji": "🧑‍💻",
       "title": "Para programadores: el código fuente",
       "menu": "Mapa de los archivos, cambiar los scripts del juego, actualizar sin conflictos",
-      "intro": "Compraste el código fuente completo, así que puedes leerlo y cambiarlo todo. Este capítulo es un mapa para quien sabe Python o Luau. No lo necesitas para usar el bot.",
+      "intro": "El código fuente completo es abierto (licencia MIT), así que puedes leerlo y cambiarlo todo. Este capítulo es un mapa para quien sabe Python o Luau. No lo necesitas para usar el bot.",
       "fields": [
         [
           "El arranque y las carpetas",

@@ -347,7 +347,7 @@ async def sync_guilds(bot) -> dict:
     then every server is checked like a new one. Returns {guild_id: decision}."""
     if not home_list_exists():
         # Before this version every server was trusted: keep each one where the bot's owner is a member (or where it
-        # can't be checked now), so an update never cuts a buyer off their own community server
+        # can't be checked now), so an update never cuts an owner off their own community server
         keep = []
         for guild in list(bot.guilds):
             if await owner_trusts(bot, guild, membership_enough=True) is not False:

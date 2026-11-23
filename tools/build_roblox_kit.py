@@ -1,6 +1,6 @@
-"""Bot author tool: assembles scripts/DiscordCodes/*.luau into one file, scripts/DiscordCodes.rbxmx.
+"""Assembles scripts/DiscordCodes/*.luau into one file, scripts/DiscordCodes.rbxmx.
 
-Buyers insert the .rbxmx into Roblox Studio in one step (right-click ServerScriptService -> Insert -> Import Roblox Model;
+Users insert the .rbxmx into Roblox Studio in one step (right-click ServerScriptService -> Insert -> Import Roblox Model;
 called Insert from File in older Studio).
 Run it after every change to the .luau files:   python tools/build_roblox_kit.py
 
@@ -22,7 +22,7 @@ SRC = ROOT / "scripts" / "DiscordCodes"
 OUT = ROOT / "scripts" / "DiscordCodes.rbxmx"
 # The code window as a ready template for StarterGui (see the end of this file).
 OUT_WINDOW = ROOT / "scripts" / "DiscordCodesWindow.rbxmx"
-# The game catalog template (a ModuleScript the buyer fills in once, see the end of this file).
+# The game catalog template (a ModuleScript the game owner fills in once, see the end of this file).
 CATALOG_SOURCE = ROOT / "tools" / "templates" / "DiscordCatalog.luau"
 OUT_CATALOG = ROOT / "scripts" / "DiscordCatalog.rbxmx"
 # The owner's settings (a ModuleScript inserted once, next to DiscordCodes): the Loader copies them into its Settings
@@ -195,7 +195,7 @@ def build(out: Path, sources: dict, version: int) -> dict:
 
 
 # ---------- Template of the code window: scripts/DiscordCodesWindow.rbxmx ----------
-# A normal ScreenGui the buyer inserts into StarterGui ONCE and restyles in Studio. It lives outside the DiscordCodes
+# A normal ScreenGui the game owner inserts into StarterGui ONCE and restyles in Studio. It lives outside the DiscordCodes
 # script, so updating DiscordCodes never touches it. The names of the parts are the contract with Client.client.luau.
 
 WINDOW_NOTE = ("Change colors, texts, sizes and positions in the Properties window. Keep these names: Window, CodeBox, Redeem, "

@@ -8,7 +8,7 @@ CodeHatch es un bot de Discord para creadores de juegos de Roblox: controlas tu 
 
 ## 👉 Empieza aquí: `DOCS.html`
 
-En la carpeta del bot hay un archivo llamado **`DOCS.html`**. Haz doble clic y se abrirá en tu navegador toda la documentación:
+**`DOCS.html`** aparece en la carpeta del bot solo después del primer arranque del bot (paso 4 más abajo); hasta entonces usa este README. Después, haz doble clic en él y se abrirá en tu navegador toda la documentación:
 
 - **misiones paso a paso**, p. ej. *Bot en línea desde cero* o *Tu primer código en el juego*, con barra de progreso e insignias,
 - un buscador (escribe p. ej. «token» o «clave API»),
@@ -17,7 +17,7 @@ En la carpeta del bot hay un archivo llamado **`DOCS.html`**. Haz doble clic y s
 
 La página funciona sin internet y guarda tu progreso en el navegador por sí sola. El bot la actualiza en cada arranque, así que tras una actualización las instrucciones siempre están al día. ¿El bot está en un servidor sin navegador? Copia `DOCS.html` a tu ordenador y ábrelo allí.
 
-## 🛠️ Instalación: del zip a tu primer código en el juego
+## 🛠️ Instalación: de la descarga a tu primer código en el juego
 
 ### Qué necesitas
 
@@ -35,8 +35,8 @@ La página funciona sin internet y guarda tu progreso en el navegador por sí so
 
 ### Paso a paso
 
-1. **Descomprime.** Clic derecho en `CodeHatch-1.0.0.zip` → **Extraer todo…** → elige una carpeta que se quede fija, p. ej. `C:\Bots`. Abre dentro la carpeta `CodeHatch-1.0.0`: verás, entre otros, `start.bat`, `main.py` y `DOCS.html`. Esa es la carpeta de tu bot.
-   - No ejecutes nada desde la vista previa del zip.
+1. **Descarga o clona el repositorio.** Clónalo con `git clone` o, en la página de GitHub, pulsa **Code** → **Download ZIP** y descomprime el archivo (clic derecho → **Extraer todo…**). Elige una carpeta que se quede fija, p. ej. `C:\Bots`. Abre la carpeta descomprimida: verás, entre otros, `start.bat` y `main.py` (`DOCS.html` aparece ahí tras el primer arranque). Esa es la carpeta de tu bot.
+   - Primero descomprime el ZIP descargado de GitHub y luego ejecuta cosas (no desde la vista previa del archivo).
    - No guardes la carpeta del bot en OneDrive ni en Dropbox (a menudo el Escritorio y Documentos se sincronizan): bloquean sus archivos.
    *Detalles: `DOCS.html` → Qué necesitas y Python.*
 2. **Python** (una vez por ordenador). **python.org** → **Downloads** → **Windows** → en Python 3.14 pulsa **Windows installer (64-bit)** → ejecuta el archivo. En la primera pantalla marca **“Add python.exe to PATH”** → **Install Now**.
@@ -69,7 +69,7 @@ La página funciona sin internet y guarda tu progreso en el navegador por sí so
    - **Save & Generate Key** → **Copy**. La clave se muestra solo una vez: ¿la perdiste? Crea una nueva.
    - `/setup-roblox` → **🔑 Conexión con el juego** → **Pegar clave API** → **Activar / desactivar** (debe estar activado) → **Probar y sincronizar**. Verás ✅ o qué corregir.
    *Detalles: `/tutorial` → Conectar tu juego de Roblox.*
-8. **El archivo para Studio.** De la carpeta `scripts` solo necesitas `DiscordCodes.rbxmx` (`DiscordSettings` es opcional; `DiscordCatalog` y `DiscordCodesWindow` son extras opcionales que se explican más adelante).
+8. **El archivo para Studio.** De la carpeta `scripts` solo necesitas `DiscordCodes.rbxmx` (`DiscordSettings` es opcional; `DiscordCatalog` y `DiscordCodesWindow` son extras opcionales que se explican en `DOCS.html`). El archivo ya está listo en el repositorio: no tienes que compilar nada.
    - Abre la versión más reciente de tu juego en Roblox Studio (**File** → **Open from Roblox**).
    - En la ventana **Explorer** haz clic derecho en **ServerScriptService** → **Insert** → **Import Roblox Model** → `scripts/DiscordCodes.rbxmx` de la carpeta del bot.
    - ¿No aparece (Studio nuevo)? Crea tu propia pestaña: **+** tras las pestañas → **Add tools** → `model` → marca **Model** → púlsalo y elige el archivo.
@@ -113,17 +113,18 @@ Descripción completa: `DOCS.html` → *Qué puede hacer el bot*.
 
 ## 🛡️ ¿Es seguro?
 
-Recibes el código fuente completo. El bot no tiene telemetría y solo se conecta a Discord y a Roblox; sus reportes de errores van solo a tu propio canal de Discord. El token del bot y la clave API se quedan en el archivo `.env` de tu ordenador. El script del juego no tiene `require(id)` ni hace peticiones a internet. El bot solo necesita cuatro permisos de Discord y una clave API limitada a tu juego. Detalles: `DOCS.html` → *¿Es seguro?*.
+Todo el código fuente es abierto (licencia MIT) y puedes leerlo. El bot no tiene telemetría y solo se conecta a Discord y a Roblox; sus reportes de errores van solo a tu propio canal de Discord. El token del bot y la clave API se quedan en el archivo `.env` de tu ordenador. El script del juego no tiene `require(id)` ni hace peticiones a internet. El bot solo necesita cuatro permisos de Discord y una clave API limitada a tu juego. Detalles: `DOCS.html` → *¿Es seguro?*.
 
 ## 🆘 ¿Algo no funciona?
 
 - `/setup` → **🩺 Diagnóstico** (Discord) y `/setup-roblox` → **🧪 Comprobar todo** (juego) te dicen qué corregir.
 - `/setup-guide`: respuestas a dudas frecuentes.
 - En `DOCS.html` escribe el problema en el buscador o abre *Problemas al empezar*.
+- Ayuda: abre un issue en **Issues** de este repositorio de GitHub. El proyecto está terminado y no se mantiene activamente, pero los issues y pull requests son bienvenidos.
 
 ## 🔄 Una versión nueva
 
-Tu versión aparece en la ventana del bot (`📦 CodeHatch 1.0.0`) y al final de `/help`. Descarga la versión nueva desde el canal #buyers del servidor de Discord CodeHatch HQ (recibes el rol 💎 Buyer al comprar) y lee en `CHANGELOG.md` todas las entradas entre tu versión y la nueva. Cierra el bot, copia los archivos nuevos encima de la carpeta antigua del bot, pero **conserva** `.env`, `config.json` y la carpeta `data` (nunca los sobrescribas), y vuelve a arrancar el bot con `start.bat` / `start.sh`. Si después `/setup-roblox` muestra ⚠️ junto al archivo DiscordCodes, reemplaza también ese archivo en Studio. Paso a paso: `DOCS.html` → *Actualizaciones del bot*.
+Tu versión aparece en la ventana del bot (`📦 CodeHatch 1.0.0`) y al final de `/help`. Descarga la versión nueva desde GitHub (`git pull` o vuelve a descargar el repositorio) y lee en `CHANGELOG.md` todas las entradas entre tu versión y la nueva. Cierra el bot, copia los archivos nuevos encima de la carpeta antigua del bot, pero **conserva** `.env`, `config.json` y la carpeta `data` (nunca los sobrescribas), y vuelve a arrancar el bot con `start.bat` / `start.sh`. Si después `/setup-roblox` muestra ⚠️ junto al archivo DiscordCodes, reemplaza también ese archivo en Studio. Paso a paso: `DOCS.html` → *Actualizaciones del bot*.
 
 ## 📁 Qué hay en la carpeta
 
@@ -131,10 +132,10 @@ Tu versión aparece en la ventana del bot (`📦 CodeHatch 1.0.0`) y al final de
 |---|---|
 | `DOCS.html` | La documentación: ábrela en tu navegador |
 | `start.bat` / `start.sh` | Arrancar el bot (Windows / Linux y macOS) |
-| `.env` | El token del bot y la clave de Roblox (se crea a partir de `.env.example` en el primer arranque, no viene en el zip). **Nunca se lo envíes a nadie** |
-| `config.json`, `data/` | Tus ajustes y la base de datos. El bot los crea en el primer arranque (no vienen en el zip). No los sobrescribas al actualizar |
+| `.env` | El token del bot y la clave de Roblox (se crea a partir de `.env.example` en el primer arranque, no viene en el repositorio). **Nunca se lo envíes a nadie** |
+| `config.json`, `data/` | Tus ajustes y la base de datos. El bot los crea en el primer arranque (no vienen en el repositorio). No los sobrescribas al actualizar |
 | `CHANGELOG.md` | Qué cambió en cada versión |
-| `LICENSE.md` | Qué puedes y qué no puedes hacer con el código (licencia, en inglés) |
+| `LICENSE` | Licencia MIT: puedes usar, cambiar y compartir el código gratis (en inglés) |
 | `scripts/` | Archivos para insertar en Roblox Studio (fuentes en `scripts/DiscordCodes/`) |
 | `cogs/`, `utils/`, `main.py` | El código fuente del bot: mapa en `DOCS.html` → *Para programadores: el código fuente* |
 | `locales/` | Textos del bot y de la documentación (ES, EN, PL) |

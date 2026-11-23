@@ -8,7 +8,7 @@ CodeHatch to bot Discord dla twórców gier na Robloxie: sterujesz swoją grą p
 
 ## 👉 Zacznij tutaj: `DOCS.html`
 
-W folderze bota jest plik **`DOCS.html`**. Kliknij go dwa razy, a otworzy się w przeglądarce strona z całą dokumentacją:
+**`DOCS.html`** pojawia się w folderze bota dopiero po pierwszym uruchomieniu bota (krok 4 poniżej); wcześniej korzystaj z tego README. Potem kliknij ten plik dwa razy, a otworzy się w przeglądarce strona z całą dokumentacją:
 
 - **misje krok po kroku**, np. *Bot online od zera* albo *Pierwszy kod w grze*, z paskiem postępu i odznakami,
 - wyszukiwarka (wpisz np. „token” albo „klucz API”),
@@ -17,7 +17,7 @@ W folderze bota jest plik **`DOCS.html`**. Kliknij go dwa razy, a otworzy się w
 
 Strona działa bez internetu, a postęp zapisuje się sam w przeglądarce. Bot odświeża ją przy każdym uruchomieniu, więc po aktualizacji instrukcje są zawsze aktualne. Bot stoi na serwerze bez przeglądarki? Skopiuj `DOCS.html` na swój komputer i otwórz go tam.
 
-## 🛠️ Instalacja: od zipa do pierwszego kodu w grze
+## 🛠️ Instalacja: od pobrania do pierwszego kodu w grze
 
 ### Co musisz mieć
 
@@ -35,8 +35,8 @@ Strona działa bez internetu, a postęp zapisuje się sam w przeglądarce. Bot o
 
 ### Krok po kroku
 
-1. **Rozpakuj.** Prawy przycisk na `CodeHatch-1.0.0.zip` → **Wyodrębnij wszystko…** → wybierz folder, który zostanie na stałe, np. `C:\Boty`. Otwórz w nim folder `CodeHatch-1.0.0`: zobaczysz m.in. `start.bat`, `main.py` i `DOCS.html`. To jest Twój folder bota.
-   - Nie uruchamiaj niczego z podglądu zipa.
+1. **Pobierz lub sklonuj repozytorium.** Sklonuj je przez `git clone` albo na stronie GitHuba kliknij **Code** → **Download ZIP** i rozpakuj plik (prawy przycisk → **Wyodrębnij wszystko…**). Wybierz folder, który zostanie na stałe, np. `C:\Boty`. Otwórz rozpakowany folder: zobaczysz m.in. `start.bat` i `main.py` (`DOCS.html` pojawi się tam po pierwszym starcie). To jest Twój folder bota.
+   - Najpierw rozpakuj ZIP pobrany z GitHuba, a dopiero potem uruchamiaj cokolwiek (nie z podglądu w archiwum).
    - Nie trzymaj folderu bota w OneDrive ani w Dropboxie (często Pulpit i Dokumenty są synchronizowane): blokują jego pliki.
    *Szczegóły: `DOCS.html` → Co musisz mieć i Python.*
 2. **Python** (raz na komputerze). **python.org** → **Downloads** → **Windows** → przy Pythonie 3.14 kliknij **Windows installer (64-bit)** → uruchom pobrany plik. Na pierwszym ekranie zaznacz **„Add python.exe to PATH”** → **Install Now**.
@@ -69,7 +69,7 @@ Strona działa bez internetu, a postęp zapisuje się sam w przeglądarce. Bot o
    - **Save & Generate Key** → **Copy**. Klucz pokazuje się tylko raz: zgubiłeś go? Utwórz nowy.
    - `/setup-roblox` → **🔑 Połączenie z grą** → **Wklej klucz API** → **Włącz / wyłącz** (ma być włączone) → **Testuj i synchronizuj**. Zobaczysz ✅ albo opis, co poprawić.
    *Szczegóły: `/tutorial` → Podłączenie gry Roblox.*
-8. **Plik do Studio.** Z folderu `scripts` potrzebujesz tylko `DiscordCodes.rbxmx` (`DiscordSettings` jest opcjonalny; `DiscordCatalog` i `DiscordCodesWindow` to opcjonalne dodatki opisane później).
+8. **Plik do Studio.** Z folderu `scripts` potrzebujesz tylko `DiscordCodes.rbxmx` (`DiscordSettings` jest opcjonalny; `DiscordCatalog` i `DiscordCodesWindow` to opcjonalne dodatki, opisane w `DOCS.html`). Plik jest gotowy w repozytorium: nie musisz niczego budować.
    - Otwórz najnowszą wersję gry w Roblox Studio (**File** → **Open from Roblox**).
    - W oknie **Explorer** kliknij prawym przyciskiem **ServerScriptService** → **Insert** → **Import Roblox Model** → `scripts/DiscordCodes.rbxmx` z folderu bota.
    - Nie ma takiej opcji (nowe Studio)? Zrób własną kartę: **+** za kartami → **Add tools** → `model` → zaznacz **Model** → kliknij go i wybierz plik.
@@ -113,17 +113,18 @@ Pełny opis: `DOCS.html` → *Co potrafi bot*.
 
 ## 🛡️ Czy to bezpieczne?
 
-Dostajesz pełny kod źródłowy. Bot nie ma telemetrii i łączy się tylko z Discordem i Robloxem; raporty błędów trafiają wyłącznie na Twój własny kanał na Discordzie. Token bota i klucz API zostają w pliku `.env` na Twoim komputerze. Skrypt w grze nie ma `require(id)` i nie wysyła zapytań do internetu. Bot potrzebuje tylko czterech uprawnień na Discordzie i klucza API ograniczonego do Twojej gry. Szczegóły: `DOCS.html` → *Czy to bezpieczne?*.
+Cały kod źródłowy jest otwarty (licencja MIT), możesz go przejrzeć. Bot nie ma telemetrii i łączy się tylko z Discordem i Robloxem; raporty błędów trafiają wyłącznie na Twój własny kanał na Discordzie. Token bota i klucz API zostają w pliku `.env` na Twoim komputerze. Skrypt w grze nie ma `require(id)` i nie wysyła zapytań do internetu. Bot potrzebuje tylko czterech uprawnień na Discordzie i klucza API ograniczonego do Twojej gry. Szczegóły: `DOCS.html` → *Czy to bezpieczne?*.
 
 ## 🆘 Coś nie działa?
 
 - `/setup` → **🩺 Diagnostyka** (Discord) i `/setup-roblox` → **🧪 Sprawdź wszystko** (gra) powiedzą, co poprawić.
 - `/setup-guide`: odpowiedzi na częste pytania.
 - W `DOCS.html` wpisz problem w wyszukiwarkę albo otwórz *Problemy na starcie*.
+- Pomoc: zgłoś problem w **Issues** tego repozytorium na GitHubie. Projekt jest skończony i nie jest aktywnie rozwijany, ale zgłoszenia i pull requesty są mile widziane.
 
 ## 🔄 Nowa wersja
 
-Twoją wersję widać w oknie bota (`📦 CodeHatch 1.0.0`) i na dole `/help`. Nową wersję pobierasz z kanału #buyers na serwerze Discord CodeHatch HQ (rolę 💎 Buyer dostajesz przy zakupie); w `CHANGELOG.md` przeczytaj wszystkie wpisy między Twoją wersją a nową. Zamknij bota, skopiuj nowe pliki na stary folder bota, ale **zostaw** `.env`, `config.json` i folder `data` (nigdy ich nie nadpisuj), potem uruchom bota znowu przez `start.bat` / `start.sh`. Jeśli `/setup-roblox` pokaże potem ⚠️ przy pliku DiscordCodes, podmień też ten plik w Studio. Krok po kroku: `DOCS.html` → *Aktualizacje bota*.
+Twoją wersję widać w oknie bota (`📦 CodeHatch 1.0.0`) i na dole `/help`. Nową wersję pobierasz z GitHuba (`git pull` albo ponowne pobranie repozytorium); w `CHANGELOG.md` przeczytaj wszystkie wpisy między Twoją wersją a nową. Zamknij bota, skopiuj nowe pliki na stary folder bota, ale **zostaw** `.env`, `config.json` i folder `data` (nigdy ich nie nadpisuj), potem uruchom bota znowu przez `start.bat` / `start.sh`. Jeśli `/setup-roblox` pokaże potem ⚠️ przy pliku DiscordCodes, podmień też ten plik w Studio. Krok po kroku: `DOCS.html` → *Aktualizacje bota*.
 
 ## 📁 Co jest w folderze
 
@@ -131,10 +132,10 @@ Twoją wersję widać w oknie bota (`📦 CodeHatch 1.0.0`) i na dole `/help`. N
 |---|---|
 | `DOCS.html` | Dokumentacja: otwórz ją w przeglądarce |
 | `start.bat` / `start.sh` | Uruchamianie bota (Windows / Linux i macOS) |
-| `.env` | Token bota i klucz Roblox (powstaje z `.env.example` przy pierwszym starcie, nie ma go w zipie). **Nikomu go nie wysyłaj** |
-| `config.json`, `data/` | Twoje ustawienia i baza danych. Bot tworzy je przy pierwszym starcie (nie ma ich w zipie). Nie nadpisuj ich przy aktualizacji |
+| `.env` | Token bota i klucz Roblox (powstaje z `.env.example` przy pierwszym starcie, nie ma go w repozytorium). **Nikomu go nie wysyłaj** |
+| `config.json`, `data/` | Twoje ustawienia i baza danych. Bot tworzy je przy pierwszym starcie (nie ma ich w repozytorium). Nie nadpisuj ich przy aktualizacji |
 | `CHANGELOG.md` | Co się zmieniło w każdej wersji |
-| `LICENSE.md` | Co wolno, a czego nie wolno robić z kodem (licencja, po angielsku) |
+| `LICENSE` | Licencja MIT: wolno używać, zmieniać i udostępniać za darmo (po angielsku) |
 | `scripts/` | Pliki do wstawienia w Roblox Studio (źródła w `scripts/DiscordCodes/`) |
 | `cogs/`, `utils/`, `main.py` | Kod źródłowy bota: mapa w `DOCS.html` → *Dla programisty: kod źródłowy* |
 | `locales/` | Teksty bota i dokumentacji (PL, EN, ES) |

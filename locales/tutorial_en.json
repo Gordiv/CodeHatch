@@ -519,7 +519,7 @@
       ],
       [
         "🔄 Updates",
-        "Download a new version from the #buyers channel on the CodeHatch HQ Discord server (you get the 💎 Buyer role when you buy). Read in `CHANGELOG.md` every entry between your version and the new one, not only the newest.\n1. Close the bot window.\n2. Unzip the new version and copy its files over the old bot folder. **Keep** `.env`, `config.json` and the `data` folder: never overwrite them.\n3. Start the bot again with `start.bat` / `start.sh`.\nDoes `/setup-roblox` then show ⚠️ next to the DiscordCodes file? Replace it in Studio: `/setup-guide` → *Updating the Studio file*."
+        "Pull the latest version from GitHub (git pull, or download the repository again). Read in `CHANGELOG.md` every entry between your version and the new one, not only the newest.\n1. Close the bot window.\n2. Unzip the new version and copy its files over the old bot folder. **Keep** `.env`, `config.json` and the `data` folder: never overwrite them.\n3. Start the bot again with `start.bat` / `start.sh`.\nDoes `/setup-roblox` then show ⚠️ next to the DiscordCodes file? Replace it in Studio: `/setup-guide` → *Updating the Studio file*."
       ]
     ],
     "checks": [

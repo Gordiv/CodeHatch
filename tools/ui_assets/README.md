@@ -1,7 +1,6 @@
 # Game button pictures
 
-Drawn in Figma: file **CodeHatch - przyciski gry** (https://www.figma.com/design/E29tteh2mvsWvG2bTAA8rV), frames
-"FINAL ...". Each button is ONE finished picture (body, icon and word), exported on a black and a white page and
+Drawn in Figma (frames "FINAL ..."). Each button is ONE finished picture (body, icon and word), exported on a black and a white page and
 combined into real transparency, at 0.72 of the Figma size (twice the size the game shows), so Roblox never cuts or
 strongly scales it: no stripes at any size. In Figma units the body is 150 tall with a margin of 30 around it.
 

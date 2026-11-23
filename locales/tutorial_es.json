@@ -519,7 +519,7 @@
       ],
       [
         "🔄 Actualizaciones",
-        "Descarga una versión nueva desde el canal #buyers del servidor de Discord CodeHatch HQ (recibes el rol 💎 Buyer al comprar). En `CHANGELOG.md` lee todas las entradas entre tu versión y la nueva, no solo la última.\n1. Cierra la ventana del bot.\n2. Descomprime la versión nueva y copia sus archivos encima de la carpeta antigua del bot. **Conserva** `.env`, `config.json` y la carpeta `data`: nunca los sobrescribas.\n3. Vuelve a arrancar el bot con `start.bat` / `start.sh`.\n¿Después `/setup-roblox` muestra ⚠️ junto al archivo DiscordCodes? Reemplázalo en Studio: `/setup-guide` → *Actualizar el archivo de Studio*."
+        "Descarga una versión nueva desde GitHub (git pull o vuelve a descargar el repositorio). En `CHANGELOG.md` lee todas las entradas entre tu versión y la nueva, no solo la última.\n1. Cierra la ventana del bot.\n2. Descomprime la versión nueva y copia sus archivos encima de la carpeta antigua del bot. **Conserva** `.env`, `config.json` y la carpeta `data`: nunca los sobrescribas.\n3. Vuelve a arrancar el bot con `start.bat` / `start.sh`.\n¿Después `/setup-roblox` muestra ⚠️ junto al archivo DiscordCodes? Reemplázalo en Studio: `/setup-guide` → *Actualizar el archivo de Studio*."
       ]
     ],
     "checks": [

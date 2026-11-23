@@ -518,11 +518,11 @@
       ],
       [
         "Hosting z panelem: kroki",
-        "1) Rozpakuj `CodeHatch-1.0.0.zip` na komputerze i otwórz folder `CodeHatch-1.0.0`.\n2) Wgraj jego zawartość do panelu (menedżer plików lub SFTP), **bez folderu `.venv`**.\n3) Ustaw Pythona 3.12–3.14 i plik startowy `main.py`.\n4) W zipie nie ma pliku `.env`: w menedżerze plików panelu skopiuj `.env.example` jako `.env` (albo zmień mu nazwę), otwórz go i wpisz token bota po `DISCORD_TOKEN=`.\n5) Upewnij się, że panel instaluje `requirements.txt`.\n6) Kliknij Start, potem wpisz `/tutorial` na Discordzie."
+        "1) Rozpakuj `CodeHatch-main.zip` na komputerze i otwórz folder `CodeHatch-main`.\n2) Wgraj jego zawartość do panelu (menedżer plików lub SFTP), **bez folderu `.venv`**.\n3) Ustaw Pythona 3.12–3.14 i plik startowy `main.py`.\n4) W zipie nie ma pliku `.env`: w menedżerze plików panelu skopiuj `.env.example` jako `.env` (albo zmień mu nazwę), otwórz go i wpisz token bota po `DISCORD_TOKEN=`.\n5) Upewnij się, że panel instaluje `requirements.txt`.\n6) Kliknij Start, potem wpisz `/tutorial` na Discordzie."
       ],
       [
         "Hosting z panelem: aktualizacje",
-        "Nową wersję pobierz z kanału #buyers na serwerze Discord CodeHatch HQ (rolę 💎 Buyer dostajesz przy zakupie) i przeczytaj w `CHANGELOG.md` wszystkie wpisy między Twoją wersją a nową.\n1) Na wszelki wypadek pobierz na komputer kopię `.env`, `config.json` i folderu `data`.\n2) Zatrzymaj bota w panelu.\n3) Wgraj nowe pliki na stare, ale **nigdy nie nadpisuj** `.env`, `config.json` ani folderu `data`.\n4) Kliknij Start. Upewnij się, że panel znów instaluje `requirements.txt` (nowa wersja może dodać biblioteki)."
+        "Nową wersję pobierz z GitHuba (git pull albo ponowne pobranie repozytorium) i przeczytaj w `CHANGELOG.md` wszystkie wpisy między Twoją wersją a nową.\n1) Na wszelki wypadek pobierz na komputer kopię `.env`, `config.json` i folderu `data`.\n2) Zatrzymaj bota w panelu.\n3) Wgraj nowe pliki na stare, ale **nigdy nie nadpisuj** `.env`, `config.json` ani folderu `data`.\n4) Kliknij Start. Upewnij się, że panel znów instaluje `requirements.txt` (nowa wersja może dodać biblioteki)."
       ]
     ]
   },
@@ -535,7 +535,7 @@
     "fields": [
       [
         "1. Przygotowanie serwera",
-        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nWgraj `CodeHatch-1.0.0.zip` do katalogu domowego (np. programem WinSCP lub FileZilla), rozpakuj go i nadaj folderowi stałą nazwę:\n```bash\nunzip CodeHatch-1.0.0.zip\nmv CodeHatch-1.0.0 codehatch\n```"
+        "```bash\nsudo apt update\nsudo apt install -y python3 python3-venv python3-pip unzip\n```\nWgraj `CodeHatch-main.zip` do katalogu domowego (np. programem WinSCP lub FileZilla), rozpakuj go i nadaj folderowi stałą nazwę:\n```bash\nunzip CodeHatch-main.zip\nmv CodeHatch-main codehatch\n```"
       ],
       [
         "2. Pierwsze uruchomienie",
