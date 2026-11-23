@@ -182,7 +182,7 @@ def set_values(updates: list) -> dict:
 
 
 def for_guild(cfg: dict, guild_id: int, section: str) -> dict:
-    """Config section with per-server values from "guild_overrides" (e.g. the bot's official support server) applied.
+    """Config section with per-server values from "guild_overrides" (e.g. a second server with its own settings) applied.
     A section written as null (or anything that isn't an object) counts as empty."""
     base = cfg.get(section)
     merged = dict(base) if isinstance(base, dict) else {}
